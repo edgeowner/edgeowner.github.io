@@ -4,11 +4,31 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/04/19/jvm/</loc>
-    <lastmod>2018-03-21T06:36:14.572Z</lastmod>
+    <loc>http://edgeowner.com/2016/04/24/jvm2/</loc>
+    <lastmod>2018-03-21T07:20:36.914Z</lastmod>
     <data>
         <display>
-        <title>JVM内存结构简介</title>
+        <title>JVM内存结构简介(2)</title>
+        <pubTime>2016-04-24T12:00:00.000Z</pubTime>
+        
+        <tag>JVM</tag>
+         
+         
+           
+             
+              <breadCrumb title="JVM" url="http://edgeowner.com/categories/JVM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edgeowner.com/2016/04/19/jvm/</loc>
+    <lastmod>2018-03-21T07:07:20.523Z</lastmod>
+    <data>
+        <display>
+        <title>JVM内存结构简介(1)</title>
         <pubTime>2016-04-19T10:35:25.000Z</pubTime>
         
         <tag>Java</tag>
