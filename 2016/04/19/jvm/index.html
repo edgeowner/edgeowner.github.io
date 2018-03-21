@@ -149,7 +149,7 @@
 <meta property="og:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime">
-<meta property="og:updated_time" content="2018-03-21T07:07:20.523Z">
+<meta property="og:updated_time" content="2018-03-21T08:47:34.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM内存结构简介(1)">
 <meta name="twitter:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
@@ -420,7 +420,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T15:07:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T16:47:34+08:00">
                 2018-03-21
               </time>
             
@@ -481,7 +481,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,894
+                  2,107
                 </span>
               
 
@@ -513,7 +513,15 @@
 <li><strong>作用</strong>： 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。此区域内存回收目标主要针对常量池回收和对类型的卸载回收。 </li>
 <li><strong>特点</strong>：线程共享 。</li>
 <li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”<em><strong>永久代(Permanent Generation)</strong></em> “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
-<li><strong>运行时常量池</strong>：方法区的一部分，用于存放编译期生成的各种<strong>字面量</strong>和<strong>符号引用</strong>。编译器和运行期的intern()都可以将常量放入池中。受方法区限制，常量池无法申请到内存时会抛出OutOfMemoryError异常。 </li>
+<li><strong>运行时常量池</strong>：方法区的一部分，存放<strong><em>编译期</em></strong>生成的<strong>各种字面量</strong>(“zdy”,”123”等)和 <strong>符号引用</strong> 。编译器和运行期的intern()都可以将常量放入池中。受方法区限制，常量池无法申请到内存时会抛出OutOfMemoryError异常。运行时常量池具有动态性，并非只有Class文件中的内容才能进入运行时常量池，<strong><em>运行期间</em></strong>也能将新的常量放入池中。如String.intern（）方法。</li>
+<li><strong>方法区储存类的信息</strong>： <ol>
+<li><code>Classloader引用</code>；</li>
+<li><code>运行时常量池</code>：数值型常量、字段引用、方法引用、属   性；  </li>
+<li><code>字段数据</code>：针对每个字段的信息、字段名、类型、修饰符、属性；</li>
+<li><code>方法数据</code>：每个方法、方法名、返回值类型、参数类型、修饰符、属性；</li>
+<li><code>方法代码</code>：每个方法、字节码、操作数栈大小、局部变量大小、局部变量表、异常表、每个异常处理器、开始点、结束点、异常处理代码的程序计数器偏移量、被捕获异常类对应的常量池下标；</li>
+</ol>
+</li>
 </ol>
 <ul>
 <li><strong><em> 字面量(literal) </em></strong>：由字母，数字等构成的字符串或者数值，用于表达源代码中一个固定值的表示法(notation)。几乎所有计算机编程语言都具有对基本值的字面量表示，诸如：整数、浮点数以及字符串；而有很多也对布尔类型和字符类型的值也支持字面量表示；还有一些甚至对枚举类型的元素以及像数组、记录和对象等复合类型的值也支持字面量表示法。</li>
@@ -563,7 +571,7 @@
   <p><span>本文标题:</span><a href="/2016/04/19/jvm/">JVM内存结构简介(1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
   <p><span>发布时间:</span>2016年04月19日 - 18:04</p>
-  <p><span>最后更新:</span>2018年03月21日 - 15:03</p>
+  <p><span>最后更新:</span>2018年03月21日 - 16:03</p>
   <p><span>原始链接:</span><a href="/2016/04/19/jvm/" title="JVM内存结构简介(1)">http://edgeowner.com/2016/04/19/jvm/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/19/jvm/"  aria-label="复制成功！"></i></span>
   </p>
@@ -918,7 +926,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共2.1k字</span>
+    <span class="post-count">博客全站共3.8k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -945,7 +953,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k</span>
+    <span title="Site words total count">3.8k</span>
    
   -->
 </div>
