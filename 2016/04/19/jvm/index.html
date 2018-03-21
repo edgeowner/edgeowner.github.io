@@ -149,7 +149,7 @@
 <meta property="og:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)、Java栈(Java Stack)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime">
-<meta property="og:updated_time" content="2018-03-21T03:12:02.458Z">
+<meta property="og:updated_time" content="2018-03-21T06:36:14.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM内存结构简介">
 <meta name="twitter:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)、Java栈(Java Stack)">
@@ -420,7 +420,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T11:12:02+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T14:36:14+08:00">
                 2018-03-21
               </time>
             
@@ -509,7 +509,7 @@
         <h3 id="JVM内存结构（运行时数据区）"><a href="#JVM内存结构（运行时数据区）" class="headerlink" title="JVM内存结构（运行时数据区）"></a>JVM内存结构（运行时数据区）</h3><p>JVM内存结构指得是：运行时数据区（Runtime Data Area），由 <strong><em>方法区(Method Area) </em></strong>、<strong><em>堆(Heap) </em></strong>、<strong><em>Java栈(Java Stack) </em></strong>、<strong><em>本地方法栈(Native Method Stack)</em></strong>、<strong><em>程序计数器(Program Counter Register)</em></strong>、<strong><em>Java栈(Java Stack) </em></strong><br><img src="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime" alt=""></p>
 <a id="more"></a>
 <hr>
-<h4 id="方法区-Method-Area-："><a href="#方法区-Method-Area-：" class="headerlink" title="方法区(Method Area)："></a>方法区(Method Area)：</h4><ol>
+<h4 id="方法区-Method-Area"><a href="#方法区-Method-Area" class="headerlink" title="方法区(Method Area)"></a>方法区(Method Area)</h4><ol>
 <li><strong>作用</strong>： 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。此区域内存回收目标主要针对常量池回收和对类型的卸载回收。 </li>
 <li><strong>特点</strong>：线程共享 。</li>
 <li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”<em><strong>永久代(Permanent Generation)</strong></em> “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
@@ -520,7 +520,7 @@
 <li><strong><em> 符号引用 </em></strong>：简单地说就是，符号引用存在class文件中的常量池，包括类和接口的全限定名、字段的名称和描述符以及方法的名称和描述符。jvm加载class的时候就可以凭着这三者进行动态连接，得到具体的内存地址。占用的数据结构在常量池项目类型有，例如类或接口的符号引用结构为u1的tag和u2的name_index。</li>
 </ul>
 <hr>
-<h4 id="堆-Heap-："><a href="#堆-Heap-：" class="headerlink" title="堆(Heap)："></a>堆(Heap)：</h4><ol>
+<h4 id="堆-Heap"><a href="#堆-Heap" class="headerlink" title="堆(Heap)"></a>堆(Heap)</h4><ol>
 <li><strong> 作用 </strong>：被所有线程运行时共享的内存区域，JVM启动之后，存放对象实例和数组，内部会划出多个线程私有的分配缓冲区(Thread Location Allocation Buffer ,<strong>TLAB</strong>)。该存储区域物理上可以是不连续空间，但是逻辑上一定要连续。</li>
 <li><strong> 特点 </strong>：是GC管理的主要区域，由于GC（垃圾收集器）是采用分代收集算法,根据对象存活率，堆还可以分为<strong>新生代</strong>、<strong>老年代</strong>、<strong>永久代</strong>。</li>
 <li><p><strong> 分类 </strong>：</p>
@@ -563,7 +563,7 @@
   <p><span>本文标题:</span><a href="/2016/04/19/jvm/">JVM内存结构简介</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
   <p><span>发布时间:</span>2016年04月19日 - 18:04</p>
-  <p><span>最后更新:</span>2018年03月21日 - 11:03</p>
+  <p><span>最后更新:</span>2018年03月21日 - 14:03</p>
   <p><span>原始链接:</span><a href="/2016/04/19/jvm/" title="JVM内存结构简介">http://edgeowner.com/2016/04/19/jvm/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/19/jvm/"  aria-label="复制成功！"></i></span>
   </p>
@@ -884,7 +884,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法区-Method-Area-："><span class="nav-number">1.1.</span> <span class="nav-text">方法区(Method Area)：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆-Heap-："><span class="nav-number">1.2.</span> <span class="nav-text">堆(Heap)：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法区-Method-Area"><span class="nav-number">1.1.</span> <span class="nav-text">方法区(Method Area)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆-Heap"><span class="nav-number">1.2.</span> <span class="nav-text">堆(Heap)</span></a></li></ol></li></ol></div>
             
 
           </div>
