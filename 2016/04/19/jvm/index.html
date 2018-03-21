@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Java,JVM," />
+  <meta name="keywords" content="JVM,Java," />
 
 
 
@@ -141,17 +141,17 @@
 
 
 <meta name="description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
-<meta name="keywords" content="Java,JVM">
+<meta name="keywords" content="JVM,Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM内存结构简介(1)">
+<meta property="og:title" content="JVM内存结构(1)">
 <meta property="og:url" content="http://edgeowner.com/2016/04/19/jvm/index.html">
 <meta property="og:site_name" content="edgeowner">
 <meta property="og:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime">
-<meta property="og:updated_time" content="2018-03-21T08:47:34.744Z">
+<meta property="og:updated_time" content="2018-03-21T09:42:18.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JVM内存结构简介(1)">
+<meta name="twitter:title" content="JVM内存结构(1)">
 <meta name="twitter:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
 <meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime">
 
@@ -189,7 +189,7 @@
 
 
 
-  <title>JVM内存结构简介(1) | edgeowner</title>
+  <title>JVM内存结构(1) | edgeowner</title>
   
 
 
@@ -392,7 +392,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JVM内存结构简介(1)</h2>
+          <h2 class="post-title" itemprop="name headline">JVM内存结构(1)</h2>
         
 
         <div class="post-meta">
@@ -420,7 +420,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T16:47:34+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-21T17:42:18+08:00">
                 2018-03-21
               </time>
             
@@ -456,7 +456,7 @@
 
           
           
-             <span id="/2016/04/19/jvm/" class="leancloud_visitors" data-flag-title="JVM内存结构简介(1)">
+             <span id="/2016/04/19/jvm/" class="leancloud_visitors" data-flag-title="JVM内存结构(1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -551,7 +551,7 @@
 </li>
 <li><p><strong> 使用方式 </strong>：Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可，就像我们的磁盘空间一样。在实现时，既可以实现成固定大小的，也可以是可扩展的，当前主流的虚拟机都是按照可扩展来实现的（通过-Xmx和-Xms控制）。<strong><em> 如果在堆中没有内存完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。 </em></strong></p>
 </li>
-<li><code>对象分配规则</code>：<br> <code>1.对象优先分配在Eden区</code>：若Eden区没有足够的空间时，虚拟机执行一次Minor GC；<br> <code>2.大对象(大对象是指需要大量连续内存空间的对象)直接进入老年代</code>：这样做目的是避免在Eden区和两个Survivor区之间发生大量的内存拷贝(新生代采用 <strong><em>复制算法 </em></strong> 收集内存)；<br> <code>3.长期存活的对象进入老年代</code>：虚拟机为每个对象定义一个年龄计数器，如果对象经过了1次Minor GC那么对象会进入Survivor区，之后每经过一次Minor GC那么对象年龄加 1，直到达到阀值，对象进入老年区；<br> <code>4.动态判断对象的年龄</code>：如果Survivor区中相同年龄的所有对象大小的总和大于Survivor空间的一半，年龄大于或等于该年龄的对象可以直接进入老年代；<br> <code>5.空间分配担保</code>：每次每次进行Minor GC时，JVM会计算Survivor区移至<strong>老年区的对象</strong>的平均大小，如果这个值大于老年区的剩余值大小则进行一次Full GC，如果小于检查HandlePromotionFailure设置，如果true则只进行Monitor GC，如果false则进行Full GC；</li>
+<li><code>对象分配规则</code>：<br> <code>1.对象优先分配在Eden区</code>：若Eden区没有足够的空间时，虚拟机执行一次Minor GC；<br> <code>2.大对象(大对象是指需要大量连续内存空间的对象)直接进入老年代</code>：这样做目的是避免在Eden区和两个Survivor区之间发生大量的内存拷贝(新生代采用 <strong><em>复制算法 </em></strong> 收集内存)；<br> <code>3.长期存活的对象进入老年代</code>：虚拟机为每个对象定义一个年龄计数器，如果对象经过了1次Minor GC那么对象会进入Survivor区，之后每经过一次Minor GC那么对象年龄加 1，直到达到阀值，对象进入老年区；<br> <code>4.动态判断对象的年龄</code>：如果Survivor区中相同年龄的所有对象大小的总和大于Survivor空间的一半，年龄大于或等于该年龄的对象可以直接进入老年代；<br> <code>5.空间分配担保</code>：每次每次进行Minor GC时，JVM会计算Survivor区移至<strong>老年区的对象</strong>的平均大小，如果这个值大于老年区的剩余值大小则进行一次Full GC，如果小于检查HandlePromotionFailure设置，如果true则只进行Monitor GC，如果false则进行Full GC；    </li>
 </ol>
 <hr>
 
@@ -568,11 +568,11 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2016/04/19/jvm/">JVM内存结构简介(1)</a></p>
+  <p><span>本文标题:</span><a href="/2016/04/19/jvm/">JVM内存结构(1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
   <p><span>发布时间:</span>2016年04月19日 - 18:04</p>
-  <p><span>最后更新:</span>2018年03月21日 - 16:03</p>
-  <p><span>原始链接:</span><a href="/2016/04/19/jvm/" title="JVM内存结构简介(1)">http://edgeowner.com/2016/04/19/jvm/</a>
+  <p><span>最后更新:</span>2018年03月21日 - 17:03</p>
+  <p><span>原始链接:</span><a href="/2016/04/19/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/19/jvm/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/19/jvm/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -651,7 +651,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://edgeowner.com/2016/04/19/jvm/" title="JVM内存结构简介(1)">http://edgeowner.com/2016/04/19/jvm/</a>
+    <a href="http://edgeowner.com/2016/04/19/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/19/jvm/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -667,9 +667,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
         </div>
       
@@ -692,8 +692,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/24/jvm2/" rel="prev" title="JVM内存结构简介(2)">
-                JVM内存结构简介(2) <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/24/jvm2/" rel="prev" title="JVM内存结构(2)">
+                JVM内存结构(2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -808,7 +808,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -926,7 +926,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共3.8k字</span>
+    <span class="post-count">博客全站共4.8k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -953,7 +953,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.8k</span>
+    <span title="Site words total count">4.8k</span>
    
   -->
 </div>
