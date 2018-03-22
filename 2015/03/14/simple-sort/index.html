@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="算法,sort," />
+  <meta name="keywords" content="算法,排序算法," />
 
 
 
@@ -141,7 +141,7 @@
 
 
 <meta name="description" content="简单排序冒泡排序 、选择排序 、插入排序 公共代码部分1234567891011121314151617181920212223public class SwapUtils &amp;#123;    public static void swap(int[] arr, int i, int j) &amp;#123;        int temp = arr[i];        arr[i] = arr[j">
-<meta name="keywords" content="算法,sort">
+<meta name="keywords" content="算法,排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法之简单排序">
 <meta property="og:url" content="http://edgeowner.com/2015/03/14/simple-sort/index.html">
@@ -483,7 +483,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,417
+                  1,420
                 </span>
               
 
@@ -518,7 +518,7 @@
 <li>针对所有的元素重复以上的步骤，除了最后一个；</li>
 <li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
 </ol>
-<p><code>遍历流程图</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/bubbleSort.gif" alt=""></p>
+<p><code>遍历流程图例</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/bubbleSort.gif" alt=""></p>
 <p><code>代码实现</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> == arr || arr.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//i控制外循环即总共需要将多少个数字进行排序，</span></span><br><span class="line">    <span class="comment">//j控制内循环即每次循环都会将最大的数排到右边</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr.length - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="comment">//如果前面的数字大于后面的数字就将前面的数字和后面的数字进行交换，直接最大的数字被排到最右侧</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                SwapUtils.swap(arr, j + <span class="number">1</span>, j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p> <strong> 冒泡排序的时间复杂度为O(n²) </strong></p>
 <blockquote>
@@ -531,7 +531,7 @@
 <li>再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾；</li>
 <li>重复第二步，直到遍历完所有元素，且均排序完毕为止。</li>
 </ol>
-<p><code>遍历流程图</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/selectionSort.gif" alt=""></p>
+<p><code>遍历流程图例</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/selectionSort.gif" alt=""></p>
 <p><code>代码实现</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">null</span> == arr || arr.length == <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 每一趟循环比较时，min用于存放较小元素的数组下标，</span></span><br><span class="line">      <span class="comment">// 这样当前批次比较完毕最终存放的就是此趟内最小的元素的下标，避免每次遇到较小元素都要进行交换。</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">          <span class="keyword">int</span> min = i;</span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">              <span class="keyword">if</span> (arr[j] &lt; arr[min]) &#123;</span><br><span class="line">                  min = j;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">if</span> (min != i) &#123;</span><br><span class="line">              SwapUtils.swap(arr, min, i);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>选择排序是一种简单直观的排序算法，无论什么数据进去都是 O(n²) 的时间复杂度。所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间。 </strong></p>
 <hr>
@@ -540,7 +540,7 @@
 <li>将第一待排序序列的第一个元素作为一个有序序列，把第二个元素到最后一个元素当成是未排序序列；</li>
 <li>从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面）</li>
 </ol>
-<p><code>遍历流程图</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/insertionSort.gif" alt=""></p>
+<p><code>遍历流程图例</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/insertionSort.gif" alt=""></p>
 <p><code>代码实现</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == arr || arr.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 从下标为1的元素开始选择合适的位置插入，</span></span><br><span class="line">        <span class="comment">// 因为下标为0的只有一个元素，默认是有序的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 记录要插入的数据</span></span><br><span class="line">            <span class="keyword">int</span> tmp = arr[i];</span><br><span class="line">            <span class="keyword">int</span> j = i;</span><br><span class="line">            <span class="comment">// 从已经排序的序列最右边的开始比较，找到比其小的数</span></span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; tmp &lt; arr[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                arr[j] = arr[j - <span class="number">1</span>];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 存在比其小的数，插入</span></span><br><span class="line">            <span class="keyword">if</span> (j != i) &#123;</span><br><span class="line">                arr[j] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong> 插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。时间复杂度为O(n²)，是稳定的排序。 </strong></p>
 
@@ -658,7 +658,7 @@
           
             <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
           
-            <a href="/tags/sort/" rel="tag"><i class="fa fa-tag"></i> sort</a>
+            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"></i> 排序算法</a>
           
         </div>
       
@@ -915,7 +915,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共9.4k字</span>
+    <span class="post-count">博客全站共10.9k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -942,7 +942,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.4k</span>
+    <span title="Site words total count">10.9k</span>
    
   -->
 </div>
