@@ -112,7 +112,7 @@
       &lt;h4 id=&quot;JVM具体参数和内存区域映射图例&quot;&gt;&lt;a href=&quot;#JVM具体参数和内存区域映射图例&quot; class=&quot;headerlink&quot; title=&quot;JVM具体参数和内存区域映射图例&quot;&gt;&lt;/a&gt;JVM具体参数和内存区域映射图例&lt;/h4&gt;&lt;p&gt; &amp;emsp;&amp;emsp;此文主要用图例方式描绘了JVM的结构，介绍了JVM内存结构对应的参数名。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在具体实现上，JVM将需要进行垃圾回收的区域分为3类：新生代（Young Generation）、老年代(Old Generation)、永久代(Permanent Generation)。其中新生代又分为eden和survival（S0、S1），具体结构如下图所示：&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;http://p5vswdxl9.bkt.clouddn.com/jvm_and_params_map.png&quot; alt=&quot;图示1.0&quot;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;img src=&quot;http://p5vswdxl9.bkt.clouddn.com/jvm_and_params_map.png&quot; alt=&quot;图示1.0&quot;&gt;
     
     </summary>
     
@@ -362,7 +362,7 @@
     <summary type="html">
     
       &lt;h4 id=&quot;个人博客简介&quot;&gt;&lt;a href=&quot;#个人博客简介&quot; class=&quot;headerlink&quot; title=&quot;个人博客简介&quot;&gt;&lt;/a&gt;个人博客简介&lt;/h4&gt;&lt;p&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;作为一枚计科专业的码农，2014年开始从事后端应用开发至今，将日常工作中遇到的问题、个人知识积累、个人见解和“打怪升级”晋级的经验分享于自己的博客，欢迎广大蜀黍来此博客分享自己的“故事”。&lt;/p&gt;
-&lt;p&gt;   &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;——&amp;emsp;ZhangSunny&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;   &amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;——&amp;emsp;ZhangSunny&lt;br&gt;
     
     </summary>
     
