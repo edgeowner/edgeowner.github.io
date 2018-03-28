@@ -202,11 +202,33 @@
 
     
   <url>
+    <loc>http://edgeowner.com/2015/03/25/shellSort/</loc>
+    <lastmod>2015-03-25T12:17:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>希尔排序（Shell Sort）</title>
+        <pubTime>2015-03-25T01:15:31.000Z</pubTime>
+        
+        <tag>Algorithms</tag>
+         
+        <tag>Sort</tag>
+         
+         
+           
+             
+              <breadCrumb title="Algorithms" url="http://edgeowner.com/categories/Algorithms/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edgeowner.com/2015/03/24/qucikSort/</loc>
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>快速排序</title>
+        <title>快速排序（Quick Sort）</title>
         <pubTime>2015-03-24T02:10:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
@@ -228,7 +250,7 @@
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>堆排序</title>
+        <title>堆排序（Heap Sort）</title>
         <pubTime>2015-03-24T02:12:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
