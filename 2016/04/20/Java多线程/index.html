@@ -136,7 +136,7 @@
 
 
 
-  <meta name="keywords" content="Algorithms,Sort," />
+  <meta name="keywords" content="多线程," />
 
 
 
@@ -150,20 +150,18 @@
 
 
 
-<meta name="description" content="快速排序快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。  算法思路快速排一般基于递归实现：  选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。 基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。 一轮下来，这个枢轴的位置一定在最终位置上。 对两个子数组分别重复上述过程，直到每个数组只有一个元素。 排序">
-<meta name="keywords" content="Algorithms,Sort">
+<meta name="description" content="Summer和Sunny博客乐园">
+<meta name="keywords" content="多线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序（Quick Sort）">
-<meta property="og:url" content="http://edgeowner.com/2015/03/24/qucikSort/index.html">
+<meta property="og:title" content="ThreadPoolExecutor 参数详解">
+<meta property="og:url" content="http://edgeowner.com/2016/04/20/Java多线程/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="快速排序快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。  算法思路快速排一般基于递归实现：  选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。 基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。 一轮下来，这个枢轴的位置一定在最终位置上。 对两个子数组分别重复上述过程，直到每个数组只有一个元素。 排序">
+<meta property="og:description" content="Summer和Sunny博客乐园">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/Sorting_quicksort_anim.gif">
-<meta property="og:updated_time" content="2015-03-24T14:19:00.000Z">
+<meta property="og:updated_time" content="2016-04-20T12:17:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速排序（Quick Sort）">
-<meta name="twitter:description" content="快速排序快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。  算法思路快速排一般基于递归实现：  选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。 基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。 一轮下来，这个枢轴的位置一定在最终位置上。 对两个子数组分别重复上述过程，直到每个数组只有一个元素。 排序">
-<meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/Sorting_quicksort_anim.gif">
+<meta name="twitter:title" content="ThreadPoolExecutor 参数详解">
+<meta name="twitter:description" content="Summer和Sunny博客乐园">
 
 
 
@@ -193,13 +191,13 @@
 
 
 
-  <link rel="canonical" href="http://edgeowner.com/2015/03/24/qucikSort/"/>
+  <link rel="canonical" href="http://edgeowner.com/2016/04/20/Java多线程/"/>
 
 
 
 
 
-  <title>快速排序（Quick Sort） | edgeowner</title>
+  <title>ThreadPoolExecutor 参数详解 | edgeowner</title>
   
 
 
@@ -219,7 +217,7 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -385,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/qucikSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/20/Java多线程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -402,7 +400,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">快速排序（Quick Sort）</h2>
+          <h2 class="post-title" itemprop="name headline">ThreadPoolExecutor 参数详解</h2>
         
 
         <div class="post-meta">
@@ -414,8 +412,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-24T10:10:31+08:00">
-                2015-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-20T09:15:31+08:00">
+                2016-04-20
               </time>
             
 
@@ -430,8 +428,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-24T22:19:00+08:00">
-                2015-03-24
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-20T20:17:23+08:00">
+                2016-04-20
               </time>
             
           </span>
@@ -449,8 +447,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
+                  <a href="/categories/Java-Multi-thread-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Java Multi-thread Programming</span>
                   </a>
                 </span>
 
@@ -466,7 +464,7 @@
 
           
           
-             <span id="/2015/03/24/qucikSort/" class="leancloud_visitors" data-flag-title="快速排序（Quick Sort）">
+             <span id="/2016/04/20/Java多线程/" class="leancloud_visitors" data-flag-title="ThreadPoolExecutor 参数详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -491,7 +489,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  645
+                  0
                 </span>
               
 
@@ -516,29 +514,7 @@
       
 
       
-        <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。</p>
-<hr>
-<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>快速排一般基于递归实现：</p>
-<ol>
-<li>选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。</li>
-<li>基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。</li>
-<li>一轮下来，这个枢轴的位置一定在最终位置上。</li>
-<li>对两个子数组分别重复上述过程，直到每个数组只有一个元素。</li>
-<li>排序完成。</li>
-</ol>
-<a id="more"></a>
-<hr>
-<h4 id="快速排序示意图："><a href="#快速排序示意图：" class="headerlink" title="快速排序示意图："></a>快速排序示意图：</h4><p><img src="http://p5vswdxl9.bkt.clouddn.com/Sorting_quicksort_anim.gif" alt=""><br>图例过程演示（<a href="https://www.bilibili.com/video/av12540893?from=search&amp;seid=6178581465044594405" target="_blank" rel="noopener">中文原视频地址</a>）：</p>
-<ol>
-<li><div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124320-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li>
-<li><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124538-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li>
-<li><a href="https://www.youtube.com/watch?v=ywWBy6J5gz8" target="_blank" rel="noopener">超有趣的快速排序视频</a></li>
-</ol>
-<hr>
-<h4 id="代码实现方式（为了更直观的反映整个排序过程添加了标记代码）："><a href="#代码实现方式（为了更直观的反映整个排序过程添加了标记代码）：" class="headerlink" title="代码实现方式（为了更直观的反映整个排序过程添加了标记代码）："></a>代码实现方式（为了更直观的反映整个排序过程添加了标记代码）：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort2</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//如果left不小于right ，需要排序的部分只有一个元素，方法返回</span></span><br><span class="line">       System.out.println(<span class="string">"left:"</span> + left + <span class="string">",right:"</span> + right);</span><br><span class="line">       <span class="keyword">if</span> (left == <span class="number">0</span> &amp;&amp; right == <span class="number">0</span>) &#123;</span><br><span class="line">           System.out.println(<span class="string">"i=j=0"</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(<span class="string">"1.-------------------"</span>);</span><br><span class="line">       <span class="keyword">if</span> (left &gt;= right) &#123;</span><br><span class="line">           System.out.println(MessageFormat.format(<span class="string">"return: left,&#123;0&#125;  | right,&#123;1&#125;"</span>, left, right));</span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//设置最左边元素为基准点：pivot</span></span><br><span class="line">       <span class="keyword">int</span> pivot = arr[left];</span><br><span class="line">       System.out.println(<span class="string">"pivot:"</span> + pivot);</span><br><span class="line">       <span class="keyword">int</span> i = left;</span><br><span class="line">       <span class="keyword">int</span> j = right;</span><br><span class="line">       <span class="comment">//把要排序的序列中比p大的放到右边，比p小的放到左边，p的下标位置为i</span></span><br><span class="line">       <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">           System.out.println(<span class="string">"2.-------start------------"</span>);</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; arr[j] &gt;= pivot) &#123;</span><br><span class="line">               j--;</span><br><span class="line">               System.out.println(<span class="string">"2.  j:"</span> + j);</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.println(<span class="string">"========[j-- over, i++ start ]=========="</span>);</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; arr[i] &lt;= pivot) &#123;</span><br><span class="line">               i++;</span><br><span class="line">               System.out.println(<span class="string">"2.  i:"</span> + i);</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.println(<span class="string">"2.-------end------------"</span>);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">               <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">               arr[i] = arr[j];</span><br><span class="line">               arr[j] = temp;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//交换基准点</span></span><br><span class="line">       arr[left] = arr[i];</span><br><span class="line">       arr[i] = pivot;</span><br><span class="line">       <span class="comment">//对序列中，i左边的元素实施快速排序</span></span><br><span class="line">       System.out.println(<span class="string">"左边开始前， right为"</span> + right + <span class="string">"值"</span>);</span><br><span class="line">       quickSort2(arr, left, i - <span class="number">1</span>);</span><br><span class="line">       <span class="comment">//对序列中，j右边边的元素实施快速排序</span></span><br><span class="line">       System.out.println(<span class="string">"右块遍历开始...... "</span>);</span><br><span class="line">       quickSort2(arr, i + <span class="number">1</span>, right);</span><br><span class="line">       System.out.println(<span class="string">"left =:"</span> + (i + <span class="number">1</span>) + <span class="string">",right = "</span> + right);</span><br><span class="line">       System.out.println(<span class="string">"3.-------------------"</span>);</span><br><span class="line">       System.out.println(<span class="string">"4.---------all over----------"</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">          <span class="comment">//大数据量测试</span></span><br><span class="line">       <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100000</span>];</span><br><span class="line">       Random r = <span class="keyword">new</span> Random();</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">           arr[i] = r.nextInt(<span class="number">10000000</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">       quickSort(nums);</span><br><span class="line">       <span class="keyword">long</span> time = System.currentTimeMillis() - start;</span><br><span class="line">       System.out.println(<span class="string">"-----------大数据量测试结果-----------"</span>);</span><br><span class="line">       System.out.println(<span class="string">"all time:"</span> + time + <span class="string">"毫秒"</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>参考地址：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484039&amp;idx=1&amp;sn=15aa43a3865daca394abae379c7a5383&amp;chksm=ebd74386dca0ca90e3c3067515de1c3b3da7e0ea44a26d8dd96e8d7424f4e10227d9edac9bcf#rd" target="_blank" rel="noopener"></a></p>
-
+        
       
     </div>
     
@@ -552,12 +528,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2015/03/24/qucikSort/">快速排序（Quick Sort）</a></p>
+  <p><span>本文标题:</span><a href="/2016/04/20/Java多线程/">ThreadPoolExecutor 参数详解</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
-  <p><span>发布时间:</span>2015年03月24日 - 10:03</p>
-  <p><span>最后更新:</span>2015年03月24日 - 22:03</p>
-  <p><span>原始链接:</span><a href="/2015/03/24/qucikSort/" title="快速排序（Quick Sort）">http://edgeowner.com/2015/03/24/qucikSort/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2015/03/24/qucikSort/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2016年04月20日 - 09:04</p>
+  <p><span>最后更新:</span>2016年04月20日 - 20:04</p>
+  <p><span>原始链接:</span><a href="/2016/04/20/Java多线程/" title="ThreadPoolExecutor 参数详解">http://edgeowner.com/2016/04/20/Java多线程/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/20/Java多线程/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -635,7 +611,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://edgeowner.com/2015/03/24/qucikSort/" title="快速排序（Quick Sort）">http://edgeowner.com/2015/03/24/qucikSort/</a>
+    <a href="http://edgeowner.com/2016/04/20/Java多线程/" title="ThreadPoolExecutor 参数详解">http://edgeowner.com/2016/04/20/Java多线程/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -651,9 +627,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithms/" rel="tag"><i class="fa fa-tag"></i> Algorithms</a>
-          
-            <a href="/tags/Sort/" rel="tag"><i class="fa fa-tag"></i> Sort</a>
+            <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i> 多线程</a>
           
         </div>
       
@@ -666,8 +640,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/22/linear/" rel="next" title="排序算法之线性排序">
-                <i class="fa fa-chevron-left"></i> 排序算法之线性排序
+              <a href="/2016/04/19/jvm/" rel="next" title="JVM内存结构(1)">
+                <i class="fa fa-chevron-left"></i> JVM内存结构(1)
               </a>
             
           </div>
@@ -676,8 +650,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/24/heapSort/" rel="prev" title="堆排序（Heap Sort）">
-                堆排序（Heap Sort） <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/21/ThreadPoolExecutor/" rel="prev" title="ThreadPoolExecutor 参数详解">
+                ThreadPoolExecutor 参数详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -763,17 +737,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -792,7 +757,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -814,7 +779,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -866,22 +831,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">1.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法思路"><span class="nav-number">1.1.</span> <span class="nav-text">算法思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序示意图："><span class="nav-number">1.2.</span> <span class="nav-text">快速排序示意图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现方式（为了更直观的反映整个排序过程添加了标记代码）："><span class="nav-number">1.3.</span> <span class="nav-text">代码实现方式（为了更直观的反映整个排序过程添加了标记代码）：</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

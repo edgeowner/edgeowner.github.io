@@ -146,6 +146,44 @@
   </entry>
   
   <entry>
+    <title>ThreadPoolExecutor 参数详解</title>
+    <link href="http://edgeowner.com/2016/04/21/ThreadPoolExecutor/"/>
+    <id>http://edgeowner.com/2016/04/21/ThreadPoolExecutor/</id>
+    <published>2016-04-21T01:15:31.000Z</published>
+    <updated>2016-04-21T12:17:23.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Java Multi-thread Programming" scheme="http://edgeowner.com/categories/Java-Multi-thread-Programming/"/>
+    
+    
+      <category term="多线程" scheme="http://edgeowner.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="线程池" scheme="http://edgeowner.com/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadPoolExecutor 参数详解</title>
+    <link href="http://edgeowner.com/2016/04/20/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>http://edgeowner.com/2016/04/20/Java多线程/</id>
+    <published>2016-04-20T01:15:31.000Z</published>
+    <updated>2016-04-20T12:17:23.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Java Multi-thread Programming" scheme="http://edgeowner.com/categories/Java-Multi-thread-Programming/"/>
+    
+    
+      <category term="多线程" scheme="http://edgeowner.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JVM内存结构(1)</title>
     <link href="http://edgeowner.com/2016/04/19/jvm/"/>
     <id>http://edgeowner.com/2016/04/19/jvm/</id>
@@ -166,26 +204,6 @@
       <category term="JVM" scheme="http://edgeowner.com/tags/JVM/"/>
     
       <category term="Java" scheme="http://edgeowner.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java多线程(Chapter1)</title>
-    <link href="http://edgeowner.com/2015/05/13/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://edgeowner.com/2015/05/13/Java多线程/</id>
-    <published>2015-05-13T12:15:25.000Z</published>
-    <updated>2018-03-14T02:35:55.291Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Java Multi-thread Programming" scheme="http://edgeowner.com/categories/Java-Multi-thread-Programming/"/>
-    
-    
-      <category term="Java" scheme="http://edgeowner.com/tags/Java/"/>
-    
-      <category term="多线程" scheme="http://edgeowner.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
@@ -261,8 +279,8 @@
   
   <entry>
     <title>快速排序（Quick Sort）</title>
-    <link href="http://edgeowner.com/2015/03/24/qucikSort/"/>
-    <id>http://edgeowner.com/2015/03/24/qucikSort/</id>
+    <link href="http://edgeowner.com/2015/03/24/quickSort/"/>
+    <id>http://edgeowner.com/2015/03/24/quickSort/</id>
     <published>2015-03-24T02:10:31.000Z</published>
     <updated>2015-03-24T14:19:00.000Z</updated>
     
