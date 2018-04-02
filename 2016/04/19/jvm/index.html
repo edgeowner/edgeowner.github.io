@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,107
+                  2,114
                 </span>
               
 
@@ -513,12 +513,10 @@
 
       
         <h3 id="JVM内存结构（运行时数据区）"><a href="#JVM内存结构（运行时数据区）" class="headerlink" title="JVM内存结构（运行时数据区）"></a>JVM内存结构（运行时数据区）</h3><p>JVM内存结构指得是：运行时数据区（Runtime Data Area），由 <strong><em>方法区(Method Area) </em></strong>、<strong><em>堆(Heap) </em></strong>、<strong><em>Java栈(Java Stack) </em></strong>、<strong><em>本地方法栈(Native Method Stack)</em></strong>、<strong><em>程序计数器(Program Counter Register)</em></strong>。<br><img src="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime" alt=""></p>
-<a id="more"></a>
-<hr>
-<h4 id="一、方法区-Method-Area"><a href="#一、方法区-Method-Area" class="headerlink" title="一、方法区(Method Area)"></a>一、方法区(Method Area)</h4><ol>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h4 id="一、方法区-Method-Area"><a href="#一、方法区-Method-Area" class="headerlink" title="一、方法区(Method Area)"></a>一、方法区(Method Area)</h4><ol>
 <li><strong>作用</strong>： 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。此区域内存回收目标主要针对常量池回收和对类型的卸载回收。 </li>
 <li><strong>特点</strong>：线程共享 。</li>
-<li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”<em><strong>永久代(Permanent Generation)</strong></em> “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
+<li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”_<strong>永久代(Permanent Generation)</strong>_ “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
 <li><strong>运行时常量池</strong>：方法区的一部分，存放<strong><em>编译期</em></strong>生成的<strong>各种字面量</strong>(“zdy”,”123”等)和 <strong>符号引用</strong> 。编译器和运行期的intern()都可以将常量放入池中。受方法区限制，常量池无法申请到内存时会抛出OutOfMemoryError异常。运行时常量池具有动态性，并非只有Class文件中的内容才能进入运行时常量池，<strong><em>运行期间</em></strong>也能将新的常量放入池中。如String.intern（）方法。</li>
 <li><strong>方法区储存类的信息</strong>： <ol>
 <li><code>Classloader引用</code>；</li>
@@ -539,20 +537,18 @@
 <li><strong> 特点 </strong>：是GC管理的主要区域，由于GC（垃圾收集器）是采用分代收集算法,根据对象存活率，堆还可以分为<strong>新生代</strong>、<strong>老年代</strong>、<strong>永久代</strong>。</li>
 <li><p><strong> 分类 </strong>：</p>
 <blockquote>
-<p><em><strong>新生代(Young Generation)</strong></em> ：方法中去new一个对象，那这方法调用完毕后，对象就会被回收，这就是一个典型的新生代对象。 每次使用Eden和其中一块Survivor，当回收时，将Eden和Survivor中还存活的对象一次性地复制到另外一块Survivor空间上，最后清理Eden和刚才用过的Survivor空间。<strong><em> HotSpot虚拟机默认Eden和Survivor的大小比例是8:1 </em></strong>，也就是说，每次新生代中可用内存空间为整个新生代容量的90%（80%+10%），只有10%的空间会被浪费。 98%的对象可回收只是一般场景下的数据，没办法保证每次回收都只有不多于10%的对象存活，当Survivor不够用时，需要依赖于老年代进行分配担保，所以<strong><em> 大对象 </em></strong>直接进入老年代。同时长期存活的对象进入老年代（虚拟机给每个对象定义一个年龄计数器）。<br><code>年轻代内存又被分成三部分</code>：  </p>
+<p>_<strong>新生代(Young Generation)</strong>_ ：方法中去new一个对象，那这方法调用完毕后，对象就会被回收，这就是一个典型的新生代对象。 每次使用Eden和其中一块Survivor，当回收时，将Eden和Survivor中还存活的对象一次性地复制到另外一块Survivor空间上，最后清理Eden和刚才用过的Survivor空间。<strong><em> HotSpot虚拟机默认Eden和Survivor的大小比例是8:1 </em></strong>，也就是说，每次新生代中可用内存空间为整个新生代容量的90%（80%+10%），只有10%的空间会被浪费。 98%的对象可回收只是一般场景下的数据，没办法保证每次回收都只有不多于10%的对象存活，当Survivor不够用时，需要依赖于老年代进行分配担保，所以<strong><em> 大对象 </em></strong>直接进入老年代。同时长期存活的对象进入老年代（虚拟机给每个对象定义一个年龄计数器）。<br><code>年轻代内存又被分成三部分</code>：  </p>
 <ol>
 <li><code>Eden空间</code>：对象优先分配在Eden区，若Eden区无足够的空间，虚拟机执行一次Minor GC。对象被创建时首先放到这个区域，进行垃圾回收后，不能被回收的对象被放到空的Survivor区域。</li>
 <li><code>Survivor Space幸存者区</code>：用于保存在Eden Space内存区域中经过垃圾回收后没有被回收的对象。Survivor有两类，分别为<strong><em>To Suvivor </em></strong> 和 <strong><em>From Suvivor</em></strong>两个区域，这两个区域空间大小是一样的执行：<br>   &emsp;&emsp;a.<code>From Survivor空间</code>：<br>   &emsp;&emsp;b.<code>To Survivor空间</code> ：      </li>
 <li><code>执行回收的内存运行</code>： 执行垃圾回收时Eden区域不能被回收的对象被放入到空的Suvivor(也就是<strong>To Survivor</strong>，同时Eden区域的内存会在垃圾回收的过程中全部释放)，另一个Survivor(即From Survivor)里不能被回收的对象也会被放入到Survivor(即To Survivor)，然后To Survivor和 From Survivor的标记会互换，始终保证一个Survivor是空的。 </li>
 </ol>
-</blockquote>
-<blockquote>
-<p><em><strong>老年代(Old Generation)</strong></em> ：<strong> 老年代空间大小&emsp;=&emsp;堆空间大小&emsp;–&emsp;年轻代大空间大小 </strong>   </p>
+<p>_<strong>老年代(Old Generation)</strong>_ ：<strong> 老年代空间大小&emsp;=&emsp;堆空间大小&emsp;—&emsp;年轻代大空间大小 </strong>   </p>
 </blockquote>
 </li>
 <li><p><strong> 年轻代的垃圾回收 </strong>：<strong><em>Eden Space(伊甸园) </em></strong>和<strong><em>Suvivor Space </em></strong>都属于新生代，新生代中执行垃圾回收被称为Minor GC(由于是对新生代进行垃圾回收，所以被称为Young GC)，每次Young GC 后留下来的对象age +1。</p>
 <blockquote>
-<p><em><strong> Eden:From:TO =8:1:1</strong></em><br> 由于新生代中90%的对象都是”朝生夕死”，采用复制算法是比较合理的，首先只移动了存活下来的对象(比较少数),其次内存在移动到To区域后是有顺序的，不存在内存碎片。值得一提的是，假如在一次Minor GC时,<code>Eden中存活的对象</code>+<code>From中存活的对象</code>&gt;<code>To的剩余空间</code>，则会通过担保机制将对象直接转移到Old Gen ,如果Old Gen的内存空间也不够，则进行一次Full GC .当<strong><em> 对象的年龄到达15岁时会转移到Old Gen(可通过参数配置，一般不建议更改) </em></strong></p>
+<p>_<strong> Eden:From:TO =8:1:1</strong>_<br> 由于新生代中90%的对象都是”朝生夕死”，采用复制算法是比较合理的，首先只移动了存活下来的对象(比较少数),其次内存在移动到To区域后是有顺序的，不存在内存碎片。值得一提的是，假如在一次Minor GC时,<code>Eden中存活的对象</code>+<code>From中存活的对象</code>&gt;<code>To的剩余空间</code>，则会通过担保机制将对象直接转移到Old Gen ,如果Old Gen的内存空间也不够，则进行一次Full GC .当<strong><em> 对象的年龄到达15岁时会转移到Old Gen(可通过参数配置，一般不建议更改) </em></strong></p>
 </blockquote>
 </li>
 <li><p><strong> 使用方式 </strong>：Java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可，就像我们的磁盘空间一样。在实现时，既可以实现成固定大小的，也可以是可扩展的，当前主流的虚拟机都是按照可扩展来实现的（通过-Xmx和-Xms控制）。<strong><em> 如果在堆中没有内存完成实例分配，并且堆也无法再扩展时，将会抛出OutOfMemoryError异常。 </em></strong></p>
@@ -814,7 +810,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -898,7 +894,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、方法区-Method-Area"><span class="nav-number">1.1.</span> <span class="nav-text">一、方法区(Method Area)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、堆-Heap"><span class="nav-number">1.2.</span> <span class="nav-text">二、堆(Heap)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、方法区-Method-Area"><span class="nav-number">0.1.</span> <span class="nav-text">一、方法区(Method Area)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、堆-Heap"><span class="nav-number">0.2.</span> <span class="nav-text">二、堆(Heap)</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -932,7 +928,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共13.2k字</span>
+    <span class="post-count">博客全站共14.1k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -960,7 +956,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">13.2k</span>
+    <span title="Site words total count">14.1k</span>
    
   -->
 </div>
@@ -1595,6 +1591,8 @@ var jiathis_config={
   
 
   
+  
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>

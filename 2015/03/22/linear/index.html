@@ -517,9 +517,7 @@
 <blockquote>
 <p>基数排序：根据键值的每位数字来分配桶；<br>计数排序：每个桶只存储单一键值；<br>桶排序：每个桶存储一定范围的数值； </p>
 </blockquote>
-<a id="more"></a>
-<hr>
-<h3 id="计数排序："><a href="#计数排序：" class="headerlink" title="计数排序："></a>计数排序：</h3><p>计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。<br><code>基本思想</code></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="计数排序："><a href="#计数排序：" class="headerlink" title="计数排序："></a>计数排序：</h3><p>计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。<br><code>基本思想</code></p>
 <p><code>遍历流程图例</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/countingSort.gif" alt=""></p>
 <p><code>代码实现</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[] counterSort(<span class="keyword">int</span>[] arr) &#123;</span><br><span class="line">       <span class="keyword">if</span> (<span class="keyword">null</span> == arr || arr.length == <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> arr;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">int</span> maxValue = getMaxValue(arr);</span><br><span class="line">       <span class="keyword">return</span> countingSort(arr, maxValue);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[] countingSort(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> maxValue) &#123;</span><br><span class="line">       <span class="keyword">int</span> bucketLen = maxValue + <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">int</span>[] bucket = <span class="keyword">new</span> <span class="keyword">int</span>[bucketLen];</span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> value : arr) &#123;</span><br><span class="line">           bucket[value]++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">int</span> sortedIndex = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; bucketLen; j++) &#123;</span><br><span class="line">           <span class="keyword">while</span> (bucket[j] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">               arr[sortedIndex++] = j;</span><br><span class="line">               bucket[j]--;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> arr;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMaxValue</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> maxValue = arr[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> value : arr) &#123;</span><br><span class="line">           <span class="keyword">if</span> (maxValue &lt; value) &#123;</span><br><span class="line">               maxValue = value;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> maxValue;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
@@ -798,7 +796,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -882,7 +880,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性排序："><span class="nav-number">1.</span> <span class="nav-text">线性排序：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计数排序："><span class="nav-number">1.1.</span> <span class="nav-text">计数排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桶排序："><span class="nav-number">1.2.</span> <span class="nav-text">桶排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基数排序："><span class="nav-number">1.3.</span> <span class="nav-text">基数排序：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性排序："><span class="nav-number">1.</span> <span class="nav-text">线性排序：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计数排序："><span class="nav-number">2.1.</span> <span class="nav-text">计数排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桶排序："><span class="nav-number">2.2.</span> <span class="nav-text">桶排序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基数排序："><span class="nav-number">2.3.</span> <span class="nav-text">基数排序：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -916,7 +914,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共13.2k字</span>
+    <span class="post-count">博客全站共14.1k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -944,7 +942,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">13.2k</span>
+    <span title="Site words total count">14.1k</span>
    
   -->
 </div>
@@ -1579,6 +1577,8 @@ var jiathis_config={
   
 
   
+  
+
 
   
   <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
