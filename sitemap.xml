@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://edgeowner.com/2018/04/03/distribution/</loc>
-    
-    <lastmod>2018-04-02T16:39:51.041Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://edgeowner.com/2018/03/13/Java-CAS/</loc>
     
     <lastmod>2018-03-19T10:37:03.986Z</lastmod>
@@ -121,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2015/03/27/counting-sort/</loc>
+    <loc>http://edgeowner.com/2015/03/27/countingSort/</loc>
     
     <lastmod>2015-03-27T03:30:14.000Z</lastmod>
     
@@ -129,6 +122,13 @@
   
   <url>
     <loc>http://edgeowner.com/2015/03/25/shellSort/</loc>
+    
+    <lastmod>2015-03-25T12:17:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edgeowner.com/2015/03/25/radixSort/</loc>
     
     <lastmod>2015-03-25T12:17:23.000Z</lastmod>
     

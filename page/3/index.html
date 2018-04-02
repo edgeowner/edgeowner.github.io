@@ -378,7 +378,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/counting-sort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/25/radixSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -397,7 +397,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/27/counting-sort/" itemprop="url">计数排序（Counting Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/25/radixSort/" itemprop="url">基数排序（Radix Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -409,8 +409,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-27T10:30:31+08:00">
-                2015-03-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-25T09:35:31+08:00">
+                2015-03-25
               </time>
             
 
@@ -425,8 +425,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-27T11:30:14+08:00">
-                2015-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-25T20:17:23+08:00">
+                2015-03-25
               </time>
             
           </span>
@@ -461,7 +461,7 @@
 
           
           
-             <span id="/2015/03/27/counting-sort/" class="leancloud_visitors" data-flag-title="计数排序（Counting Sort）">
+             <span id="/2015/03/25/radixSort/" class="leancloud_visitors" data-flag-title="基数排序（Radix Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -486,7 +486,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  867
+                  23
                 </span>
               
 
@@ -512,15 +512,10 @@
 
       
         
-          <h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p>计数排序是一种稳定的<strong>线性时间排序算法</strong>。计数排序使用一个额外的数组 $C$ ，其中第i个元素是待排序数组 $A$中值等于 $i$ 的元素的个数。然后根据数组 $C$ 来将 $A$ 中的元素排到正确的位置。<br>当输入的元素是 $n$ 个 $0$到 $k$ 之间的整数时，它的运行时间是 $\Theta (n+k)$ 。计数排序不是比较排序，排序的速度快于任何比较排序算法。<br>由于用来计数的数组$C$ 的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上 $1$），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。例如：计数排序是用来排序$0$到 $100$ 之间的数字的最好的算法，但是它不适合按字母顺序排序人名。但是，计数排序可以用在基数排序算法中，能够更有效的排序数据范围很大的数组。</p>
-<ol>
-<li>计数排序(Counting Sort)是一种O(n)的排序算法，其思路是开一个长度为maxValue-minValue+1的数组，然后分配。扫描一遍原始数组，以当前值-minValue作为下标，将该下标的计数器增1。</li>
-<li>收集。扫描一遍计数器数组，按顺序把值收集起来。</li>
-<li>计数排序本质上是一种特殊的桶排序，当桶的个数最大的时候，就是计数排序。</li>
-</ol>
+          <h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/27/counting-sort/#more" rel="contents">
+            <a class="btn" href="/2015/03/25/radixSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
