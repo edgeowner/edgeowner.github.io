@@ -485,7 +485,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  755
+                  801
                 </span>
               
 
@@ -513,8 +513,9 @@
         <h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>希尔排序也称为递减增量排序算法，是插入排序的一种更高效的改进版本。希尔排序是非稳定排序算法。希尔排序是基于插入排序的一下两点性质而提出改进方法的：</p>
 <ul>
 <li>插入排序在对几乎已经安排好序的数据操作时，效率高，即可达到线性排序的效率</li>
-<li>插入排序一般来说是抵消的，因为插入排序每次只能将数据移动一位<br>从专业的角度上讲，将一个序列分成好几个序列，用一个数来表示：那个数称为增量。显然的是，增量是不断递减的(直到增量为1)</li>
+<li>插入排序一般来说是抵消的，因为插入排序每次只能将数据移动一位<br>从专业的角度上讲，将一个序列分成好几个序列，用一个数来表示：那个数称为增量。显然的是，增量是不断递减的(直到增量为$1$)</li>
 </ul>
+<p>希尔排序的平均复杂度是$O(N*logN)~O(N^2)$，最好的情况$O(N^1.3)$，最坏的情况$O(N^2)$；空间复杂度$O(1)$;不稳定算法</p>
 <hr>
 <a id="more"></a>
 <h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>In this sorting algorithm we compare elements that are distant apart rather than adjacent. Shell sort is like insertion sort.</p>
@@ -907,7 +908,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共14.8k字</span>
+    <span class="post-count">博客全站共14.9k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -935,7 +936,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.8k</span>
+    <span title="Site words total count">14.9k</span>
    
   -->
 </div>
@@ -1570,6 +1571,26 @@ var jiathis_config={
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
