@@ -7,7 +7,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -136,7 +136,7 @@
 
 
 
-  <meta name="keywords" content="Java, 分布式, 多线程, 高并发， 算法, UML, 设计模式, 锁" />
+  <meta name="keywords" content="Algorithms,Sort," />
 
 
 
@@ -150,16 +150,18 @@
 
 
 
-<meta name="description" content="Summer和Sunny博客乐园">
-<meta property="og:type" content="website">
-<meta property="og:title" content="edgeowner">
-<meta property="og:url" content="http://edgeowner.com/tags/小记/index.html">
+<meta name="description" content="归并排序归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。 归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i">
+<meta name="keywords" content="Algorithms,Sort">
+<meta property="og:type" content="article">
+<meta property="og:title" content="归并排序（Merge Sort）">
+<meta property="og:url" content="http://edgeowner.com/2015/03/28/mergeSort/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="Summer和Sunny博客乐园">
+<meta property="og:description" content="归并排序归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。 归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2015-03-28T12:17:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="edgeowner">
-<meta name="twitter:description" content="Summer和Sunny博客乐园">
+<meta name="twitter:title" content="归并排序（Merge Sort）">
+<meta name="twitter:description" content="归并排序归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。 归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i">
 
 
 
@@ -189,13 +191,13 @@
 
 
 
-  <link rel="canonical" href="http://edgeowner.com/tags/小记/"/>
+  <link rel="canonical" href="http://edgeowner.com/2015/03/28/mergeSort/"/>
 
 
 
 
 
-  <title>标签: 小记 | edgeowner</title>
+  <title>归并排序（Merge Sort） | edgeowner</title>
   
 
 
@@ -210,12 +212,12 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
 
-</head>
+<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -224,7 +226,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/edgeowner" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -363,54 +365,374 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>小记<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/28/mergeSort/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2014/07/22/firstblog/" itemprop="url">
-              
-                <span itemprop="name">博客简介</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">归并排序（Merge Sort）</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-07-22T10:40:18+08:00"
-              content="2014-07-22" >
-          07-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-28T19:35:31+08:00">
+                2015-03-28
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-28T20:17:23+08:00">
+                2015-03-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/03/28/mergeSort/" class="leancloud_visitors" data-flag-title="归并排序（Merge Sort）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,200
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<p>归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i]$复制到$r[k]$中，并令$i$和$k$分别加上$1$；否则将第二个有序表中的元素$b[j]$复制到$r[k]$中，并令$j$和$k$分别加上$1$，如此循环下去，直到其中一个有序表取完，然后再将另一个有序表中剩余的元素复制到$r$中从下标$k$到下标$t$的单元。归并排序的算法我们通常用递归实现，先把待排序区间$[s,t]$以中点二分，接着把左边子区间排序，再把右边子区间排序，最后把左区间和右区间用一次归并操作合并成有序的区间$[s,t]$。</p>
+<hr>
+<a id="more"></a>
+<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>Selection Sort、Bubble Sort、Insertion Sort is $O(n^2)$ in average case , Merge Sort $O(n log(n))$ in worst case.</p>
+<ol>
+<li>In this sorting algorithm we use the idea of divide and conquer. We divide the array into two parts, sort them and then merge them to get the elements in ascending or descending order. Merge sorting is done recursively.</li>
+<li>We take an array and keep dividing from the middle till we get only one element in each halves(sub-array).</li>
+<li>The we sort the sub-arrays and join (merge) them back to get the final sorted array.</li>
+</ol>
+<blockquote>
+<ol>
+<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；</li>
+<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置；</li>
+<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；</li>
+<li>重复步骤3直到某一指针超出序列尾；</li>
+<li>将另一序列剩下的所有元素直接复制到合并序列尾</li>
+</ol>
+</blockquote>
+<p><strong>总结</strong>：</p>
+<ul>
+<li>将两个已排好序的数组合并成一个有序的数组,称之为归并排序；</li>
+<li>步骤：遍历两个数组，比较它们的值。谁比较小，谁先放入大数组中，直到数组遍历完成；</li>
+</ul>
+<p>算法动态展示</p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=7zuGmKfUt7s&amp;t=15s" target="_blank" rel="noopener">YouTube视频源地址</a> ;</li>
+<li><a href="https://www.youtube.com/watch?v=e5ik2UGjHBk" target="_blank" rel="noopener">Merge Sort - step by step guide</a>;<br><strong><em>In this video beg and end are pointing at array index not the value at the array index.﻿ </em></strong></li>
+<li><a href="https://www.youtube.com/watch?v=qdv3i6X0PiQ" target="_blank" rel="noopener">开课老师视频源</a>; </li>
+<li><a href="https://www.youtube.com/watch?v=TzeBrDU-JaY&amp;t=319s" target="_blank" rel="noopener">MycodeSchool</a> </li>
+<li><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/mergeSort.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+</li>
+</ol>
+<hr>
+<h4 id="代码实现方式"><a href="#代码实现方式" class="headerlink" title="代码实现方式"></a>代码实现方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 归并排序</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arrs)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (arrs == <span class="keyword">null</span> || arrs.length == <span class="number">0</span> || arrs.length == <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      mergeSort(arrs, <span class="number">0</span>, arrs.length - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 归并排序核心部分(递归调用)</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> left</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> right</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arrs, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">      <span class="comment">//如果只有一个元素就不用排序</span></span><br><span class="line">      <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">//取消中间数，进行拆分</span></span><br><span class="line">          <span class="keyword">int</span> middle = (left + right) / <span class="number">2</span>;</span><br><span class="line">          <span class="comment">//左边的数不断进行拆分</span></span><br><span class="line">          mergeSort(arrs, left, middle);</span><br><span class="line">          <span class="comment">//右边的数不断进行拆分</span></span><br><span class="line">          mergeSort(arrs, middle + <span class="number">1</span>, right);</span><br><span class="line">          <span class="comment">//合并</span></span><br><span class="line">          merge(arrs, left, middle + <span class="number">1</span>, right);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 合并数组</span></span><br><span class="line"><span class="comment">   *</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> left   指向数组第一个元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> middle 指向数组分隔的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> right  指向数组最后的元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arrs, <span class="keyword">int</span> left, <span class="keyword">int</span> middle, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">//左边的数组大小</span></span><br><span class="line">      <span class="keyword">int</span>[] leftArrs = <span class="keyword">new</span> <span class="keyword">int</span>[middle - left];</span><br><span class="line"></span><br><span class="line">      <span class="comment">//右边的数组大小</span></span><br><span class="line">      <span class="keyword">int</span>[] rightArrs = <span class="keyword">new</span> <span class="keyword">int</span>[right - middle + <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">      <span class="comment">//往这两个数组填充数据</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt; middle; i++) &#123;</span><br><span class="line">          leftArrs[i - left] = arrs[i];</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = middle; i &lt;= right; i++) &#123;</span><br><span class="line">          rightArrs[i - middle] = arrs[i];</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">      <span class="comment">//arrs数组的第一个元素</span></span><br><span class="line">      <span class="keyword">int</span> k = left;</span><br><span class="line">      <span class="comment">//比较两个数组的值，哪个小，就往数组上放</span></span><br><span class="line">      <span class="keyword">while</span> (i &lt; leftArrs.length &amp;&amp; j &lt; rightArrs.length) &#123;</span><br><span class="line">          <span class="comment">//谁比较小，谁将元素放入大数组中，移动指针，继续比较下一个</span></span><br><span class="line">          <span class="keyword">if</span> (leftArrs[i] &lt; rightArrs[j]) &#123;</span><br><span class="line">              arrs[k] = leftArrs[i];</span><br><span class="line">              i++;</span><br><span class="line">              k++;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              arrs[k] = rightArrs[j];</span><br><span class="line">              j++;</span><br><span class="line">              k++;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">//如果左边的数组还没比较完，右边的数都已经完了，那么将左边的数抄到大数组中(剩下的都是大数字)</span></span><br><span class="line">      <span class="keyword">while</span> (i &lt; leftArrs.length) &#123;</span><br><span class="line">          arrs[k] = leftArrs[i];</span><br><span class="line">          i++;</span><br><span class="line">          k++;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//如果右边的数组还没比较晚，左边的数都已经完了，那么将右边的数抄到大数组中(剩下的都是大数字)</span></span><br><span class="line">      <span class="keyword">while</span> (j &lt; rightArrs.length) &#123;</span><br><span class="line">          arrs[k] = rightArrs[j];</span><br><span class="line">          k++;</span><br><span class="line">          j++;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>参考地址：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484058&amp;idx=1&amp;sn=432c2dd8e4bda662ce066c09f8e22bda&amp;chksm=ebd7439bdca0ca8ded40d0f431db411928936db9b4b5f5595027c8acd2efdef5ba35348641d2&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">归并排序</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2015/03/28/mergeSort/">归并排序（Merge Sort）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
+  <p><span>发布时间:</span>2015年03月28日 - 19:03</p>
+  <p><span>最后更新:</span>2015年03月28日 - 20:03</p>
+  <p><span>原始链接:</span><a href="/2015/03/28/mergeSort/" title="归并排序（Merge Sort）">http://edgeowner.com/2015/03/28/mergeSort/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2015/03/28/mergeSort/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
 
       
     </div>
 
+    <div>
+      
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="ZhangSunny 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="ZhangSunny 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    <!-- 
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    ZhangSunny
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://edgeowner.com/2015/03/28/mergeSort/" title="归并排序（Merge Sort）">http://edgeowner.com/2015/03/28/mergeSort/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+    -->
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithms/" rel="tag"><i class="fa fa-tag"></i> Algorithms</a>
+          
+            <a href="/tags/Sort/" rel="tag"><i class="fa fa-tag"></i> Sort</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/03/27/radixSort/" rel="next" title="基数排序（Radix Sort）">
+                <i class="fa fa-chevron-left"></i> 基数排序（Radix Sort）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/04/13/Java-Core/" rel="prev" title="JavaCore（Java核心）">
+                JavaCore（Java核心） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -418,6 +740,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDk4MS8xMTUxOA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -440,8 +771,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -534,6 +874,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法思路"><span class="nav-number">1.1.</span> <span class="nav-text">算法思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现方式"><span class="nav-number">1.2.</span> <span class="nav-text">代码实现方式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -713,6 +1069,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -742,6 +1102,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1241,7 +1612,7 @@
   
 
 
-<!--   -->
+<!--   --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

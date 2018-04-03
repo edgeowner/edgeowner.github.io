@@ -237,6 +237,28 @@
 
     
   <url>
+    <loc>http://edgeowner.com/2015/03/28/mergeSort/</loc>
+    <lastmod>2015-03-28T12:17:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>归并排序（Merge Sort）</title>
+        <pubTime>2015-03-28T11:35:31.000Z</pubTime>
+        
+        <tag>Algorithms</tag>
+         
+        <tag>Sort</tag>
+         
+         
+           
+             
+              <breadCrumb title="Algorithms" url="http://edgeowner.com/categories/Algorithms/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edgeowner.com/2015/03/27/radixSort/</loc>
     <lastmod>2015-03-27T12:17:23.000Z</lastmod>
     <data>
@@ -303,12 +325,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/03/24/quickSort/</loc>
+    <loc>http://edgeowner.com/2015/03/24/heapSort/</loc>
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>快速排序（Quick Sort）</title>
-        <pubTime>2015-03-24T02:10:31.000Z</pubTime>
+        <title>堆排序（Heap Sort）</title>
+        <pubTime>2015-03-24T02:12:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
          
@@ -325,12 +347,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/03/24/heapSort/</loc>
+    <loc>http://edgeowner.com/2015/03/24/quickSort/</loc>
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>堆排序（Heap Sort）</title>
-        <pubTime>2015-03-24T02:12:31.000Z</pubTime>
+        <title>快速排序（Quick Sort）</title>
+        <pubTime>2015-03-24T02:10:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
          
