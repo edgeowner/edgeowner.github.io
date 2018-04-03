@@ -7,7 +7,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -150,18 +150,18 @@
 
 
 
-<meta name="description" content="基数排序">
+<meta name="description" content="基数排序基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(nlog(r)m)$，其中r为所采取的基数，而$m$为堆数，在某些时候，基数排序法的效率高于其它的稳定性">
 <meta name="keywords" content="Algorithms,Sort">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基数排序（Radix Sort）">
 <meta property="og:url" content="http://edgeowner.com/2015/03/27/radixSort/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="基数排序">
+<meta property="og:description" content="基数排序基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(nlog(r)m)$，其中r为所采取的基数，而$m$为堆数，在某些时候，基数排序法的效率高于其它的稳定性">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2015-03-27T12:17:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基数排序（Radix Sort）">
-<meta name="twitter:description" content="基数排序">
+<meta name="twitter:description" content="基数排序基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(nlog(r)m)$，其中r为所采取的基数，而$m$为堆数，在某些时候，基数排序法的效率高于其它的稳定性">
 
 
 
@@ -212,12 +212,12 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
 
-</head>
+<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -226,7 +226,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/edgeowner" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -485,7 +485,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  23
+                  722
                 </span>
               
 
@@ -510,12 +510,36 @@
       
 
       
-        <h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><hr>
-<a id="more"></a>
-<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><hr>
-<h4 id="代码实现方式"><a href="#代码实现方式" class="headerlink" title="代码实现方式"></a>代码实现方式</h4><p><code>java</code></p>
+        <h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(nlog(r)m)$，其中r为所采取的基数，而$m$为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。<br>基数排序是按照<strong>分配，回收（分配到不同的位置上，然后回收）…不断分配…回收来进行排序，直到有序…</strong>。</p>
 <hr>
-<p>参考地址：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484071&amp;idx=2&amp;sn=5195363e7a5c5e3e7cac2a733c2695e9&amp;chksm=ebd743a6dca0cab0b79aec38ff835116af9079114c9266ef673c6c1009b32b2abf262bf35e0c#rd" target="_blank" rel="noopener">基数排序</a></p>
+<a id="more"></a>
+<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>It is a sorting algorithm that is used to sort numbers. We sort the numbers from least significant digit to the most significant digit.</p>
+<ol>
+<li>When we are sorting the numbers we will first find the number of digits in the biggest number.</li>
+<li>If there are N digits in the biggest number then we will need to perform N number of pass.</li>
+<li>We will pad the remaining numbers with leading zeros so they all have N digits.</li>
+<li>Then we will take 10 buckets labeled 0 to 9 and sort the numbers.</li>
+<li>After the sorting is complete we will remove the leading zeros.</li>
+</ol>
+<p>基数排序的要点就两个：</p>
+<blockquote>
+<ol>
+<li>分配：按照元素的大小来放入不同的桶子里；</li>
+<li>回收：将桶子里的元素按桶子顺序重新放到数组中；</li>
+<li>重复…..两个步骤；<br><strong><em> 基数排序对有负数和0的数列难以进行排序 </em></strong></li>
+</ol>
+</blockquote>
+<p>算法动态展示</p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=nu4gDuFabIM" target="_blank" rel="noopener">YouTube视频源地址</a> ;</li>
+<li><a href="https://www.youtube.com/watch?v=YXFI4osELGU" target="_blank" rel="noopener">Radix Sort - step by step guide</a>;</li>
+<li><div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180403-113850-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+</li>
+</ol>
+<hr>
+<h4 id="代码实现方式"><a href="#代码实现方式" class="headerlink" title="代码实现方式"></a>代码实现方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 基数排序</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">radixSort</span><span class="params">(<span class="keyword">int</span>[] arrs)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> max = findMax(arrs, <span class="number">0</span>, arrs.length - <span class="number">1</span>);</span><br><span class="line">       <span class="comment">//需要遍历的次数由数组最大的位数来决定</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; max / i &gt; <span class="number">0</span>; i = i * <span class="number">10</span>) &#123;</span><br><span class="line">           <span class="keyword">int</span>[][] buckets = <span class="keyword">new</span> <span class="keyword">int</span>[arrs.length][<span class="number">10</span>];</span><br><span class="line">           <span class="comment">//获取每一个数字（个、十、百、千位...分配到桶子里）</span></span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arrs.length; j++) &#123;</span><br><span class="line">               <span class="keyword">int</span> num = (arrs[j] / i) % <span class="number">10</span>;</span><br><span class="line">               <span class="comment">//将其放入桶子里</span></span><br><span class="line">               buckets[j][num] = arrs[j];</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//回收桶子里的元素</span></span><br><span class="line">           <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">           <span class="comment">//有10个桶子</span></span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">               <span class="comment">//对每个桶子里的元素进行回收</span></span><br><span class="line">               <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt; arrs.length; l++) &#123;</span><br><span class="line">                   <span class="comment">//如果桶子里有元素就回收(数据会初始化为0)</span></span><br><span class="line">                   <span class="keyword">if</span> (buckets[l][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                       arrs[k++] = buckets[l][j];</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 递归找出数组最大值</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> arrs  数组</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> left  左边界，第一个数</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> right 右边界，数组长度</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">findMax</span><span class="params">(<span class="keyword">int</span>[] arrs, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//若该数组只有一个数，那么最大的就是该数组第一个值</span></span><br><span class="line">       <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">           <span class="keyword">return</span> arrs[left];</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">int</span> leftValue = arrs[left];</span><br><span class="line">           <span class="comment">//找出所有元素中的最大值</span></span><br><span class="line">           <span class="keyword">int</span> rightvalue = findMax(arrs, left + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> (leftValue &gt; rightvalue) &#123;</span><br><span class="line">               <span class="keyword">return</span> leftValue;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">return</span> rightvalue;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>参考地址：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484071&amp;idx=2&amp;sn=5195363e7a5c5e3e7cac2a733c2695e9&amp;chksm=ebd743a6dca0cab0b79aec38ff835116af9079114c9266ef673c6c1009b32b2abf262bf35e0c&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">基数排序</a></p>
 
       
     </div>
@@ -770,7 +794,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -888,7 +912,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共14.1k字</span>
+    <span class="post-count">博客全站共14.8k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -916,7 +940,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.1k</span>
+    <span title="Site words total count">14.8k</span>
    
   -->
 </div>
@@ -1562,7 +1586,7 @@ var jiathis_config={
   
 
 
-<!--   -->
+<!--   --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
