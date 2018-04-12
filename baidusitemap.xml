@@ -158,16 +158,14 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
+    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>乐观锁和悲观锁(OCC和PCC)</title>
+        <title>事务知识点</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
-        <tag>并发控制</tag>
-         
-        <tag>锁</tag>
+        <tag>事务</tag>
          
          
            
@@ -180,14 +178,16 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
+    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>事务知识点</title>
+        <title>乐观锁和悲观锁(OCC和PCC)</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
-        <tag>事务</tag>
+        <tag>并发控制</tag>
+         
+        <tag>锁</tag>
          
          
            
