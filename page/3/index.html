@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/28/mergeSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/22/linear/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -399,7 +399,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/28/mergeSort/" itemprop="url">归并排序（Merge Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/22/linear/" itemprop="url">排序算法之线性排序</a></h2>
         
 
         <div class="post-meta">
@@ -411,8 +411,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-28T19:35:31+08:00">
-                2015-03-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-22T19:20:31+08:00">
+                2015-03-22
               </time>
             
 
@@ -427,8 +427,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-28T20:17:23+08:00">
-                2015-03-28
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-23T21:29:00+08:00">
+                2015-03-23
               </time>
             
           </span>
@@ -463,7 +463,7 @@
 
           
           
-             <span id="/2015/03/28/mergeSort/" class="leancloud_visitors" data-flag-title="归并排序（Merge Sort）">
+             <span id="/2015/03/22/linear/" class="leancloud_visitors" data-flag-title="排序算法之线性排序">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,7 +488,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,200
+                  1,465
                 </span>
               
 
@@ -514,817 +514,14 @@
 
       
         
-          <h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
-<p>归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i]$复制到$r[k]$中，并令$i$和$k$分别加上$1$；否则将第二个有序表中的元素$b[j]$复制到$r[k]$中，并令$j$和$k$分别加上$1$，如此循环下去，直到其中一个有序表取完，然后再将另一个有序表中剩余的元素复制到$r$中从下标$k$到下标$t$的单元。归并排序的算法我们通常用递归实现，先把待排序区间$[s,t]$以中点二分，接着把左边子区间排序，再把右边子区间排序，最后把左区间和右区间用一次归并操作合并成有序的区间$[s,t]$。</p>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/28/mergeSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/radixSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/27/radixSort/" itemprop="url">基数排序（Radix Sort）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-27T10:35:31+08:00">
-                2015-03-27
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-27T20:17:23+08:00">
-                2015-03-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/27/radixSort/" class="leancloud_visitors" data-flag-title="基数排序（Radix Sort）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  723
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(n log(r)m)$，其中$r$为所采取的基数，而$m$为堆数，空间复杂度$O(N)$，在某些时候，基数排序法的效率高于其它的稳定性排序法。<br><code>基数排序是按照分配，回收（分配到不同的位置上，然后回收）...不断分配...回收来进行排序，直到有序...。</code></p>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/27/radixSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/countingSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/27/countingSort/" itemprop="url">计数排序（Counting Sort）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-27T10:30:31+08:00">
-                2015-03-27
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-27T11:30:14+08:00">
-                2015-03-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/27/countingSort/" class="leancloud_visitors" data-flag-title="计数排序（Counting Sort）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  867
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p>计数排序是一种稳定的<strong>线性时间排序算法</strong>。计数排序使用一个额外的数组 $C$ ，其中第i个元素是待排序数组 $A$中值等于 $i$ 的元素的个数。然后根据数组 $C$ 来将 $A$ 中的元素排到正确的位置。<br>当输入的元素是 $n$ 个 $0$到 $k$ 之间的整数时，它的运行时间是 $\Theta (n+k)$ 。计数排序不是比较排序，排序的速度快于任何比较排序算法。<br>由于用来计数的数组$C$ 的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上 $1$），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。例如：计数排序是用来排序$0$到 $100$ 之间的数字的最好的算法，但是它不适合按字母顺序排序人名。但是，计数排序可以用在基数排序算法中，能够更有效的排序数据范围很大的数组。</p>
-<ol>
-<li>计数排序(Counting Sort)是一种$O(n)$的排序算法，其思路是开一个长度为$maxValue-minValue+1$的数组，然后分配。扫描一遍原始数组，以当前值$-minValue$作为下标，将该下标的计数器增$1$。</li>
-<li>收集。扫描一遍计数器数组，按顺序把值收集起来。</li>
-<li>计数排序本质上是一种特殊的桶排序，当桶的个数最大的时候，就是计数排序。</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/27/countingSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/25/shellSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/25/shellSort/" itemprop="url">希尔排序（Shell Sort）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-25T09:15:31+08:00">
-                2015-03-25
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-25T20:17:23+08:00">
-                2015-03-25
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/25/shellSort/" class="leancloud_visitors" data-flag-title="希尔排序（Shell Sort）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  801
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>希尔排序也称为递减增量排序算法，是插入排序的一种更高效的改进版本。希尔排序是非稳定排序算法。希尔排序是基于插入排序的一下两点性质而提出改进方法的：</p>
-<ul>
-<li>插入排序在对几乎已经安排好序的数据操作时，效率高，即可达到线性排序的效率</li>
-<li>插入排序一般来说是抵消的，因为插入排序每次只能将数据移动一位<br>从专业的角度上讲，将一个序列分成好几个序列，用一个数来表示：那个数称为增量。显然的是，增量是不断递减的(直到增量为$1$)</li>
-</ul>
-<p>希尔排序的平均复杂度是$O(N*logN)~O(N^2)$，最好的情况$O(N^1.3)$，最坏的情况$O(N^2)$；空间复杂度$O(1)$;不稳定算法</p>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/25/shellSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/heapSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/24/heapSort/" itemprop="url">堆排序（Heap Sort）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-24T10:12:31+08:00">
-                2015-03-24
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-24T22:19:00+08:00">
-                2015-03-24
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/24/heapSort/" class="leancloud_visitors" data-flag-title="堆排序（Heap Sort）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  903
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>堆排序是利用堆这种数据结构而设计的一种排序算法，堆排序是一种选择排序，它的最坏，最好，平均时间复杂度均为O(nlogn)，它也是不稳定排序。<br>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。<br>大堆小堆图例：<br><img src="http://p5vswdxl9.bkt.clouddn.com/%E5%A4%A7%E5%A0%86%E5%B0%8F%E5%A0%86.png" alt=""><br>简单来说：堆排序是将数据看成是完全二叉树、根据完全二叉树的特性来进行排序的一种算法。<br>最大堆要求节点的元素都要不小于其孩子，最小堆要求节点元素都不大于其左右孩子。那么处于最大堆的根节点的元素一定是这个堆中的最大值。<br>完全二叉树有个特性：左边子节点位置 = 当前父节点的两倍 + 1，右边子节点位置 = 当前父节点的两倍 + 2<br><a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484064&amp;idx=2&amp;sn=d308d573df43e8e3b0633d0dc1147c3b&amp;chksm=ebd743a1dca0cab774e7df348401039dda0765923efde0b9cf8e3589c4ceab25c5ec0cea5f7d#rd" target="_blank" rel="noopener">点击参考文章</a></p>
+          <h2 id="线性排序："><a href="#线性排序：" class="headerlink" title="线性排序："></a>线性排序：</h2><p><strong><em>计数排序 </em></strong>、<strong><em>桶排序 </em></strong>、<strong><em>基数排序 </em></strong><br>这三种排序算法都利用了桶的概念，但对桶的使用方法上有明显差异：</p>
+<blockquote>
+<p>基数排序：根据键值的每位数字来分配桶；<br>计数排序：每个桶只存储单一键值；<br>桶排序：每个桶存储一定范围的数值； </p>
+</blockquote>
 <h2 id=""><a href="#" class="headerlink" title=""></a>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/24/heapSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/22/linear/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1385,7 +582,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/quickSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/18/division-recursion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1404,7 +601,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/24/quickSort/" itemprop="url">快速排序（Quick Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/18/division-recursion/" itemprop="url">排序算法之归并排序</a></h2>
         
 
         <div class="post-meta">
@@ -1416,8 +613,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-24T10:10:31+08:00">
-                2015-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-18T10:10:31+08:00">
+                2015-03-18
               </time>
             
 
@@ -1432,8 +629,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-24T22:19:00+08:00">
-                2015-03-24
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-19T20:29:00+08:00">
+                2015-03-19
               </time>
             
           </span>
@@ -1468,7 +665,7 @@
 
           
           
-             <span id="/2015/03/24/quickSort/" class="leancloud_visitors" data-flag-title="快速排序（Quick Sort）">
+             <span id="/2015/03/18/division-recursion/" class="leancloud_visitors" data-flag-title="排序算法之归并排序">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1493,7 +690,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  645
+                  617
                 </span>
               
 
@@ -1519,19 +716,823 @@
 
       
         
-          <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。</p>
-<hr>
-<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>快速排一般基于递归实现：</p>
+          <h2 id="分治递归思想排序："><a href="#分治递归思想排序：" class="headerlink" title="分治递归思想排序："></a>分治递归思想排序：</h2><hr>
+<h3 id="归并排序："><a href="#归并排序：" class="headerlink" title="归并排序："></a>归并排序：</h3><p>归并排序（Merge sort）是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。<br>作为一种典型的分而治之思想的算法应用，归并排序的实现由两种方法：</p>
+<blockquote>
+<p>自上而下的递归（所有递归的方法都可以用迭代重写，所以就有了第 2 种方法）；<br>自下而上的迭代；</p>
+</blockquote>
+<p><code>基本思想</code></p>
 <ol>
-<li>选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。</li>
-<li>基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。</li>
-<li>一轮下来，这个枢轴的位置一定在最终位置上。</li>
-<li>对两个子数组分别重复上述过程，直到每个数组只有一个元素。</li>
-<li>排序完成。</li>
-</ol>
+<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；</li>
+<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置；</li>
+<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；</li>
+<li>重复步骤 3 直到某一指针达到序列尾；</li>
+<li>将另一序列剩下的所有元素直接复制到合并序列尾。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/24/quickSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/18/division-recursion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/16/high-efficiency/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/03/16/high-efficiency/" itemprop="url">排序算法之高效排序</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-16T18:02:31+08:00">
+                2015-03-16
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-16T20:29:00+08:00">
+                2015-03-16
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/03/16/high-efficiency/" class="leancloud_visitors" data-flag-title="排序算法之高效排序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,149
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="高效排序"><a href="#高效排序" class="headerlink" title="高效排序"></a>高效排序</h2><p><strong><em>快速排序 </em></strong>、<strong><em>堆排序 </em></strong>、<strong><em>希尔排序 </em></strong></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/03/16/high-efficiency/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/14/simple-sort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/03/14/simple-sort/" itemprop="url">排序算法之简单排序</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-14T20:10:31+08:00">
+                2015-03-14
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-15T20:29:00+08:00">
+                2015-03-15
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/03/14/simple-sort/" class="leancloud_visitors" data-flag-title="排序算法之简单排序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,426
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简单排序"><a href="#简单排序" class="headerlink" title="简单排序"></a>简单排序</h2><p><strong><em>冒泡排序 </em></strong>、<strong><em>选择排序 </em></strong>、<strong><em>插入排序 </em></strong><br><figure class="highlight java"><figcaption><span>公共代码部分</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwapUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArrays</span><span class="params">(<span class="keyword">int</span>[] arrs)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == arrs || arrs.length == <span class="number">0</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"Is Empty!"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arrs.length; i++) &#123;</span><br><span class="line">            sb.append(<span class="string">","</span> + arrs[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        String toPring = sb.append(<span class="string">" ]"</span>).toString().replaceFirst(<span class="string">","</span>, <span class="string">""</span>);</span><br><span class="line">        System.out.println(toPring);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/03/14/simple-sort/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/13/sort-algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/03/13/sort-algorithm/" itemprop="url">排序算法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-13T21:02:31+08:00">
+                2015-03-13
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2015-03-14T20:29:00+08:00">
+                2015-03-14
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2015/03/13/sort-algorithm/" class="leancloud_visitors" data-flag-title="排序算法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  494
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="排序算法分类"><a href="#排序算法分类" class="headerlink" title="排序算法分类"></a>排序算法分类</h2><h5 id="emsp-emsp-emsp-排序算法从排序的效率上分类，主要分四类："><a href="#emsp-emsp-emsp-排序算法从排序的效率上分类，主要分四类：" class="headerlink" title="&emsp;&emsp;&emsp;排序算法从排序的效率上分类，主要分四类："></a>&emsp;&emsp;&emsp;排序算法从排序的效率上分类，主要分四类：</h5><blockquote>
+<ol>
+<li><code>简单排序</code>：<strong><em>冒泡排序 </em></strong>、<strong><em>(直接)选择排序 </em></strong>、<strong><em>(直接)插入排序 </em></strong>；</li>
+<li><code>高效排序</code>：<strong><em>快速排序 </em></strong>、<strong><em>堆排序 </em></strong>、<strong><em>希尔排序 </em></strong>；</li>
+<li><code>分治递归思想实现的排序</code>：<strong><em>递归排序 </em></strong>；</li>
+<li><code>线性排序</code>：<strong><em>计数排序 </em></strong>、<strong><em>桶排序 </em></strong>、<strong><em>基数排序 </em></strong>；<h5 id="emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类："><a href="#emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类：" class="headerlink" title="&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类："></a>&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类：</h5></li>
+<li><code>插入排序</code>：<strong><em>直接插入排序 </em></strong>、<strong><em>希尔排序 </em></strong>；</li>
+<li><code>选择排序</code>：<strong><em>直接选择排序 </em></strong>、<strong><em>堆排序 </em></strong>；</li>
+<li><code>交换排序</code>：<strong><em>冒泡排序 </em></strong>、<strong><em>快速排序 </em></strong>；</li>
+<li><code>线性排序</code>：<strong><em>计数排序 </em></strong>、<strong><em>基数排序 </em></strong>、<strong><em>桶排序 </em></strong>；</li>
+<li><code>递归排序</code>：<strong><em>归并排序 </em></strong>；
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/03/13/sort-algorithm/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2014/07/22/firstblog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2014/07/22/firstblog/" itemprop="url">博客简介</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-22T10:40:18+08:00">
+                2014-07-22
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2014-07-22T12:29:00+08:00">
+                2014-07-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+             <span id="/2014/07/22/firstblog/" class="leancloud_visitors" data-flag-title="博客简介">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  88
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="个人博客简介"><a href="#个人博客简介" class="headerlink" title="个人博客简介"></a>个人博客简介</h4><p>&emsp;&emsp;&emsp;&emsp;作为一枚计科专业的码农，2014年开始从事后端应用开发至今，将日常工作中遇到的问题、个人知识积累、个人见解和“打怪升级”晋级的经验分享于自己的博客，欢迎广大蜀黍来此博客分享自己的“故事”。</p>
+<p>   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;———&emsp;ZhangSunny<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2014/07/22/firstblog/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1583,7 +1584,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
@@ -1635,7 +1636,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1646,7 +1647,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1657,7 +1658,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1737,7 +1738,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共16.1k字</span>
+    <span class="post-count">博客全站共19.0k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -1765,7 +1766,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.1k</span>
+    <span title="Site words total count">19.0k</span>
    
   -->
 </div>

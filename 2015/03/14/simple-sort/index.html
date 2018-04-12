@@ -491,7 +491,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,420
+                  1,426
                 </span>
               
 
@@ -551,6 +551,8 @@
 <p><code>遍历流程图例</code><br><img src="http://p5vswdxl9.bkt.clouddn.com/insertionSort.gif" alt=""></p>
 <p><code>代码实现</code><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == arr || arr.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 从下标为1的元素开始选择合适的位置插入，</span></span><br><span class="line">        <span class="comment">// 因为下标为0的只有一个元素，默认是有序的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 记录要插入的数据</span></span><br><span class="line">            <span class="keyword">int</span> tmp = arr[i];</span><br><span class="line">            <span class="keyword">int</span> j = i;</span><br><span class="line">            <span class="comment">// 从已经排序的序列最右边的开始比较，找到比其小的数</span></span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; tmp &lt; arr[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                arr[j] = arr[j - <span class="number">1</span>];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 存在比其小的数，插入</span></span><br><span class="line">            <span class="keyword">if</span> (j != i) &#123;</span><br><span class="line">                arr[j] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong> 插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。时间复杂度为O(n²)，是稳定的排序。 </strong></p>
+<hr>
+<p>Demo代码地址：<a href="git@github.com:edgeowner/JavaCoreDemo.git">Github</a></p>
 
       
     </div>
@@ -805,7 +807,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -816,7 +818,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -827,7 +829,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -923,7 +925,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共16.1k字</span>
+    <span class="post-count">博客全站共19.0k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -951,7 +953,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.1k</span>
+    <span title="Site words total count">19.0k</span>
    
   -->
 </div>
