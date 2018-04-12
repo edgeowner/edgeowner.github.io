@@ -114,6 +114,46 @@
     
     
   <url>
+    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
+    <lastmod>2017-05-06T13:40:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>单例模式</title>
+        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
+        
+        <tag>Code</tag>
+         
+         
+           
+             
+              <breadCrumb title="示例代码" url="http://edgeowner.com/categories/%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
+    <lastmod>2017-05-06T13:40:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql索引介绍</title>
+        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
+        
+        <tag>Code</tag>
+         
+         
+           
+             
+              <breadCrumb title="示例代码" url="http://edgeowner.com/categories/%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edgeowner.com/2017/05/06/Multi-thread-Programming-Code-Demo/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>

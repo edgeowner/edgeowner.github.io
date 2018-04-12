@@ -93,6 +93,58 @@
   </entry>
   
   <entry>
+    <title>Mysql索引介绍</title>
+    <link href="http://edgeowner.com/2017/05/06/mysql-index/"/>
+    <id>http://edgeowner.com/2017/05/06/mysql-index/</id>
+    <published>2017-05-06T11:23:43.000Z</published>
+    <updated>2017-05-06T13:40:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://segmentfault.com/a/1190000012773157" target="_blank" rel="noopener"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000012773157&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="示例代码" scheme="http://edgeowner.com/categories/%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Code" scheme="http://edgeowner.com/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式</title>
+    <link href="http://edgeowner.com/2017/05/06/SingletonPattern/"/>
+    <id>http://edgeowner.com/2017/05/06/SingletonPattern/</id>
+    <published>2017-05-06T10:23:43.000Z</published>
+    <updated>2017-05-06T13:40:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank" rel="noopener">单例模式</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/design-pattern/singleton-pattern.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;单例模式&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="示例代码" scheme="http://edgeowner.com/categories/%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Code" scheme="http://edgeowner.com/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常用多线程Code示例</title>
     <link href="http://edgeowner.com/2017/05/06/Multi-thread-Programming-Code-Demo/"/>
     <id>http://edgeowner.com/2017/05/06/Multi-thread-Programming-Code-Demo/</id>
@@ -386,60 +438,6 @@
       &lt;h3 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot; title=&quot;归并排序&quot;&gt;&lt;/a&gt;归并排序&lt;/h3&gt;&lt;p&gt;归并排序（Merge Sort）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。&lt;/p&gt;
 &lt;p&gt;归并过程为：比较$a[i]$和$b[j]$的大小，若$a[i]≤b[j]$，则将第一个有序表中的元素$a[i]$复制到$r[k]$中，并令$i$和$k$分别加上$1$；否则将第二个有序表中的元素$b[j]$复制到$r[k]$中，并令$j$和$k$分别加上$1$，如此循环下去，直到其中一个有序表取完，然后再将另一个有序表中剩余的元素复制到$r$中从下标$k$到下标$t$的单元。归并排序的算法我们通常用递归实现，先把待排序区间$[s,t]$以中点二分，接着把左边子区间排序，再把右边子区间排序，最后把左区间和右区间用一次归并操作合并成有序的区间$[s,t]$。&lt;/p&gt;
 &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="http://edgeowner.com/categories/Algorithms/"/>
-    
-    
-      <category term="Algorithms" scheme="http://edgeowner.com/tags/Algorithms/"/>
-    
-      <category term="Sort" scheme="http://edgeowner.com/tags/Sort/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基数排序（Radix Sort）</title>
-    <link href="http://edgeowner.com/2015/03/27/radixSort/"/>
-    <id>http://edgeowner.com/2015/03/27/radixSort/</id>
-    <published>2015-03-27T02:35:31.000Z</published>
-    <updated>2015-03-27T12:17:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h3><p>基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(n log(r)m)$，其中$r$为所采取的基数，而$m$为堆数，空间复杂度$O(N)$，在某些时候，基数排序法的效率高于其它的稳定性排序法。<br><code>基数排序是按照分配，回收（分配到不同的位置上，然后回收）...不断分配...回收来进行排序，直到有序...。</code></p><hr><a id="more"></a><h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>It is a sorting algorithm that is used to sort numbers. We sort the numbers from least significant digit to the most significant digit.</p><ol><li>When we are sorting the numbers we will first find the number of digits in the biggest number.</li><li>If there are N digits in the biggest number then we will need to perform N number of pass.</li><li>We will pad the remaining numbers with leading zeros so they all have N digits.</li><li>Then we will take 10 buckets labeled 0 to 9 and sort the numbers.</li><li>After the sorting is complete we will remove the leading zeros.</li></ol><p>基数排序的要点就两个：</p><blockquote><ol><li>分配：按照元素的大小来放入不同的桶子里；</li><li>回收：将桶子里的元素按桶子顺序重新放到数组中；</li><li>重复…..两个步骤；<br><strong><em> 基数排序对有负数和0的数列难以进行排序 </em></strong></li></ol></blockquote><p>算法动态展示</p><ol><li><a href="https://www.youtube.com/watch?v=nu4gDuFabIM" target="_blank" rel="noopener">YouTube视频源地址</a> ;</li><li><a href="https://www.youtube.com/watch?v=YXFI4osELGU" target="_blank" rel="noopener">Radix Sort - step by step guide</a>;</li><li><a href="https://www.youtube.com/watch?v=xhr26ia4k38" target="_blank" rel="noopener">开课老师视频源</a>; </li><li><div id="dplayer5" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180403-113850-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li></ol><hr><h4 id="代码实现方式"><a href="#代码实现方式" class="headerlink" title="代码实现方式"></a>代码实现方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 基数排序</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">radixSort</span><span class="params">(<span class="keyword">int</span>[] arrs)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> max = findMax(arrs, <span class="number">0</span>, arrs.length - <span class="number">1</span>);</span><br><span class="line">     <span class="comment">//需要遍历的次数由数组最大的位数来决定</span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; max / i &gt; <span class="number">0</span>; i = i * <span class="number">10</span>) &#123;</span><br><span class="line">         <span class="keyword">int</span>[][] buckets = <span class="keyword">new</span> <span class="keyword">int</span>[arrs.length][<span class="number">10</span>];</span><br><span class="line">         <span class="comment">//获取每一个数字（个、十、百、千位...分配到桶子里）</span></span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arrs.length; j++) &#123;</span><br><span class="line">             <span class="keyword">int</span> num = (arrs[j] / i) % <span class="number">10</span>;</span><br><span class="line">             <span class="comment">//将其放入桶子里</span></span><br><span class="line">             buckets[j][num] = arrs[j];</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="comment">//回收桶子里的元素</span></span><br><span class="line">         <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">         <span class="comment">//有10个桶子</span></span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">             <span class="comment">//对每个桶子里的元素进行回收</span></span><br><span class="line">             <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt; arrs.length; l++) &#123;</span><br><span class="line">                 <span class="comment">//如果桶子里有元素就回收(数据会初始化为0)</span></span><br><span class="line">                 <span class="keyword">if</span> (buckets[l][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                     arrs[k++] = buckets[l][j];</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 递归找出数组最大值</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> arrs  数组</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> left  左边界，第一个数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> right 右边界，数组长度</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">findMax</span><span class="params">(<span class="keyword">int</span>[] arrs, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">     <span class="comment">//若该数组只有一个数，那么最大的就是该数组第一个值</span></span><br><span class="line">     <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">         <span class="keyword">return</span> arrs[left];</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">int</span> leftValue = arrs[left];</span><br><span class="line">         <span class="comment">//找出所有元素中的最大值</span></span><br><span class="line">         <span class="keyword">int</span> rightvalue = findMax(arrs, left + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (leftValue &gt; rightvalue) &#123;</span><br><span class="line">             <span class="keyword">return</span> leftValue;</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">             <span class="keyword">return</span> rightvalue;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><hr><p>参考地址：<a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484071&amp;idx=2&amp;sn=5195363e7a5c5e3e7cac2a733c2695e9&amp;chksm=ebd743a6dca0cab0b79aec38ff835116af9079114c9266ef673c6c1009b32b2abf262bf35e0c&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">基数排序</a><br>Demo代码地址：<a href="git@github.com:edgeowner/JavaCoreDemo.git">Github</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;基数排序&quot;&gt;&lt;a href=&quot;#基数排序&quot; class=&quot;headerlink&quot; title=&quot;基数排序&quot;&gt;&lt;/a&gt;基数排序&lt;/h3&gt;&lt;p&gt;基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(n log(r)m)$，其中$r$为所采取的基数，而$m$为堆数，空间复杂度$O(N)$，在某些时候，基数排序法的效率高于其它的稳定性排序法。&lt;br&gt;&lt;code&gt;基数排序是按照分配，回收（分配到不同的位置上，然后回收）...不断分配...回收来进行排序，直到有序...。&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="http://edgeowner.com/categories/Algorithms/"/>
-    
-    
-      <category term="Algorithms" scheme="http://edgeowner.com/tags/Algorithms/"/>
-    
-      <category term="Sort" scheme="http://edgeowner.com/tags/Sort/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计数排序（Counting Sort）</title>
-    <link href="http://edgeowner.com/2015/03/27/countingSort/"/>
-    <id>http://edgeowner.com/2015/03/27/countingSort/</id>
-    <published>2015-03-27T02:30:31.000Z</published>
-    <updated>2015-03-27T03:30:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p>计数排序是一种稳定的<strong>线性时间排序算法</strong>。计数排序使用一个额外的数组 $C$ ，其中第i个元素是待排序数组 $A$中值等于 $i$ 的元素的个数。然后根据数组 $C$ 来将 $A$ 中的元素排到正确的位置。<br>当输入的元素是 $n$ 个 $0$到 $k$ 之间的整数时，它的运行时间是 $\Theta (n+k)$ 。计数排序不是比较排序，排序的速度快于任何比较排序算法。<br>由于用来计数的数组$C$ 的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上 $1$），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。例如：计数排序是用来排序$0$到 $100$ 之间的数字的最好的算法，但是它不适合按字母顺序排序人名。但是，计数排序可以用在基数排序算法中，能够更有效的排序数据范围很大的数组。</p><ol><li>计数排序(Counting Sort)是一种$O(n)$的排序算法，其思路是开一个长度为$maxValue-minValue+1$的数组，然后分配。扫描一遍原始数组，以当前值$-minValue$作为下标，将该下标的计数器增$1$。</li><li>收集。扫描一遍计数器数组，按顺序把值收集起来。</li><li>计数排序本质上是一种特殊的桶排序，当桶的个数最大的时候，就是计数排序。</li></ol><a id="more"></a><hr><h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>Counting sort is a sorting technique based on keys between a specific range, it works by counting the number of objects having distinct key values.Then doing some arithmetic to calculate the position of each object in the output sequence.</p><ol><li>Create a count array to store the count of each unique object;</li><li>Initially the count of all elements is zero ;</li><li>Count each elements in the given array and  place the count at the appropriate index;</li><li>Modify the count array by adding the previous counts;</li><li>Corresponding values represent the places in the count array;</li><li>We place the objects in their correct positions and decrease the count by one;</li></ol><p><em>翻译</em></p><blockquote><ol><li>找出待排序的中最大元素和最小元素；</li><li>统计数组中每个值为 $i$ 的元素出现的次数，存入数组 $C$的第$i$项；</li><li>对所有的技术累加（ $C$ 中的第一个元素开始，每一项和前一项相加）；</li><li>反向填充目标数组；将每个元素 $i$ i放在新数组的第$C[i]$项，每放一个元素就将 $C[i]$减去$1$ ；</li></ol></blockquote><p>算法动态展示</p><ol><li><a href="https://www.youtube.com/watch?v=7zuGmKfUt7s&amp;t=15s" target="_blank" rel="noopener">YouTube视频源地址</a> ;</li><li><a href="https://www.youtube.com/watch?v=TTnvXY82dtM" target="_blank" rel="noopener">Counting Sort - step by step guide</a>;</li><li><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180402-174913-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li></ol><hr><h4 id="代码实现方式"><a href="#代码实现方式" class="headerlink" title="代码实现方式"></a>代码实现方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 计数排序 </span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> arrs</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">countingSort</span><span class="params">(<span class="keyword">int</span>[] arrs)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span>[] copyData = Arrays.copyOf(arrs, arrs.length);</span><br><span class="line">       <span class="keyword">int</span> maxValue = arrs[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">int</span> minValue = arrs[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; copyData.length; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (copyData[i] &gt; maxValue) &#123;</span><br><span class="line">               maxValue = copyData[i];</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span> (copyData[i] &lt; minValue) &#123;</span><br><span class="line">               minValue = copyData[i];</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> range = maxValue - minValue + <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">int</span>[] counts = <span class="keyword">new</span> <span class="keyword">int</span>[range];</span><br><span class="line">       Arrays.fill(counts, <span class="number">0</span>);</span><br><span class="line">       <span class="comment">//  计算数组中每个值和最小值的差，并计数</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> arr : copyData) &#123;</span><br><span class="line">           counts[arr - minValue]++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">// 得到数组中大于某个数的值一共有多少个</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; counts.length; i++) &#123;</span><br><span class="line">           counts[i] = counts[i] + counts[i - <span class="number">1</span>];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">// 根据数量放置值，每放置一个，对应的值的数量减一</span></span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; copyData.length; i++) &#123;</span><br><span class="line">           <span class="keyword">int</span> index = copyData[i] - minValue;</span><br><span class="line">           arrs[counts[index] - <span class="number">1</span>] = copyData[i];</span><br><span class="line">           counts[index]--;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><p>参考地址：<a href="https://github.com/hustcc/JS-Sorting-Algorithm/blob/master/8.countingSort.md" target="_blank" rel="noopener">计数排序</a><br>Demo代码地址：<a href="git@github.com:edgeowner/JavaCoreDemo.git">Github</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;计数排序&quot;&gt;&lt;a href=&quot;#计数排序&quot; class=&quot;headerlink&quot; title=&quot;计数排序&quot;&gt;&lt;/a&gt;计数排序&lt;/h3&gt;&lt;p&gt;计数排序是一种稳定的&lt;strong&gt;线性时间排序算法&lt;/strong&gt;。计数排序使用一个额外的数组 $C$ ，其中第i个元素是待排序数组 $A$中值等于 $i$ 的元素的个数。然后根据数组 $C$ 来将 $A$ 中的元素排到正确的位置。&lt;br&gt;当输入的元素是 $n$ 个 $0$到 $k$ 之间的整数时，它的运行时间是 $\Theta (n+k)$ 。计数排序不是比较排序，排序的速度快于任何比较排序算法。&lt;br&gt;由于用来计数的数组$C$ 的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上 $1$），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。例如：计数排序是用来排序$0$到 $100$ 之间的数字的最好的算法，但是它不适合按字母顺序排序人名。但是，计数排序可以用在基数排序算法中，能够更有效的排序数据范围很大的数组。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;计数排序(Counting Sort)是一种$O(n)$的排序算法，其思路是开一个长度为$maxValue-minValue+1$的数组，然后分配。扫描一遍原始数组，以当前值$-minValue$作为下标，将该下标的计数器增$1$。&lt;/li&gt;
-&lt;li&gt;收集。扫描一遍计数器数组，按顺序把值收集起来。&lt;/li&gt;
-&lt;li&gt;计数排序本质上是一种特殊的桶排序，当桶的个数最大的时候，就是计数排序。&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     
