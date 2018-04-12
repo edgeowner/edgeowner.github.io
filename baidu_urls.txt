@@ -3,8 +3,10 @@ http://edgeowner.com/2018/03/13/Java序列化/
 http://edgeowner.com/2018/03/13/Java-NIO/
 http://edgeowner.com/2018/03/13/Java-LDAP/
 http://edgeowner.com/2018/03/13/Java-CAS/
-http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/
+http://edgeowner.com/2016/11/06/dateSourceLock/
+http://edgeowner.com/2016/11/05/dataSourceRead/
 http://edgeowner.com/2016/10/01/tranaction/
+http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/
 http://edgeowner.com/2016/06/01/Java面试题目集锦/
 http://edgeowner.com/2016/04/26/JVM3/
 http://edgeowner.com/2016/04/24/jvm2/

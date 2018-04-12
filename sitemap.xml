@@ -86,14 +86,28 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
+    <loc>http://edgeowner.com/2016/11/06/dateSourceLock/</loc>
+    
+    <lastmod>2016-11-06T13:40:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edgeowner.com/2016/11/05/dataSourceRead/</loc>
+    
+    <lastmod>2016-11-05T02:25:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
+    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     

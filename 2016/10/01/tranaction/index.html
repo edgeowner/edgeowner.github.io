@@ -152,18 +152,18 @@
 
 
 
-<meta name="description" content="事务本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。事务是并发控制的单元，">
+<meta name="description" content="事务&amp;emsp;&amp;emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）">
 <meta name="keywords" content="事务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事务知识点">
 <meta property="og:url" content="http://edgeowner.com/2016/10/01/tranaction/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="事务本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。事务是并发控制的单元，">
+<meta property="og:description" content="事务&amp;emsp;&amp;emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-10-01T12:19:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事务知识点">
-<meta name="twitter:description" content="事务本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。事务是并发控制的单元，">
+<meta name="twitter:description" content="事务&amp;emsp;&amp;emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）">
 
 
 
@@ -445,8 +445,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/事务相关知识点/" itemprop="url" rel="index">
-                    <span itemprop="name">事务相关知识点</span>
+                  <a href="/categories/并发控制相关知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">并发控制相关知识点</span>
                   </a>
                 </span>
 
@@ -487,7 +487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,013
+                  2,047
                 </span>
               
 
@@ -512,7 +512,7 @@
       
 
       
-        <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
+        <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
 <a id="more"></a>
 <hr>
 <h4 id="事务特性：ACID"><a href="#事务特性：ACID" class="headerlink" title="事务特性：ACID"></a>事务特性：ACID</h4><p>事务的ACID特性：</p>
@@ -674,7 +674,7 @@
 </table>
 </div>
 <hr>
-<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><p>数据库的事物隔离越严格，并发副作用越小，但付出的代价也就越大。因为事务隔离实质上是将事务在一定程度上“串行”进行，这显然与“并发”是矛盾的。实际业务中处理的话，根据自己的业务逻辑，权衡能接受的最大副作用，从而平衡了<strong><em>“隔离” </em></strong>和<strong><em>“并发” </em></strong>的问题。Mysql默认隔离级别是可重复读的。</p>
+<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><p>数据库的事物隔离越严格，并发副作用越小，但付出的代价也就越大。因为事务隔离实质上是将事务在一定程度上“串行”进行，这显然与“并发”是矛盾的。实际业务中处理的话，根据自己的业务逻辑，权衡能接受的最大副作用，从而平衡了<strong><em>“隔离” </em></strong>和<strong><em>“并发” </em></strong>的问题。Mysql默认隔离级别是可重复读的。<br>事务的隔离级别通常有四种（RU, RC, RR，Serializable）：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -732,7 +732,8 @@
 <h5 id="修改表的存储引擎"><a href="#修改表的存储引擎" class="headerlink" title="修改表的存储引擎"></a>修改表的存储引擎</h5><p>alter table test1 engine = INNODB</p>
 <h5 id="查看是否开启日志"><a href="#查看是否开启日志" class="headerlink" title="查看是否开启日志"></a>查看是否开启日志</h5><p>show variables like ‘log_bin’;</p>
 <h5 id="查看日志状态"><a href="#查看日志状态" class="headerlink" title="查看日志状态"></a>查看日志状态</h5><p>show master status;</p>
-<h4 id="相关技术参考："><a href="#相关技术参考：" class="headerlink" title="相关技术参考："></a>相关技术参考：</h4><p><a href="https://segmentfault.com/a/1190000004437223" target="_blank" rel="noopener">深入浅出事务（1）</a><br><a href="https://segmentfault.com/a/1190000004437275" target="_blank" rel="noopener">深入浅出事务（2）</a><br><a href="https://segmentfault.com/a/1190000004469395" target="_blank" rel="noopener">深入浅出事务（3）</a><br><a href="https://segmentfault.com/a/1190000012773157" target="_blank" rel="noopener">MySQL表锁和行锁机制</a><br><a href="https://juejin.im/post/5ab5e44a6fb9a028c97a013d" target="_blank" rel="noopener">Mysql之锁与事务</a></p>
+<hr>
+<h4 id="相关技术参考："><a href="#相关技术参考：" class="headerlink" title="相关技术参考："></a>相关技术参考：</h4><p><a href="https://segmentfault.com/a/1190000004437223" target="_blank" rel="noopener">深入浅出事务（1）</a><br><a href="https://segmentfault.com/a/1190000004437275" target="_blank" rel="noopener">深入浅出事务（2）</a><br><a href="https://segmentfault.com/a/1190000004469395" target="_blank" rel="noopener">深入浅出事务（3）</a><br><a href="https://segmentfault.com/a/1190000012773157" target="_blank" rel="noopener">MySQL表锁和行锁机制</a><br><a href="https://juejin.im/post/5ab5e44a6fb9a028c97a013d" target="_blank" rel="noopener">Mysql之锁与事务</a><br><a href="https://segmentfault.com/a/1190000013122242" target="_blank" rel="noopener">数据库 - 事务管理（ACID）、隔离级别、事务传播行为</a></p>
 
       
     </div>
@@ -859,8 +860,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/01/Java面试题目集锦/" rel="next" title="Java面试题目集锦 (1)">
-                <i class="fa fa-chevron-left"></i> Java面试题目集锦 (1)
+              <a href="/2016/10/01/optimistic-pessimistic-locking/" rel="next" title="乐观锁和悲观锁(OCC和PCC)">
+                <i class="fa fa-chevron-left"></i> 乐观锁和悲观锁(OCC和PCC)
               </a>
             
           </div>
@@ -869,8 +870,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/01/optimistic-pessimistic-locking/" rel="prev" title="（乐观锁和悲观锁）">
-                （乐观锁和悲观锁） <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/05/dataSourceRead/" rel="prev" title="浅析数据库读现象">
+                浅析数据库读现象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -985,7 +986,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -996,7 +997,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1103,7 +1104,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共19.0k字</span>
+    <span class="post-count">博客全站共20.4k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -1131,7 +1132,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.0k</span>
+    <span title="Site words total count">20.4k</span>
    
   -->
 </div>
