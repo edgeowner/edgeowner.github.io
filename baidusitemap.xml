@@ -158,14 +158,16 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
+    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>事务知识点</title>
+        <title>乐观锁和悲观锁(OCC和PCC)</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
-        <tag>事务</tag>
+        <tag>并发控制</tag>
+         
+        <tag>锁</tag>
          
          
            
@@ -178,16 +180,14 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
+    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>乐观锁和悲观锁(OCC和PCC)</title>
+        <title>事务知识点</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
-        <tag>并发控制</tag>
-         
-        <tag>锁</tag>
+        <tag>事务</tag>
          
          
            
@@ -412,12 +412,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/03/24/heapSort/</loc>
+    <loc>http://edgeowner.com/2015/03/24/quickSort/</loc>
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>堆排序（Heap Sort）</title>
-        <pubTime>2015-03-24T02:12:31.000Z</pubTime>
+        <title>快速排序（Quick Sort）</title>
+        <pubTime>2015-03-24T02:10:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
          
@@ -434,12 +434,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/03/24/quickSort/</loc>
+    <loc>http://edgeowner.com/2015/03/24/heapSort/</loc>
     <lastmod>2015-03-24T14:19:00.000Z</lastmod>
     <data>
         <display>
-        <title>快速排序（Quick Sort）</title>
-        <pubTime>2015-03-24T02:10:31.000Z</pubTime>
+        <title>堆排序（Heap Sort）</title>
+        <pubTime>2015-03-24T02:12:31.000Z</pubTime>
         
         <tag>Algorithms</tag>
          
