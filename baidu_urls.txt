@@ -2,9 +2,9 @@ http://edgeowner.com/2018/03/13/Java序列化/
 http://edgeowner.com/2018/03/13/Java-NIO/
 http://edgeowner.com/2018/03/13/Java-LDAP/
 http://edgeowner.com/2018/03/13/Java-CAS/
-http://edgeowner.com/2018/03/01/developing-tools/
 http://edgeowner.com/2017/05/06/mysql-index/
 http://edgeowner.com/2017/05/06/SingletonPattern/
+http://edgeowner.com/2017/03/01/developing-tools/
 http://edgeowner.com/2016/11/06/dateSourceLock/
 http://edgeowner.com/2016/11/05/dataSourceRead/
 http://edgeowner.com/2016/10/01/optimistic-pessimistic/

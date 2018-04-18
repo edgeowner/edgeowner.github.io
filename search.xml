@@ -28,17 +28,6 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[日常开发工具集（1）]]></title>
-    <url>%2F2018%2F03%2F01%2Fdeveloping-tools%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;日常工作中只要时方便开发的部分工具的用途及资源会在此文介绍，欢迎广大技术蜀黍添加。 Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员的网站，这里可通过Java的project 、classes等关键字在线查看它对应的源码，知道对应的project、classes等信息。更方便的是，能提供不同版本的源代码在线查看：jar包 、源码jar包、doc下载。同样，也可以使用xxx-1.1.1.jar类似这样的名字直接找到对应的jar包，从而下载。 开源代码以及文档搜索&emsp;&emsp;SearchCode(资源地址)是一个源码搜索引擎，目前支持从Github 、Bitbucket、Google Code、CodePlex、SourceForge 和 Fedora Project 平台搜索公开的源码。 电子书搜索&emsp;&emsp;鸠摩搜书(资源地址)是一个比较不错的电子书搜索网站。内容也比较全。 网盘资源搜索&emsp;&emsp;盘搜(资源地址)可以通过这个网站搜索百度网盘上面的各种资源。 无版权图片搜索&emsp;&emsp;Unsplash(资源地址)是我用过的最好的网站，不需要登录，图片很高请，也比较全。唯一的缺点就是需要英文搜搜 在线UML制图&emsp;&emsp;ProcessOn(资源地址)是一个在线协作绘图平台，为用户提供最强大、易用的作图工具!支持在线创作流程图 、BPMN 、UML图 、UI界面原型设计、iOS界面原型设计等。 Json在线验证及格式化&emsp;&emsp;json.cn(资源地址)是比较不错的，不仅支持Json格式的验证及格式化，还可以将Json格式压缩成普通文本等，以及查询Json组件和Json解析相关代码好用功能。 json生成java类&emsp;&emsp;bejson(资源地址Json是目前JavaWeb中数据传输的主要格式，很多时候会有把Json转成Java对象的需求。有时候合作方会提供一个Json的样例，需要我们自己定义Java类，这时候这个工具就派上用场了。 SQL自动生成Java代码&emsp;&emsp;Json(资源地址)是目前JavaWeb中数据传输的主要格式，很多时候会有把json转成Java对象的需求。有时候合作方会提供一个json的样例，需要我们自己定义Java类，这时候这个工具就派上用场了。 Maven依赖查询&emsp;&emsp;Mvnrepository(资源地址)查询开源的Java的jar包版本依赖标签 Cron表达式生成&emsp;&emsp;Pdtools(资源地址)用于配置定时任务的cron表达式。 正则验证&emsp;&emsp;(资源地址)Java开发对正则表达式肯定不陌生。站长工具提供的正则验证还不错。 正则代码生成&emsp;&emsp;(资源地址)站长工具提供的正则代码生成。可以一键生成身份证号、邮箱、手机号等验证的正则表达式。 时间戳转换&emsp;&emsp;(资源地址)时间戳(英语：Timestamp）是指在一连串的资料中加入辨识文字，如时间或日期，用以保障本地端（local）资料更新顺序与远端（remote）一致。Java中很多地方都会用到时间戳，也经常会使用这种转换工具。 加密解密&emsp;&emsp;(资源地址)加密解密也是JavaWeb可能会经常遇到的，有的时候我们需要验证加密算法是否正确，或者要解密等场景，就需要一个在线工具。 在线调色板&emsp;&emsp;(资源地址)常用MarkDown字体配色使用获取RGB代码例如：1&lt;font face="微软雅黑" color=#9900ff size=2&gt;-Xms1024m -Xmx1024m -XX:PermSize=512M -XX:MaxPermSize=1024m -Dfile.encoding=utf-8 &lt;/font&gt; ASCII ART生成&emsp;&emsp;ASCII ART生成(资源地址) 常用对照表 ASCII对照表 HTTP状态码 HTTP Content-type TCP/UDP常见端口参考 HTML转义字符 RGB颜色参考 网页字体参考]]></content>
-      <categories>
-        <category>开发工具集</category>
-      </categories>
-      <tags>
-        <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Mysql索引介绍]]></title>
     <url>%2F2017%2F05%2F06%2Fmysql-index%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -58,6 +47,17 @@
       </categories>
       <tags>
         <tag>Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[日常开发工具集（1）]]></title>
+    <url>%2F2017%2F03%2F01%2Fdeveloping-tools%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;日常工作中只要时方便开发的部分工具的用途及资源会在此文介绍，欢迎广大技术蜀黍添加。 Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员的网站，这里可通过Java的project 、classes等关键字在线查看它对应的源码，知道对应的project、classes等信息。更方便的是，能提供不同版本的源代码在线查看：jar包 、源码jar包、doc下载。同样，也可以使用xxx-1.1.1.jar类似这样的名字直接找到对应的jar包，从而下载。 开源代码以及文档搜索&emsp;&emsp;SearchCode(资源地址)是一个源码搜索引擎，目前支持从Github 、Bitbucket、Google Code、CodePlex、SourceForge 和 Fedora Project 平台搜索公开的源码。 电子书搜索&emsp;&emsp;鸠摩搜书(资源地址)是一个比较不错的电子书搜索网站。内容也比较全。 网盘资源搜索&emsp;&emsp;盘搜(资源地址)可以通过这个网站搜索百度网盘上面的各种资源。 无版权图片搜索&emsp;&emsp;Unsplash(资源地址)是我用过的最好的网站，不需要登录，图片很高请，也比较全。唯一的缺点就是需要英文搜搜 在线UML制图&emsp;&emsp;ProcessOn(资源地址)是一个在线协作绘图平台，为用户提供最强大、易用的作图工具!支持在线创作流程图 、BPMN 、UML图 、UI界面原型设计、iOS界面原型设计等。 Json在线验证及格式化&emsp;&emsp;json.cn(资源地址)是比较不错的，不仅支持Json格式的验证及格式化，还可以将Json格式压缩成普通文本等，以及查询Json组件和Json解析相关代码好用功能。 json生成java类&emsp;&emsp;bejson(资源地址Json是目前JavaWeb中数据传输的主要格式，很多时候会有把Json转成Java对象的需求。有时候合作方会提供一个Json的样例，需要我们自己定义Java类，这时候这个工具就派上用场了。 SQL自动生成Java代码&emsp;&emsp;Json(资源地址)是目前JavaWeb中数据传输的主要格式，很多时候会有把json转成Java对象的需求。有时候合作方会提供一个json的样例，需要我们自己定义Java类，这时候这个工具就派上用场了。 Maven依赖查询&emsp;&emsp;Mvnrepository(资源地址)查询开源的Java的jar包版本依赖标签 Cron表达式生成&emsp;&emsp;Pdtools(资源地址)用于配置定时任务的cron表达式。 正则验证&emsp;&emsp;(资源地址)Java开发对正则表达式肯定不陌生。站长工具提供的正则验证还不错。 正则代码生成&emsp;&emsp;(资源地址)站长工具提供的正则代码生成。可以一键生成身份证号、邮箱、手机号等验证的正则表达式。 时间戳转换&emsp;&emsp;(资源地址)时间戳(英语：Timestamp）是指在一连串的资料中加入辨识文字，如时间或日期，用以保障本地端（local）资料更新顺序与远端（remote）一致。Java中很多地方都会用到时间戳，也经常会使用这种转换工具。 加密解密&emsp;&emsp;(资源地址)加密解密也是JavaWeb可能会经常遇到的，有的时候我们需要验证加密算法是否正确，或者要解密等场景，就需要一个在线工具。 在线调色板&emsp;&emsp;(资源地址)常用MarkDown字体配色使用获取RGB代码例如：1&lt;font face="微软雅黑" color=#9900ff size=2&gt;-Xms1024m -Xmx1024m -XX:PermSize=512M -XX:MaxPermSize=1024m -Dfile.encoding=utf-8 &lt;/font&gt; ASCII ART生成&emsp;&emsp;ASCII ART生成(资源地址) 常用对照表 ASCII对照表 HTTP状态码 HTTP Content-type TCP/UDP常见端口参考 HTML转义字符 RGB颜色参考 网页字体参考]]></content>
+      <categories>
+        <category>开发工具集</category>
+      </categories>
+      <tags>
+        <tag>tools</tag>
       </tags>
   </entry>
   <entry>
