@@ -138,7 +138,7 @@
 
 
 
-  <meta name="keywords" content="JVM,Java," />
+  <meta name="keywords" content="JVM," />
 
 
 
@@ -153,15 +153,15 @@
 
 
 <meta name="description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
-<meta name="keywords" content="JVM,Java">
+<meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM内存结构(1)">
-<meta property="og:url" content="http://edgeowner.com/2016/04/19/jvm/index.html">
+<meta property="og:url" content="http://edgeowner.com/2016/04/23/jvm/index.html">
 <meta property="og:site_name" content="edgeowner">
 <meta property="og:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime">
-<meta property="og:updated_time" content="2016-04-19T12:29:00.000Z">
+<meta property="og:updated_time" content="2016-04-23T14:29:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM内存结构(1)">
 <meta name="twitter:description" content="JVM内存结构（运行时数据区）JVM内存结构指得是：运行时数据区（Runtime Data Area），由 方法区(Method Area) 、堆(Heap) 、Java栈(Java Stack) 、本地方法栈(Native Method Stack)、程序计数器(Program Counter Register)。">
@@ -195,7 +195,7 @@
 
 
 
-  <link rel="canonical" href="http://edgeowner.com/2016/04/19/jvm/"/>
+  <link rel="canonical" href="http://edgeowner.com/2016/04/23/jvm/"/>
 
 
 
@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/19/jvm/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/23/jvm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -412,8 +412,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-19T18:35:25+08:00">
-                2016-04-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-23T21:20:43+08:00">
+                2016-04-23
               </time>
             
 
@@ -428,8 +428,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2016-04-19T20:29:00+08:00">
-                2016-04-19
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-23T22:29:00+08:00">
+                2016-04-23
               </time>
             
           </span>
@@ -464,7 +464,7 @@
 
           
           
-             <span id="/2016/04/19/jvm/" class="leancloud_visitors" data-flag-title="JVM内存结构(1)">
+             <span id="/2016/04/23/jvm/" class="leancloud_visitors" data-flag-title="JVM内存结构(1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -515,7 +515,9 @@
 
       
         <h3 id="JVM内存结构（运行时数据区）"><a href="#JVM内存结构（运行时数据区）" class="headerlink" title="JVM内存结构（运行时数据区）"></a>JVM内存结构（运行时数据区）</h3><p>JVM内存结构指得是：运行时数据区（Runtime Data Area），由 <strong><em>方法区(Method Area) </em></strong>、<strong><em>堆(Heap) </em></strong>、<strong><em>Java栈(Java Stack) </em></strong>、<strong><em>本地方法栈(Native Method Stack)</em></strong>、<strong><em>程序计数器(Program Counter Register)</em></strong>。<br><img src="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime" alt=""></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h4 id="一、方法区-Method-Area"><a href="#一、方法区-Method-Area" class="headerlink" title="一、方法区(Method Area)"></a>一、方法区(Method Area)</h4><ol>
+<a id="more"></a>
+<hr>
+<h4 id="一、方法区-Method-Area"><a href="#一、方法区-Method-Area" class="headerlink" title="一、方法区(Method Area)"></a>一、方法区(Method Area)</h4><ol>
 <li><strong>作用</strong>： 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。此区域内存回收目标主要针对常量池回收和对类型的卸载回收。 </li>
 <li><strong>特点</strong>：线程共享 。</li>
 <li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”_<strong>永久代(Permanent Generation)</strong>_ “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
@@ -572,12 +574,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2016/04/19/jvm/">JVM内存结构(1)</a></p>
+  <p><span>本文标题:</span><a href="/2016/04/23/jvm/">JVM内存结构(1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
-  <p><span>发布时间:</span>2016年04月19日 - 18:04</p>
-  <p><span>最后更新:</span>2016年04月19日 - 20:04</p>
-  <p><span>原始链接:</span><a href="/2016/04/19/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/19/jvm/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/19/jvm/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2016年04月23日 - 21:04</p>
+  <p><span>最后更新:</span>2016年04月23日 - 22:04</p>
+  <p><span>原始链接:</span><a href="/2016/04/23/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/23/jvm/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/04/23/jvm/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -655,7 +657,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://edgeowner.com/2016/04/19/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/19/jvm/</a>
+    <a href="http://edgeowner.com/2016/04/23/jvm/" title="JVM内存结构(1)">http://edgeowner.com/2016/04/23/jvm/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -673,8 +675,6 @@
           
             <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
         </div>
       
 
@@ -686,8 +686,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/13/Java-Core/" rel="next" title="JavaCore（1）">
-                <i class="fa fa-chevron-left"></i> JavaCore（1）
+              <a href="/2016/04/23/thread-sample-introduce/" rel="next" title="多线程相关知识点">
+                <i class="fa fa-chevron-left"></i> 多线程相关知识点
               </a>
             
           </div>
@@ -696,8 +696,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/20/Java多线程/" rel="prev" title="ThreadPoolExecutor 参数详解">
-                ThreadPoolExecutor 参数详解 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/24/jvm2/" rel="prev" title="JVM内存结构(2)">
+                JVM内存结构(2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -896,7 +896,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、方法区-Method-Area"><span class="nav-number">0.1.</span> <span class="nav-text">一、方法区(Method Area)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、堆-Heap"><span class="nav-number">0.2.</span> <span class="nav-text">二、堆(Heap)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM内存结构（运行时数据区）"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构（运行时数据区）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、方法区-Method-Area"><span class="nav-number">1.1.</span> <span class="nav-text">一、方法区(Method Area)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、堆-Heap"><span class="nav-number">1.2.</span> <span class="nav-text">二、堆(Heap)</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -518,8 +518,7 @@
 <li><strong>特点</strong>：线程私有的，生命周期和线程相同。栈是一个后进先出(<strong>LIFO</strong>)的数据结构，每次方法调用时，一个新的栈帧创建并被压栈到栈顶， 当方法正常返回或者抛出未捕获的异常时，栈帧就会出栈。除了栈帧的压栈和出栈，栈不能被直接操作。 在JVM中，若线程请求栈的深度 超过了虚拟机允许的最大深度 ，则会抛出StackOverflowError异常；当栈进行动态扩展，但 无法申请到相应内存空间（此时，线程请求的栈深度未超过虚拟机允许的最大深度）时，则会抛出OutOfMemoryError异常。</li>
 <li><code>局部变量表</code>：存放了编译期间可以知道大小的各种类型变量，它所需要的内存空间大小在编译期间就已经分配，当一个方法被调用时，栈帧进入虚拟机栈，在运行期间，局部变量表大小是不会变化的。</li>
 <li><code>栈帧(Frame)</code>：<strong><em>栈帧只存储指向堆中对象或数组的引用 </em></strong>，包含<code>局部变量数组</code>、<code>返回值</code>、<code>操作数栈</code>、<code>类当前方法运行时常量池引用</code>：  <blockquote>
-<p><code>局部变量数组</code>：包含了方法执行过程中所有变量，包括this引用、所有方法参数、其他局部变量。对于类方法（也就是静态方法），方法参数从下标 0 开始，对于对象方法，位置0保留为 this。（boolean、byte、char、long、short、int、float、double、reference、returnAddress均为局部变量，除了 long 和 double 类型以外，所有的变量类型都占用局部变量数组的一个位置。long 和 double 需要占用局部变量数组两个连续的位置，因为它们是 64 位双精度，其它类型都是 32 位单精度。）<br><code>操作数栈</code>：在执行字节码指令过程中被用到，这种方式类似于原生<strong>CPU寄存器</strong>。大部分JVM字节码把时间花费在操作数栈的操作上：<strong><em>入栈 </em></strong>、<strong><em>出栈 </em></strong> 、<strong><em>复制 </em></strong> 、<strong><em>交换 </em></strong>、<strong><em>产生消费变量 </em></strong>的操作。因此，局部变量数组和操作数栈之间的交换变量指令操作通过字节码频繁执行。比如，一个简单的变量初始化语句将产生两条跟操作数栈交互的字节码。</p>
-<p>关于局部变量数组、操作数栈和运行时常量池之间交互的详细信息，可以在类文件结构部分找到。</p>
+<p><code>局部变量数组</code>：包含了方法执行过程中所有变量，包括this引用、所有方法参数、其他局部变量。对于类方法（也就是静态方法），方法参数从下标 0 开始，对于对象方法，位置0保留为 this。（boolean、byte、char、long、short、int、float、double、reference、returnAddress均为局部变量，除了 long 和 double 类型以外，所有的变量类型都占用局部变量数组的一个位置。long 和 double 需要占用局部变量数组两个连续的位置，因为它们是 64 位双精度，其它类型都是 32 位单精度。）<br><code>操作数栈</code>：在执行字节码指令过程中被用到，这种方式类似于原生<strong>CPU寄存器</strong>。大部分JVM字节码把时间花费在操作数栈的操作上：<strong><em>入栈 </em></strong>、<strong><em>出栈 </em></strong> 、<strong><em>复制 </em></strong> 、<strong><em>交换 </em></strong>、<strong><em>产生消费变量 </em></strong>的操作。因此，局部变量数组和操作数栈之间的交换变量指令操作通过字节码频繁执行。比如，一个简单的变量初始化语句将产生两条跟操作数栈交互的字节码。<br>关于局部变量数组、操作数栈和运行时常量池之间交互的详细信息，可以在类文件结构部分找到。</p>
 </blockquote>
 </li>
 </ol>
@@ -662,8 +661,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/23/thread-sample-introduce/" rel="next" title="多线程相关知识点">
-                <i class="fa fa-chevron-left"></i> 多线程相关知识点
+              <a href="/2016/04/23/jvm/" rel="next" title="JVM内存结构(1)">
+                <i class="fa fa-chevron-left"></i> JVM内存结构(1)
               </a>
             
           </div>
