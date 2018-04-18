@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/20/Java多线程/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/23/JVM/jvm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -399,7 +399,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/04/20/Java多线程/" itemprop="url">ThreadPoolExecutor 参数详解</a></h2>
+                <a class="post-title-link" href="/2016/04/23/JVM/jvm/" itemprop="url">JVM内存结构(1)</a></h2>
         
 
         <div class="post-meta">
@@ -411,8 +411,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-20T09:15:31+08:00">
-                2016-04-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-23T21:20:43+08:00">
+                2016-04-23
               </time>
             
 
@@ -427,8 +427,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2016-04-20T20:17:23+08:00">
-                2016-04-20
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-23T22:29:00+08:00">
+                2016-04-23
               </time>
             
           </span>
@@ -446,8 +446,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-Multi-thread-Programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Java Multi-thread Programming</span>
+                  <a href="/categories/JVM/" itemprop="url" rel="index">
+                    <span itemprop="name">JVM</span>
                   </a>
                 </span>
 
@@ -463,7 +463,7 @@
 
           
           
-             <span id="/2016/04/20/Java多线程/" class="leancloud_visitors" data-flag-title="ThreadPoolExecutor 参数详解">
+             <span id="/2016/04/23/JVM/jvm/" class="leancloud_visitors" data-flag-title="JVM内存结构(1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,7 +488,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  2,114
                 </span>
               
 
@@ -514,12 +514,10 @@
 
       
         
-          
-          
-          
+          <h3 id="JVM内存结构（运行时数据区）"><a href="#JVM内存结构（运行时数据区）" class="headerlink" title="JVM内存结构（运行时数据区）"></a>JVM内存结构（运行时数据区）</h3><p>JVM内存结构指得是：运行时数据区（Runtime Data Area），由 <strong><em>方法区(Method Area) </em></strong>、<strong><em>堆(Heap) </em></strong>、<strong><em>Java栈(Java Stack) </em></strong>、<strong><em>本地方法栈(Native Method Stack)</em></strong>、<strong><em>程序计数器(Program Counter Register)</em></strong>。<br><img src="http://p5vswdxl9.bkt.clouddn.com/JVMRuntime" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/04/20/Java多线程/#more" rel="contents">
+            <a class="btn" href="/2016/04/23/JVM/jvm/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -580,7 +578,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/04/13/Java-Core/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/23/JavaMultiThread/thread-sample-introduce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -599,7 +597,616 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/04/13/Java-Core/" itemprop="url">JavaCore（1）</a></h2>
+                <a class="post-title-link" href="/2016/04/23/JavaMultiThread/thread-sample-introduce/" itemprop="url">多线程相关知识点</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-23T20:20:43+08:00">
+                2016-04-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-23T21:19:21+08:00">
+                2016-04-23
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java多线程/" itemprop="url" rel="index">
+                    <span itemprop="name">Java多线程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/04/23/JavaMultiThread/thread-sample-introduce/" class="leancloud_visitors" data-flag-title="多线程相关知识点">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  901
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="引入线程技术背景"><a href="#引入线程技术背景" class="headerlink" title="引入线程技术背景"></a>引入线程技术背景</h3><ol>
+<li>一个应用程序中同时存在多个任务，其中部分活动会随时间的推移而阻塞，而另外一部分则不会。例如：一个文字处理软件，前台部分需要从终端设备获得输入或者将处理完的部分输出，而后台线程则可以实现对文字的处理。故对于CPU密集型进程，该用多线程其性能不一定能得到很大提高，但对于IO密集型进程，其性能可得到很大提高。</li>
+<li><font color="#FF4500"> 线程比进程更轻量级，创建和撤销的代价小，在许多系统中国呢，创建一个线程比一个进程要快10～100倍不等</font>。</li>
+<li>在多核CPU中，真正的并行有了可能。即在多线程设计中一部分可用来处理前台任务，一部分可用来处理后台任务，实现真正意义上的并行。</li>
+<li>线程间的切换代价要比进程切换的代价小。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/23/JavaMultiThread/thread-sample-introduce/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/21/JavaMultiThread/thread-pool/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/04/21/JavaMultiThread/thread-pool/" itemprop="url">线程池介绍</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-21T20:15:31+08:00">
+                2016-04-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-21T21:17:23+08:00">
+                2016-04-21
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java多线程/" itemprop="url" rel="index">
+                    <span itemprop="name">Java多线程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/04/21/JavaMultiThread/thread-pool/" class="leancloud_visitors" data-flag-title="线程池介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,451
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>&emsp;&emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。<br>&emsp;&emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。<br>&emsp;&emsp;<font color="#EE4000">线程和进程的区别</font>：</p>
+<ol>
+<li>多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间和一组系统资源，有可能互相影响。　　</li>
+<li>线程本身的数据通常只有寄存器数据，以及一个程序执行时使用的堆栈，所以线程的切换负担比进程切换的负担要小。多线程程序比多进程程序需要更少的管理费用。　　</li>
+<li>进程是重量级的任务，需要分配给它们独立的地址空间，进程间通信是昂贵和受限的，进程间的转换也是很需要花费的。而线程是轻量级的选手，它们共享相同的地址空间并且共同分享同一个进程，线程间的通信是便宜的，线程间的转换也是低成本的。</li>
+</ol>
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/21/JavaMultiThread/thread-pool/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/04/21/JavaMultiThread/ThreadPoolExecutor/" itemprop="url">ThreadPoolExecutor 参数详解</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-21T09:15:31+08:00">
+                2016-04-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2016-04-21T20:17:23+08:00">
+                2016-04-21
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java多线程/" itemprop="url" rel="index">
+                    <span itemprop="name">Java多线程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/04/21/JavaMultiThread/ThreadPoolExecutor/" class="leancloud_visitors" data-flag-title="ThreadPoolExecutor 参数详解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ThreadPoolExecutor类介绍&emsp;&emsp; 
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/21/JavaMultiThread/ThreadPoolExecutor/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+
+    <!-- 
+    -->
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/04/13/JavaPremium/Java-Core/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangSunny">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="edgeowner">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/04/13/JavaPremium/Java-Core/" itemprop="url">JavaCore（1）</a></h2>
         
 
         <div class="post-meta">
@@ -663,7 +1270,7 @@
 
           
           
-             <span id="/2015/04/13/Java-Core/" class="leancloud_visitors" data-flag-title="JavaCore（1）">
+             <span id="/2015/04/13/JavaPremium/Java-Core/" class="leancloud_visitors" data-flag-title="JavaCore（1）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -717,7 +1324,7 @@
           <h2 id="Java核心"><a href="#Java核心" class="headerlink" title="Java核心"></a>Java核心</h2><h4 id="Java基本语法："><a href="#Java基本语法：" class="headerlink" title="Java基本语法："></a>Java基本语法：</h4><h4 id="Java类和对象："><a href="#Java类和对象：" class="headerlink" title="Java类和对象："></a>Java类和对象：</h4><h4 id="Java集合："><a href="#Java集合：" class="headerlink" title="Java集合："></a>Java集合：</h4><h4 id="Java泛型："><a href="#Java泛型：" class="headerlink" title="Java泛型："></a>Java泛型：</h4><h4 id="Java注解："><a href="#Java注解：" class="headerlink" title="Java注解："></a>Java注解：</h4><h4 id="Java反射："><a href="#Java反射：" class="headerlink" title="Java反射："></a>Java反射：</h4>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/04/13/Java-Core/#more" rel="contents">
+            <a class="btn" href="/2015/04/13/JavaPremium/Java-Core/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -778,7 +1385,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/28/mergeSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/28/SortAlogrithms/mergeSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -797,7 +1404,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/28/mergeSort/" itemprop="url">归并排序（Merge Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/28/SortAlogrithms/mergeSort/" itemprop="url">归并排序（Merge Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -861,7 +1468,7 @@
 
           
           
-             <span id="/2015/03/28/mergeSort/" class="leancloud_visitors" data-flag-title="归并排序（Merge Sort）">
+             <span id="/2015/03/28/SortAlogrithms/mergeSort/" class="leancloud_visitors" data-flag-title="归并排序（Merge Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -917,7 +1524,7 @@
 <hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/28/mergeSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/28/SortAlogrithms/mergeSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -978,7 +1585,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/radixSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/SortAlogrithms/radixSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -997,7 +1604,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/27/radixSort/" itemprop="url">基数排序（Radix Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/27/SortAlogrithms/radixSort/" itemprop="url">基数排序（Radix Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -1061,7 +1668,7 @@
 
           
           
-             <span id="/2015/03/27/radixSort/" class="leancloud_visitors" data-flag-title="基数排序（Radix Sort）">
+             <span id="/2015/03/27/SortAlogrithms/radixSort/" class="leancloud_visitors" data-flag-title="基数排序（Radix Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1116,7 +1723,7 @@
 <hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/27/radixSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/27/SortAlogrithms/radixSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1177,7 +1784,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/countingSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/27/SortAlogrithms/countingSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1196,7 +1803,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/27/countingSort/" itemprop="url">计数排序（Counting Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/27/SortAlogrithms/countingSort/" itemprop="url">计数排序（Counting Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -1260,7 +1867,7 @@
 
           
           
-             <span id="/2015/03/27/countingSort/" class="leancloud_visitors" data-flag-title="计数排序（Counting Sort）">
+             <span id="/2015/03/27/SortAlogrithms/countingSort/" class="leancloud_visitors" data-flag-title="计数排序（Counting Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1319,7 +1926,7 @@
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/27/countingSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/27/SortAlogrithms/countingSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1380,7 +1987,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/25/shellSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/25/SortAlogrithms/shellSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1399,7 +2006,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/25/shellSort/" itemprop="url">希尔排序（Shell Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/25/SortAlogrithms/shellSort/" itemprop="url">希尔排序（Shell Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -1463,7 +2070,7 @@
 
           
           
-             <span id="/2015/03/25/shellSort/" class="leancloud_visitors" data-flag-title="希尔排序（Shell Sort）">
+             <span id="/2015/03/25/SortAlogrithms/shellSort/" class="leancloud_visitors" data-flag-title="希尔排序（Shell Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1523,7 +2130,7 @@
 <hr>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/25/shellSort/#more" rel="contents">
+            <a class="btn" href="/2015/03/25/SortAlogrithms/shellSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1584,7 +2191,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/heapSort/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/SortAlogrithms/heapSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1603,7 +2210,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2015/03/24/heapSort/" itemprop="url">堆排序（Heap Sort）</a></h2>
+                <a class="post-title-link" href="/2015/03/24/SortAlogrithms/heapSort/" itemprop="url">堆排序（Heap Sort）</a></h2>
         
 
         <div class="post-meta">
@@ -1667,7 +2274,7 @@
 
           
           
-             <span id="/2015/03/24/heapSort/" class="leancloud_visitors" data-flag-title="堆排序（Heap Sort）">
+             <span id="/2015/03/24/SortAlogrithms/heapSort/" class="leancloud_visitors" data-flag-title="堆排序（Heap Sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1722,625 +2329,7 @@
 <h2 id=""><a href="#" class="headerlink" title=""></a>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/03/24/heapSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/24/quickSort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/24/quickSort/" itemprop="url">快速排序（Quick Sort）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-24T10:10:31+08:00">
-                2015-03-24
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-24T22:19:00+08:00">
-                2015-03-24
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/24/quickSort/" class="leancloud_visitors" data-flag-title="快速排序（Quick Sort）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  645
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。</p>
-<hr>
-<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>快速排一般基于递归实现：</p>
-<ol>
-<li>选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。</li>
-<li>基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。</li>
-<li>一轮下来，这个枢轴的位置一定在最终位置上。</li>
-<li>对两个子数组分别重复上述过程，直到每个数组只有一个元素。</li>
-<li>排序完成。</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/24/quickSort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/22/linear/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/22/linear/" itemprop="url">排序算法之线性排序</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-22T19:20:31+08:00">
-                2015-03-22
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-23T21:29:00+08:00">
-                2015-03-23
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/22/linear/" class="leancloud_visitors" data-flag-title="排序算法之线性排序">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,465
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="线性排序："><a href="#线性排序：" class="headerlink" title="线性排序："></a>线性排序：</h2><p><strong><em>计数排序 </em></strong>、<strong><em>桶排序 </em></strong>、<strong><em>基数排序 </em></strong><br>这三种排序算法都利用了桶的概念，但对桶的使用方法上有明显差异：</p>
-<blockquote>
-<p>基数排序：根据键值的每位数字来分配桶；<br>计数排序：每个桶只存储单一键值；<br>桶排序：每个桶存储一定范围的数值； </p>
-</blockquote>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/22/linear/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-
-    <!-- 
-    -->
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2015/03/18/division-recursion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZhangSunny">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="edgeowner">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/03/18/division-recursion/" itemprop="url">排序算法之归并排序</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-18T10:10:31+08:00">
-                2015-03-18
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2015-03-19T20:29:00+08:00">
-                2015-03-19
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/03/18/division-recursion/" class="leancloud_visitors" data-flag-title="排序算法之归并排序">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  617
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="分治递归思想排序："><a href="#分治递归思想排序：" class="headerlink" title="分治递归思想排序："></a>分治递归思想排序：</h2><hr>
-<h3 id="归并排序："><a href="#归并排序：" class="headerlink" title="归并排序："></a>归并排序：</h3><p>归并排序（Merge sort）是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。<br>作为一种典型的分而治之思想的算法应用，归并排序的实现由两种方法：</p>
-<blockquote>
-<p>自上而下的递归（所有递归的方法都可以用迭代重写，所以就有了第 2 种方法）；<br>自下而上的迭代；</p>
-</blockquote>
-<p><code>基本思想</code></p>
-<ol>
-<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；</li>
-<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置；</li>
-<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；</li>
-<li>重复步骤 3 直到某一指针达到序列尾；</li>
-<li>将另一序列剩下的所有元素直接复制到合并序列尾。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/03/18/division-recursion/#more" rel="contents">
+            <a class="btn" href="/2015/03/24/SortAlogrithms/heapSort/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2444,7 +2433,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2466,7 +2455,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
