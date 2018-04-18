@@ -99,12 +99,12 @@
     
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
+    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>Mysql索引介绍</title>
-        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
+        <title>单例模式</title>
+        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -119,12 +119,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
+    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>单例模式</title>
-        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
+        <title>Mysql索引介绍</title>
+        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
