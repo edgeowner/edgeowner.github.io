@@ -99,12 +99,12 @@
     
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
+    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>Mysql索引介绍</title>
-        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
+        <title>单例模式</title>
+        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -119,12 +119,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
+    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>单例模式</title>
-        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
+        <title>Mysql索引介绍</title>
+        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -183,6 +183,26 @@
 
     
   <url>
+    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
+    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>事务知识点</title>
+        <pubTime>2016-10-01T11:20:43.000Z</pubTime>
+        
+        <tag>事务</tag>
+         
+         
+           
+             
+              <breadCrumb title="并发控制相关知识点" url="http://edgeowner.com/categories/%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
@@ -215,26 +235,6 @@
         <tag>并发控制</tag>
          
         <tag>锁</tag>
-         
-         
-           
-             
-              <breadCrumb title="并发控制相关知识点" url="http://edgeowner.com/categories/%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
-    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>事务知识点</title>
-        <pubTime>2016-10-01T11:20:43.000Z</pubTime>
-        
-        <tag>事务</tag>
          
          
            

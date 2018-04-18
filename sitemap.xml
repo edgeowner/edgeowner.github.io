@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
+    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
     
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
+    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
     
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     
@@ -107,6 +107,13 @@
   </url>
   
   <url>
+    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
+    
+    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
@@ -115,13 +122,6 @@
   
   <url>
     <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
-    
-    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edgeowner.com/2016/10/01/tranaction/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     

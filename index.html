@@ -2128,7 +2128,7 @@ Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/optimistic-pessimistic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -2147,7 +2147,7 @@ Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/optimistic-pessimistic-locking/" itemprop="url">乐观锁和悲观锁(OCC和PCC)</a></h2>
+                <a class="post-title-link" href="/2016/10/01/optimistic-pessimistic/" itemprop="url">乐观锁与悲观锁的实际应用</a></h2>
         
 
         <div class="post-meta">
@@ -2211,7 +2211,7 @@ Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员�
 
           
           
-             <span id="/2016/10/01/optimistic-pessimistic-locking/" class="leancloud_visitors" data-flag-title="乐观锁和悲观锁(OCC和PCC)">
+             <span id="/2016/10/01/optimistic-pessimistic/" class="leancloud_visitors" data-flag-title="乐观锁与悲观锁的实际应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2236,7 +2236,7 @@ Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员�
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,425
+                  1,615
                 </span>
               
 
@@ -2262,12 +2262,11 @@ Java源代码搜索&emsp;&emsp;Grepcode(资源地址)是面向Java开发人员�
 
       
         
-          
-          &emsp;&emsp;本文在介乐观锁和悲观锁之前请先了解事务相关知识点乐观并发控制(乐观锁)和悲观并发控制（悲观锁）是并发控制主要采用的技术手段。&emsp;&emsp;无论是悲观锁还是乐观锁，都是人们定义出来的概念，可以认为是一种思想。其实不仅仅是关系型数据库系统中有乐观锁和悲观锁的概念，像me
-          ...
+          <h4 id="高并发场景"><a href="#高并发场景" class="headerlink" title="高并发场景"></a>高并发场景</h4><p>&emsp;&emsp;首先假设一个业务场景：数据库中有一条数据，需要获取到当前的值，在当前值的基础上$+10$，然后再更新回去。如果此时有两个线程同时并发处理，第一个线程拿到数据是$10，+10=20$更新回去。第二个线程原本是要在第一个线程的基础上再$+20=40$,结果由于并发访问取到更新前的数据为$10，+20=30$。<br>这就是典型的存在中间状态，导致数据不正确。来看以下的例子：<br>并发所带来的问题，和上文提到的类似，这里有一张price表，表结构如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`price`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'主键'</span>,</span><br><span class="line">  <span class="string">`total`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'总值'</span>,</span><br><span class="line">  <span class="string">`front`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费前'</span>,</span><br><span class="line">  <span class="string">`end`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费后'</span>,</span><br><span class="line">  <span class="string">`add_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'添加时间'</span>,</span><br><span class="line">  <span class="string">`update_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>, <span class="keyword">COMMENT</span> <span class="string">'更新时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/optimistic-pessimistic-locking/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/optimistic-pessimistic/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
