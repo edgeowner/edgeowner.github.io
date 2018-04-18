@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/optimistic-pessimistic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -399,7 +399,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/optimistic-pessimistic-locking/" itemprop="url">乐观锁和悲观锁(OCC和PCC)</a></h2>
+                <a class="post-title-link" href="/2016/10/01/optimistic-pessimistic/" itemprop="url">乐观锁与悲观锁的实际应用</a></h2>
         
 
         <div class="post-meta">
@@ -463,7 +463,7 @@
 
           
           
-             <span id="/2016/10/01/optimistic-pessimistic-locking/" class="leancloud_visitors" data-flag-title="乐观锁和悲观锁(OCC和PCC)">
+             <span id="/2016/10/01/optimistic-pessimistic/" class="leancloud_visitors" data-flag-title="乐观锁与悲观锁的实际应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,7 +488,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,425
+                  1,615
                 </span>
               
 
@@ -514,12 +514,11 @@
 
       
         
-          
-          &emsp;&emsp;本文在介乐观锁和悲观锁之前请先了解事务相关知识点乐观并发控制(乐观锁)和悲观并发控制（悲观锁）是并发控制主要采用的技术手段。&emsp;&emsp;无论是悲观锁还是乐观锁，都是人们定义出来的概念，可以认为是一种思想。其实不仅仅是关系型数据库系统中有乐观锁和悲观锁的概念，像me
-          ...
+          <h4 id="高并发场景"><a href="#高并发场景" class="headerlink" title="高并发场景"></a>高并发场景</h4><p>&emsp;&emsp;首先假设一个业务场景：数据库中有一条数据，需要获取到当前的值，在当前值的基础上$+10$，然后再更新回去。如果此时有两个线程同时并发处理，第一个线程拿到数据是$10，+10=20$更新回去。第二个线程原本是要在第一个线程的基础上再$+20=40$,结果由于并发访问取到更新前的数据为$10，+20=30$。<br>这就是典型的存在中间状态，导致数据不正确。来看以下的例子：<br>并发所带来的问题，和上文提到的类似，这里有一张price表，表结构如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`price`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'主键'</span>,</span><br><span class="line">  <span class="string">`total`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'总值'</span>,</span><br><span class="line">  <span class="string">`front`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费前'</span>,</span><br><span class="line">  <span class="string">`end`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费后'</span>,</span><br><span class="line">  <span class="string">`add_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'添加时间'</span>,</span><br><span class="line">  <span class="string">`update_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>, <span class="keyword">COMMENT</span> <span class="string">'更新时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/optimistic-pessimistic-locking/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/optimistic-pessimistic/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1893,7 +1892,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,110
+                  2,451
                 </span>
               
 
@@ -1919,9 +1918,14 @@
 
       
         
-          
-          多线程技术背景&emsp;&emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。&emsp;&emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一
-          ...
+          <hr>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>&emsp;&emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。<br>&emsp;&emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。<br>&emsp;&emsp;<font color="#EE4000">线程和进程的区别</font>：</p>
+<ol>
+<li>多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间和一组系统资源，有可能互相影响。　　</li>
+<li>线程本身的数据通常只有寄存器数据，以及一个程序执行时使用的堆栈，所以线程的切换负担比进程切换的负担要小。多线程程序比多进程程序需要更少的管理费用。　　</li>
+<li>进程是重量级的任务，需要分配给它们独立的地址空间，进程间通信是昂贵和受限的，进程间的转换也是很需要花费的。而线程是轻量级的选手，它们共享相同的地址空间并且共同分享同一个进程，线程间的通信是便宜的，线程间的转换也是低成本的。</li>
+</ol>
+<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/04/21/thread-pool/#more" rel="contents">
@@ -2531,7 +2535,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共28.1k字</span>
+    <span class="post-count">博客全站共28.4k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -2559,7 +2563,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.1k</span>
+    <span title="Site words total count">28.4k</span>
    
   -->
 </div>

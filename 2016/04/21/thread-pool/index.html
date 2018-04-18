@@ -152,20 +152,20 @@
 
 
 
-<meta name="description" content="多线程技术背景&amp;emsp;&amp;emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。&amp;emsp;&amp;emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁。如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资">
+<meta name="description" content="前言&amp;emsp;&amp;emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。&amp;emsp;&amp;emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。&amp;emsp;&amp;emsp;线程和进程的区别：  多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间">
 <meta name="keywords" content="多线程,线程池">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线程池介绍">
 <meta property="og:url" content="http://edgeowner.com/2016/04/21/thread-pool/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="多线程技术背景&amp;emsp;&amp;emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。&amp;emsp;&amp;emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁。如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。&amp;emsp;&amp;emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。&amp;emsp;&amp;emsp;线程和进程的区别：  多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/threadPool">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/thpool">
 <meta property="og:updated_time" content="2016-04-21T13:17:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线程池介绍">
-<meta name="twitter:description" content="多线程技术背景&amp;emsp;&amp;emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。&amp;emsp;&amp;emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁。如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。&amp;emsp;&amp;emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。&amp;emsp;&amp;emsp;线程和进程的区别：  多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间">
 <meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/threadPool">
 
 
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,110
+                  2,451
                 </span>
               
 
@@ -515,7 +515,16 @@
       
 
       
-        <h4 id="多线程技术背景"><a href="#多线程技术背景" class="headerlink" title="多线程技术背景"></a>多线程技术背景</h4><p>&emsp;&emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。<br>&emsp;&emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁。如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资源”技术产生的原因。<br>&emsp;&emsp;线程池为我们做的，就是线程创建之后为我们保留，当我们需要的时候直接拿来用，省去了重复创建销毁的过程。<br><img src="http://p5vswdxl9.bkt.clouddn.com/threadPool" alt="线程"></p>
+        <hr>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>&emsp;&emsp;很多人可能已经很熟悉操作系统中的多任务：就是同一时刻运行多个程序的能力。<br>&emsp;&emsp;多线程程序在较低层次上扩展了多任务的概念：一个程序同时执行多个任务。通常每一个任务称为一个线程，它是线程控制的简称。可以同时运行一个以上线程的程序成为多线程程序。<br>&emsp;&emsp;<font color="#EE4000">线程和进程的区别</font>：</p>
+<ol>
+<li>多个进程的内部数据和状态都是完全独立的，而多线程是共享一块内存空间和一组系统资源，有可能互相影响。　　</li>
+<li>线程本身的数据通常只有寄存器数据，以及一个程序执行时使用的堆栈，所以线程的切换负担比进程切换的负担要小。多线程程序比多进程程序需要更少的管理费用。　　</li>
+<li>进程是重量级的任务，需要分配给它们独立的地址空间，进程间通信是昂贵和受限的，进程间的转换也是很需要花费的。而线程是轻量级的选手，它们共享相同的地址空间并且共同分享同一个进程，线程间的通信是便宜的，线程间的转换也是低成本的。</li>
+</ol>
+<hr>
+<a id="more"></a>
+<h4 id="多线程技术背景"><a href="#多线程技术背景" class="headerlink" title="多线程技术背景"></a>多线程技术背景</h4><p>&emsp;&emsp;面向对象编程，创建和销毁对象是很浪费时间，因为创建一个对象要获取内存资源或者其它更多资源。在Java中亦是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。<br>&emsp;&emsp;为了提高服务程序的效率，尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁。如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资源”技术产生的原因。<br>&emsp;&emsp;线程池为我们做的，就是线程创建之后为我们保留，当我们需要的时候直接拿来用，省去了重复创建销毁的过程。<br><img src="http://p5vswdxl9.bkt.clouddn.com/threadPool" alt="线程"></p>
 <hr>
 <h4 id="线程池的优点"><a href="#线程池的优点" class="headerlink" title="线程池的优点"></a>线程池的优点</h4><ul>
 <li>重用线程中的线程，减少因对象创建、销毁所带来的性能开销；</li>
@@ -914,7 +923,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#多线程技术背景"><span class="nav-number">1.</span> <span class="nav-text">多线程技术背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池的优点"><span class="nav-number">2.</span> <span class="nav-text">线程池的优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池的处理逻辑"><span class="nav-number">3.</span> <span class="nav-text">线程池的处理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#线程池ThreadPoolExecutor构造函数"><span class="nav-number">3.1.</span> <span class="nav-text">线程池ThreadPoolExecutor构造函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数参数介绍"><span class="nav-number">3.2.</span> <span class="nav-text">构造函数参数介绍</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池使用"><span class="nav-number">4.</span> <span class="nav-text">线程池使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合理配置线程池的大小"><span class="nav-number">5.</span> <span class="nav-text">合理配置线程池的大小</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多线程技术背景"><span class="nav-number">2.</span> <span class="nav-text">多线程技术背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池的优点"><span class="nav-number">3.</span> <span class="nav-text">线程池的优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池的处理逻辑"><span class="nav-number">4.</span> <span class="nav-text">线程池的处理逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#线程池ThreadPoolExecutor构造函数"><span class="nav-number">4.1.</span> <span class="nav-text">线程池ThreadPoolExecutor构造函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数参数介绍"><span class="nav-number">4.2.</span> <span class="nav-text">构造函数参数介绍</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程池使用"><span class="nav-number">5.</span> <span class="nav-text">线程池使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合理配置线程池的大小"><span class="nav-number">6.</span> <span class="nav-text">合理配置线程池的大小</span></a></li></ol></div>
             
 
           </div>
@@ -948,7 +957,7 @@ var jiathis_config={
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共28.1k字</span>
+    <span class="post-count">博客全站共28.4k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -976,7 +985,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.1k</span>
+    <span title="Site words total count">28.4k</span>
    
   -->
 </div>

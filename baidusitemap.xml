@@ -99,12 +99,12 @@
     
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
+    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>单例模式</title>
-        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
+        <title>Mysql索引介绍</title>
+        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -119,12 +119,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/mysql-index/</loc>
+    <loc>http://edgeowner.com/2017/05/06/SingletonPattern/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>Mysql索引介绍</title>
-        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
+        <title>单例模式</title>
+        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -183,11 +183,11 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
+    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>乐观锁和悲观锁(OCC和PCC)</title>
+        <title>乐观锁与悲观锁的实际应用</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
         <tag>并发控制</tag>
@@ -205,11 +205,11 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic/</loc>
+    <loc>http://edgeowner.com/2016/10/01/optimistic-pessimistic-locking/</loc>
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>乐观锁与悲观锁的实际应用</title>
+        <title>乐观锁和悲观锁(OCC和PCC)</title>
         <pubTime>2016-10-01T11:20:43.000Z</pubTime>
         
         <tag>并发控制</tag>
