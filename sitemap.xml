@@ -212,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
@@ -226,13 +226,6 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
-    
-    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
@@ -240,14 +233,14 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter2/</loc>
     
-    <lastmod>2015-04-14T12:29:00.000Z</lastmod>
+    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-3/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
     
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     
@@ -261,7 +254,14 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
+    
+    <lastmod>2015-04-14T12:29:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-3/</loc>
     
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     

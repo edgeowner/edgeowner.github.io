@@ -474,7 +474,7 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     <data>
         <display>
@@ -518,28 +518,6 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
-    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>ThreadPoolExecutor 参数详解</title>
-        <pubTime>2016-04-21T01:15:31.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-        <tag>线程池</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java多线程" url="http://edgeowner.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/</loc>
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     <data>
@@ -562,19 +540,21 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
-    <lastmod>2015-04-14T12:29:00.000Z</lastmod>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     <data>
         <display>
-        <title>JavaCore（1）</title>
-        <pubTime>2015-04-13T11:06:43.000Z</pubTime>
+        <title>ThreadPoolExecutor 参数详解</title>
+        <pubTime>2016-04-21T01:15:31.000Z</pubTime>
         
-        <tag>java</tag>
+        <tag>多线程</tag>
+         
+        <tag>线程池</tag>
          
          
            
              
-              <breadCrumb title="Java" url="http://edgeowner.com/categories/Java/"/>
+              <breadCrumb title="Java多线程" url="http://edgeowner.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -582,7 +562,7 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-3/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     <data>
         <display>
@@ -622,7 +602,27 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
+    <lastmod>2015-04-14T12:29:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaCore（1）</title>
+        <pubTime>2015-04-13T11:06:43.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://edgeowner.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-3/</loc>
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     <data>
         <display>
