@@ -3,22 +3,22 @@
   <entry>
     <title><![CDATA[concurrent source code read]]></title>
     <url>%2F2018%2F04%2F18%2FConcurrentSourceCodeRead%2Fconcurrent-source-code-read%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[Spring source code read]]></title>
     <url>%2F2018%2F04%2F18%2FSpringSourceCodeRead%2Fspring-source-code-read%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[JDK source code read]]></title>
     <url>%2F2018%2F04%2F18%2FJDKSourceCodeRead%2FJDK-source-code-read%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[Java序列化]]></title>
     <url>%2F2018%2F03%2F13%2FJavaPremium%2FJava%E5%BA%8F%E5%88%97%E5%8C%96%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -30,17 +30,17 @@
   <entry>
     <title><![CDATA[Java NIO]]></title>
     <url>%2F2018%2F03%2F13%2FJavaPremium%2FJava-NIO%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[Java LDAP]]></title>
     <url>%2F2018%2F03%2F13%2FJavaPremium%2FJava-LDAP%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[Java CAS]]></title>
     <url>%2F2018%2F03%2F13%2FJavaPremium%2FJava-CAS%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
   </entry>
   <entry>
     <title><![CDATA[Mysql索引介绍]]></title>
@@ -65,9 +65,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[日常开发工具集（1）]]></title>
+    <title><![CDATA[浅析线程安全]]></title>
     <url>%2F2017%2F03%2F02%2FJavaMultiThread%2Fthread-safety-demo%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Java多线程</category>
       </categories>
@@ -148,7 +148,7 @@
   <entry>
     <title><![CDATA[Java面试题目集锦 (1)]]></title>
     <url>%2F2016%2F06%2F01%2FInterviewCase%2FJava%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E9%9B%86%E9%94%A6%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Java面试题目汇总</category>
       </categories>
@@ -160,13 +160,12 @@
   <entry>
     <title><![CDATA[Chapter(1)]]></title>
     <url>%2F2016%2F05%2F01%2FJavaMultiThreadBook%2FMultiThreadChapter1%2F</url>
-    <content type="text"><![CDATA[Thread类]]></content>
+    <content type="text"><![CDATA[Thread类中start()方法和run()方法的区别 &emsp;&emsp;Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。 &emsp;&emsp;如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规划器”来进行处理，而是由main()主线程来调用run()方法，也就是必须等run()方法中的代码执行完后才可以执行后面的代码。 代码Demo地址]]></content>
       <categories>
         <category>Java Multi-thread Programming书籍</category>
       </categories>
       <tags>
         <tag>多线程</tag>
-        <tag>线程池</tag>
       </tags>
   </entry>
   <entry>
@@ -250,7 +249,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter4%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -274,7 +273,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter4%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -297,7 +296,7 @@
   </entry>
   <entry>
     <title><![CDATA[JavaCore（1）]]></title>
-    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-2%2F</url>
+    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-1%2F</url>
     <content type="text"><![CDATA[Java核心Java基本语法：Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
       <categories>
         <category>Java</category>
@@ -308,7 +307,7 @@
   </entry>
   <entry>
     <title><![CDATA[JavaCore（1）]]></title>
-    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-1%2F</url>
+    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-2%2F</url>
     <content type="text"><![CDATA[Java核心Java基本语法：Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
       <categories>
         <category>Java</category>
@@ -343,7 +342,7 @@
   <entry>
     <title><![CDATA[基数排序（Radix Sort）]]></title>
     <url>%2F2015%2F03%2F27%2FSortAlogrithms%2FradixSort%2F</url>
-    <content type="text"><![CDATA[基数排序基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(n log(r)m)$，其中$r$为所采取的基数，而$m$为堆数，空间复杂度$O(N)$，在某些时候，基数排序法的效率高于其它的稳定性排序法。基数排序是按照分配，回收（分配到不同的位置上，然后回收）...不断分配...回收来进行排序，直到有序...。 算法思路It is a sorting algorithm that is used to sort numbers. We sort the numbers from least significant digit to the most significant digit. When we are sorting the numbers we will first find the number of digits in the biggest number. If there are N digits in the biggest number then we will need to perform N number of pass. We will pad the remaining numbers with leading zeros so they all have N digits. Then we will take 10 buckets labeled 0 to 9 and sort the numbers. After the sorting is complete we will remove the leading zeros. 基数排序的要点就两个： 分配：按照元素的大小来放入不同的桶子里； 回收：将桶子里的元素按桶子顺序重新放到数组中； 重复…..两个步骤； 基数排序对有负数和0的数列难以进行排序 算法动态展示 YouTube视频源地址 ; Radix Sort - step by step guide; 开课老师视频源; (function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180403-113850-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() 代码实现方式1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556/** * 基数排序 * * @param arrs */ public static void radixSort(int[] arrs) &#123; int max = findMax(arrs, 0, arrs.length - 1); //需要遍历的次数由数组最大的位数来决定 for (int i = 1; max / i &gt; 0; i = i * 10) &#123; int[][] buckets = new int[arrs.length][10]; //获取每一个数字（个、十、百、千位...分配到桶子里） for (int j = 0; j &lt; arrs.length; j++) &#123; int num = (arrs[j] / i) % 10; //将其放入桶子里 buckets[j][num] = arrs[j]; &#125; //回收桶子里的元素 int k = 0; //有10个桶子 for (int j = 0; j &lt; 10; j++) &#123; //对每个桶子里的元素进行回收 for (int l = 0; l &lt; arrs.length; l++) &#123; //如果桶子里有元素就回收(数据会初始化为0) if (buckets[l][j] != 0) &#123; arrs[k++] = buckets[l][j]; &#125; &#125; &#125; &#125; &#125; /** * 递归找出数组最大值 * * @param arrs 数组 * @param left 左边界，第一个数 * @param right 右边界，数组长度 * @return */ public static int findMax(int[] arrs, int left, int right) &#123; //若该数组只有一个数，那么最大的就是该数组第一个值 if (left == right) &#123; return arrs[left]; &#125; else &#123; int leftValue = arrs[left]; //找出所有元素中的最大值 int rightvalue = findMax(arrs, left + 1, right); if (leftValue &gt; rightvalue) &#123; return leftValue; &#125; else &#123; return rightvalue; &#125; &#125; &#125; 参考地址：基数排序Demo代码地址：Github]]></content>
+    <content type="text"><![CDATA[基数排序基数排序(radix sort)属于”分配式排序”(distribution sort)，又称”桶子法”(bucket sort)或bin sort，将要排序的元素分配至某些”桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为$O(n log(r)m)$，其中$r$为所采取的基数，而$m$为堆数，空间复杂度$O(N)$，在某些时候，基数排序法的效率高于其它的稳定性排序法。基数排序是按照分配，回收（分配到不同的位置上，然后回收）...不断分配...回收来进行排序，直到有序...。 算法思路It is a sorting algorithm that is used to sort numbers. We sort the numbers from least significant digit to the most significant digit. When we are sorting the numbers we will first find the number of digits in the biggest number. If there are N digits in the biggest number then we will need to perform N number of pass. We will pad the remaining numbers with leading zeros so they all have N digits. Then we will take 10 buckets labeled 0 to 9 and sort the numbers. After the sorting is complete we will remove the leading zeros. 基数排序的要点就两个： 分配：按照元素的大小来放入不同的桶子里； 回收：将桶子里的元素按桶子顺序重新放到数组中； 重复…..两个步骤； 基数排序对有负数和0的数列难以进行排序 算法动态展示 YouTube视频源地址 ; Radix Sort - step by step guide; 开课老师视频源; (function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180403-113850-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() 代码实现方式1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556/** * 基数排序 * * @param arrs */ public static void radixSort(int[] arrs) &#123; int max = findMax(arrs, 0, arrs.length - 1); //需要遍历的次数由数组最大的位数来决定 for (int i = 1; max / i &gt; 0; i = i * 10) &#123; int[][] buckets = new int[arrs.length][10]; //获取每一个数字（个、十、百、千位...分配到桶子里） for (int j = 0; j &lt; arrs.length; j++) &#123; int num = (arrs[j] / i) % 10; //将其放入桶子里 buckets[j][num] = arrs[j]; &#125; //回收桶子里的元素 int k = 0; //有10个桶子 for (int j = 0; j &lt; 10; j++) &#123; //对每个桶子里的元素进行回收 for (int l = 0; l &lt; arrs.length; l++) &#123; //如果桶子里有元素就回收(数据会初始化为0) if (buckets[l][j] != 0) &#123; arrs[k++] = buckets[l][j]; &#125; &#125; &#125; &#125; &#125; /** * 递归找出数组最大值 * * @param arrs 数组 * @param left 左边界，第一个数 * @param right 右边界，数组长度 * @return */ public static int findMax(int[] arrs, int left, int right) &#123; //若该数组只有一个数，那么最大的就是该数组第一个值 if (left == right) &#123; return arrs[left]; &#125; else &#123; int leftValue = arrs[left]; //找出所有元素中的最大值 int rightvalue = findMax(arrs, left + 1, right); if (leftValue &gt; rightvalue) &#123; return leftValue; &#125; else &#123; return rightvalue; &#125; &#125; &#125; 参考地址：基数排序Demo代码地址：Github]]></content>
       <categories>
         <category>Algorithms</category>
       </categories>
@@ -391,7 +390,7 @@
   <entry>
     <title><![CDATA[快速排序（Quick Sort）]]></title>
     <url>%2F2015%2F03%2F24%2FSortAlogrithms%2FquickSort%2F</url>
-    <content type="text"><![CDATA[快速排序快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。 算法思路快速排一般基于递归实现： 选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。 基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。 一轮下来，这个枢轴的位置一定在最终位置上。 对两个子数组分别重复上述过程，直到每个数组只有一个元素。 排序完成。 快速排序示意图：图例过程演示（中文原视频地址）： (function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124320-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() (function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124538-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() 超有趣的快速排序视频 代码实现方式（为了更直观的反映整个排序过程添加了标记代码）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748private static void quickSort2(int arr[], int left, int right) &#123; //如果left不小于right ，需要排序的部分只有一个元素，方法返回 System.out.println("left:" + left + ",right:" + right); if (left == 0 &amp;&amp; right == 0) &#123; System.out.println("i=j=0"); &#125; System.out.println("1.-------------------"); if (left &gt;= right) &#123; System.out.println(MessageFormat.format("return: left,&#123;0&#125; | right,&#123;1&#125;", left, right)); return; &#125; //设置最左边元素为基准点：pivot int pivot = arr[left]; System.out.println("pivot:" + pivot); int i = left; int j = right; //把要排序的序列中比p大的放到右边，比p小的放到左边，p的下标位置为i while (i &lt; j) &#123; System.out.println("2.-------start------------"); while (i &lt; j &amp;&amp; arr[j] &gt;= pivot) &#123; j--; System.out.println("2. j:" + j); &#125; System.out.println("========[j-- over, i++ start ]=========="); while (i &lt; j &amp;&amp; arr[i] &lt;= pivot) &#123; i++; System.out.println("2. i:" + i); &#125; System.out.println("2.-------end------------"); if (i &lt; j) &#123; int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; &#125; &#125; //交换基准点 arr[left] = arr[i]; arr[i] = pivot; //对序列中，i左边的元素实施快速排序 System.out.println("左边开始前， right为" + right + "值"); quickSort2(arr, left, i - 1); //对序列中，j右边边的元素实施快速排序 System.out.println("右块遍历开始...... "); quickSort2(arr, i + 1, right); System.out.println("left =:" + (i + 1) + ",right = " + right); System.out.println("3.-------------------"); System.out.println("4.---------all over----------"); 12345678910111213public static void quickSort(int[] arr) &#123; //大数据量测试 int[] arr = new int[100000]; Random r = new Random(); for (int i = 0; i &lt; arr.length; i++) &#123; arr[i] = r.nextInt(10000000); &#125; long start = System.currentTimeMillis(); quickSort(nums); long time = System.currentTimeMillis() - start; System.out.println("-----------大数据量测试结果-----------"); System.out.println("all time:" + time + "毫秒"); &#125; 参考地址：]]></content>
+    <content type="text"><![CDATA[快速排序快速排序是冒泡排序的改进版，是最好的一种内排序，面试会经常被问到，是程序员必须掌握的。 算法思路快速排一般基于递归实现： 选定一个合适的值（理想情况中值最好。实现中一般使用数组第一个值），称为“枢轴”（pivot）。 基于这个值，将数组分为两部分，较小的分在左边，较大的分在右边。 一轮下来，这个枢轴的位置一定在最终位置上。 对两个子数组分别重复上述过程，直到每个数组只有一个元素。 排序完成。 快速排序示意图：图例过程演示（中文原视频地址）： (function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124320-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() (function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"theme":"#FADFA3","loop":true,"video":{"url":"http://p5vswdxl9.bkt.clouddn.com/QQ20180327-124538-HD.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})() 超有趣的快速排序视频 代码实现方式（为了更直观的反映整个排序过程添加了标记代码）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748private static void quickSort2(int arr[], int left, int right) &#123; //如果left不小于right ，需要排序的部分只有一个元素，方法返回 System.out.println("left:" + left + ",right:" + right); if (left == 0 &amp;&amp; right == 0) &#123; System.out.println("i=j=0"); &#125; System.out.println("1.-------------------"); if (left &gt;= right) &#123; System.out.println(MessageFormat.format("return: left,&#123;0&#125; | right,&#123;1&#125;", left, right)); return; &#125; //设置最左边元素为基准点：pivot int pivot = arr[left]; System.out.println("pivot:" + pivot); int i = left; int j = right; //把要排序的序列中比p大的放到右边，比p小的放到左边，p的下标位置为i while (i &lt; j) &#123; System.out.println("2.-------start------------"); while (i &lt; j &amp;&amp; arr[j] &gt;= pivot) &#123; j--; System.out.println("2. j:" + j); &#125; System.out.println("========[j-- over, i++ start ]=========="); while (i &lt; j &amp;&amp; arr[i] &lt;= pivot) &#123; i++; System.out.println("2. i:" + i); &#125; System.out.println("2.-------end------------"); if (i &lt; j) &#123; int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; &#125; &#125; //交换基准点 arr[left] = arr[i]; arr[i] = pivot; //对序列中，i左边的元素实施快速排序 System.out.println("左边开始前， right为" + right + "值"); quickSort2(arr, left, i - 1); //对序列中，j右边边的元素实施快速排序 System.out.println("右块遍历开始...... "); quickSort2(arr, i + 1, right); System.out.println("left =:" + (i + 1) + ",right = " + right); System.out.println("3.-------------------"); System.out.println("4.---------all over----------"); 12345678910111213public static void quickSort(int[] arr) &#123; //大数据量测试 int[] arr = new int[100000]; Random r = new Random(); for (int i = 0; i &lt; arr.length; i++) &#123; arr[i] = r.nextInt(10000000); &#125; long start = System.currentTimeMillis(); quickSort(nums); long time = System.currentTimeMillis() - start; System.out.println("-----------大数据量测试结果-----------"); System.out.println("all time:" + time + "毫秒"); &#125; 参考地址：]]></content>
       <categories>
         <category>Algorithms</category>
       </categories>
