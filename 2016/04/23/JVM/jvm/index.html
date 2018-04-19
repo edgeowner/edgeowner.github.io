@@ -503,7 +503,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,114
+                  2,112
                 </span>
               
 
@@ -534,7 +534,7 @@
 <h4 id="一、方法区-Method-Area"><a href="#一、方法区-Method-Area" class="headerlink" title="一、方法区(Method Area)"></a>一、方法区(Method Area)</h4><ol>
 <li><strong>作用</strong>： 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。此区域内存回收目标主要针对常量池回收和对类型的卸载回收。 </li>
 <li><strong>特点</strong>：线程共享 。</li>
-<li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”_<strong>永久代(Permanent Generation)</strong>_ “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
+<li><strong>永久代的疑问(PerGen)</strong>：该内存区域一般被称为”<strong>永久代(Permanent Generation)</strong> “，二者并不等价，设计之初就把GC分代收集扩展至方法区，或者说使用永久代实现方法区而已。</li>
 <li><strong>运行时常量池</strong>：方法区的一部分，存放<strong><em>编译期</em></strong>生成的<strong>各种字面量</strong>(“zdy”,”123”等)和 <strong>符号引用</strong> 。编译器和运行期的intern()都可以将常量放入池中。受方法区限制，常量池无法申请到内存时会抛出OutOfMemoryError异常。运行时常量池具有动态性，并非只有Class文件中的内容才能进入运行时常量池，<strong><em>运行期间</em></strong>也能将新的常量放入池中。如String.intern（）方法。</li>
 <li><strong>方法区储存类的信息</strong>： <ol>
 <li><code>Classloader引用</code>；</li>
