@@ -595,7 +595,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Lock/optimistic-pessimistic/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Transaction/transaction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -614,7 +614,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/Lock/optimistic-pessimistic/" itemprop="url">乐观锁与悲观锁的实际应用</a></h2>
+                <a class="post-title-link" href="/2016/10/01/Transaction/transaction/" itemprop="url">事务知识点</a></h2>
         
 
         <div class="post-meta">
@@ -678,7 +678,7 @@
 
           
           
-             <span id="/2016/10/01/Lock/optimistic-pessimistic/" class="leancloud_visitors" data-flag-title="乐观锁与悲观锁的实际应用">
+             <span id="/2016/10/01/Transaction/transaction/" class="leancloud_visitors" data-flag-title="事务知识点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -703,7 +703,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,615
+                  2,047
                 </span>
               
 
@@ -729,11 +729,10 @@
 
       
         
-          <h4 id="高并发场景"><a href="#高并发场景" class="headerlink" title="高并发场景"></a>高并发场景</h4><p>&emsp;&emsp;首先假设一个业务场景：数据库中有一条数据，需要获取到当前的值，在当前值的基础上$+10$，然后再更新回去。如果此时有两个线程同时并发处理，第一个线程拿到数据是$10，+10=20$更新回去。第二个线程原本是要在第一个线程的基础上再$+20=40$,结果由于并发访问取到更新前的数据为$10，+20=30$。<br>这就是典型的存在中间状态，导致数据不正确。来看以下的例子：<br>并发所带来的问题，和上文提到的类似，这里有一张price表，表结构如下：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`price`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'主键'</span>,</span><br><span class="line">  <span class="string">`total`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'总值'</span>,</span><br><span class="line">  <span class="string">`front`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费前'</span>,</span><br><span class="line">  <span class="string">`end`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费后'</span>,</span><br><span class="line">  <span class="string">`add_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'添加时间'</span>,</span><br><span class="line">  <span class="string">`update_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>, <span class="keyword">COMMENT</span> <span class="string">'更新时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure>
+          <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/Lock/optimistic-pessimistic/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/Transaction/transaction/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -994,7 +993,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Transaction/transaction/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Lock/optimistic-pessimistic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1013,7 +1012,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/Transaction/transaction/" itemprop="url">事务知识点</a></h2>
+                <a class="post-title-link" href="/2016/10/01/Lock/optimistic-pessimistic/" itemprop="url">乐观锁与悲观锁的实际应用</a></h2>
         
 
         <div class="post-meta">
@@ -1077,7 +1076,7 @@
 
           
           
-             <span id="/2016/10/01/Transaction/transaction/" class="leancloud_visitors" data-flag-title="事务知识点">
+             <span id="/2016/10/01/Lock/optimistic-pessimistic/" class="leancloud_visitors" data-flag-title="乐观锁与悲观锁的实际应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1102,7 +1101,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,047
+                  1,615
                 </span>
               
 
@@ -1128,10 +1127,11 @@
 
       
         
-          <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
+          <h4 id="高并发场景"><a href="#高并发场景" class="headerlink" title="高并发场景"></a>高并发场景</h4><p>&emsp;&emsp;首先假设一个业务场景：数据库中有一条数据，需要获取到当前的值，在当前值的基础上$+10$，然后再更新回去。如果此时有两个线程同时并发处理，第一个线程拿到数据是$10，+10=20$更新回去。第二个线程原本是要在第一个线程的基础上再$+20=40$,结果由于并发访问取到更新前的数据为$10，+20=30$。<br>这就是典型的存在中间状态，导致数据不正确。来看以下的例子：<br>并发所带来的问题，和上文提到的类似，这里有一张price表，表结构如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`price`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'主键'</span>,</span><br><span class="line">  <span class="string">`total`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'总值'</span>,</span><br><span class="line">  <span class="string">`front`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费前'</span>,</span><br><span class="line">  <span class="string">`end`</span> <span class="built_in">decimal</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">DEFAULT</span> <span class="string">'0.00'</span> <span class="keyword">COMMENT</span> <span class="string">'消费后'</span>,</span><br><span class="line">  <span class="string">`add_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'添加时间'</span>,</span><br><span class="line">  <span class="string">`update_time`</span> <span class="keyword">timestamp</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>, <span class="keyword">COMMENT</span> <span class="string">'更新时间'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span>  <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/Transaction/transaction/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/Lock/optimistic-pessimistic/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1500,7 +1500,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  185
+                  197
                 </span>
               
 
@@ -1526,10 +1526,11 @@
 
       
         
-          
-          Thread类中start()方法和run()方法的区别
-&emsp;&emsp;Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动
-          ...
+          <h3 id="Thread类中start-方法和run-方法的区别"><a href="#Thread类中start-方法和run-方法的区别" class="headerlink" title="Thread类中start()方法和run()方法的区别"></a>Thread类中start()方法和run()方法的区别</h3><ol>
+<li>&emsp;&emsp;Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。</li>
+<li>&emsp;&emsp;如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规划器”来进行处理，而是由main()主线程来调用run()方法，也就是必须等run()方法中的代码执行完后才可以执行后面的代码。</li>
+<li><a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener">代码Demo地址</a>：参见com.multithread.demo.chapter1.ThreadShareDemo目录下代码</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/#more" rel="contents">
