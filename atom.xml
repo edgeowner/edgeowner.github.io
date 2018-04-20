@@ -490,7 +490,7 @@
       &lt;h4 id=&quot;JVM具体参数和内存区域映射图例&quot;&gt;&lt;a href=&quot;#JVM具体参数和内存区域映射图例&quot; class=&quot;headerlink&quot; title=&quot;JVM具体参数和内存区域映射图例&quot;&gt;&lt;/a&gt;JVM具体参数和内存区域映射图例&lt;/h4&gt;&lt;p&gt; &amp;emsp;&amp;emsp;此文主要用图例方式描绘了JVM的结构，介绍了JVM内存结构对应的参数名。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在具体实现上，JVM将需要进行垃圾回收的区域分为3类：新生代（Young Generation）、老年代(Old Generation)、永久代(Permanent Generation)。其中新生代又分为eden和survival（S0、S1），具体结构如下图所示：&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;http://p5vswdxl9.bkt.clouddn.com/jvm_and_params_map.png&quot; alt=&quot;图示1.0&quot;&gt;
+&lt;li&gt;&lt;img src=&quot;http://p5vswdxl9.bkt.clouddn.com/jvm_and_params_map.png&quot; alt=&quot;图示1.0&quot;&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
