@@ -157,15 +157,23 @@
 <meta name="description" content="Thread类中start()方法和run()方法的区别 Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。 如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规">
 <meta name="keywords" content="多线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chapter(1)">
+<meta property="og:title" content="Chapter(1-1)">
 <meta property="og:url" content="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/index.html">
 <meta property="og:site_name" content="edgeowner">
 <meta property="og:description" content="Thread类中start()方法和run()方法的区别 Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。 如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/Thread-start.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/Thread-run.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/ThreadNotShare.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/NotShareResult.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/ThreadShare.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/shareResult.png">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5.png">
 <meta property="og:updated_time" content="2016-05-01T12:19:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter(1)">
+<meta name="twitter:title" content="Chapter(1-1)">
 <meta name="twitter:description" content="Thread类中start()方法和run()方法的区别 Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。 如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规">
+<meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/Thread-start.png">
 
 
 
@@ -201,7 +209,7 @@
 
 
 
-  <title>Chapter(1) | edgeowner</title>
+  <title>Chapter(1-1) | edgeowner</title>
   
 
 
@@ -398,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Chapter(1)</h2>
+          <h2 class="post-title" itemprop="name headline">Chapter(1-1)</h2>
         
 
         <div class="post-meta">
@@ -462,7 +470,7 @@
 
           
           
-             <span id="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" class="leancloud_visitors" data-flag-title="Chapter(1)">
+             <span id="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" class="leancloud_visitors" data-flag-title="Chapter(1-1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -487,7 +495,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  197
+                  772
                 </span>
               
 
@@ -515,10 +523,44 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="Thread类中start-方法和run-方法的区别"><a href="#Thread类中start-方法和run-方法的区别" class="headerlink" title="Thread类中start()方法和run()方法的区别"></a>Thread类中start()方法和run()方法的区别</h3><ol>
 <li>Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。</li>
 <li>如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规划器”来进行处理，而是由main()主线程来调用run()方法，也就是必须等run()方法中的代码执行完后才可以执行后面的代码。</li>
-<li>(<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener"><font color="#ff6600">代码Demo地址</font></a>)：参见com.multithread.demo.chapter1.ThreadShareDemo目录下代码</li>
+<li>(<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener"><font color="#ff6600">代码Demo地址</font></a>)：参见com.multithread.demo.chapter1.ThreaStartAndRun目录下代码</li>
+<li>运行结果：<ol>
+<li>start()方法 ：<img src="http://p5vswdxl9.bkt.clouddn.com/Thread-start.png" alt="start()方法"></li>
+<li>run()方法 ：<img src="http://p5vswdxl9.bkt.clouddn.com/Thread-run.png" alt="run()方法"></li>
+</ol>
+</li>
 </ol>
 <a id="more"></a>
 <hr>
+<h3 id="实例变量与线程安全"><a href="#实例变量与线程安全" class="headerlink" title="实例变量与线程安全"></a>实例变量与线程安全</h3><ol>
+<li>自定义线程类中的实例变量针对其他线程可以有共享和不共享之分，这在多个线程之间进行交互时是很重要的一个技术点。</li>
+<li>(<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener"><font color="#ff6600">代码Demo地址</font></a>)：参见com.multithread.demo.chapter1.ThreadShareDemo目录下代码<h5 id="不共享数据"><a href="#不共享数据" class="headerlink" title="不共享数据"></a>不共享数据</h5></li>
+<li><img src="http://p5vswdxl9.bkt.clouddn.com/ThreadNotShare.png" alt="不共享数据"></li>
+<li>代码示例</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 测试线程不共享Demo</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyThread myThreadA = <span class="keyword">new</span> MyThread(<span class="string">"A"</span>);</span><br><span class="line">        MyThread myThreadB = <span class="keyword">new</span> MyThread(<span class="string">"B"</span>);</span><br><span class="line">        MyThread myThreadC = <span class="keyword">new</span> MyThread(<span class="string">"C"</span>);</span><br><span class="line">        myThreadA.start();</span><br><span class="line">        myThreadB.start();</span><br><span class="line">        myThreadC.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>运行结果：<img src="http://p5vswdxl9.bkt.clouddn.com/NotShareResult.png" alt="NotShareResult.png"></li>
+<li>以上步骤创建了三个线程，每个线程都有各自的count变量，自己减少自己的count变量的值。并不存在多个线程访问同一个实例变量的情况。<h4 id="共享数据"><a href="#共享数据" class="headerlink" title="共享数据"></a>共享数据</h4></li>
+<li><img src="http://p5vswdxl9.bkt.clouddn.com/ThreadShare.png" alt="共享数据"></li>
+<li><p>代码示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>  zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>    测试线程共享Demo（线程不安全）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyThread2 myThread2 = <span class="keyword">new</span> MyThread2();</span><br><span class="line">        Thread a = <span class="keyword">new</span> Thread(myThread2, <span class="string">"A"</span>);</span><br><span class="line">        Thread b = <span class="keyword">new</span> Thread(myThread2, <span class="string">"B"</span>);</span><br><span class="line">        Thread c = <span class="keyword">new</span> Thread(myThread2, <span class="string">"C"</span>);</span><br><span class="line">        Thread d = <span class="keyword">new</span> Thread(myThread2, <span class="string">"D"</span>);</span><br><span class="line">        Thread e = <span class="keyword">new</span> Thread(myThread2, <span class="string">"E"</span>);</span><br><span class="line">        a.start();</span><br><span class="line">        b.start();</span><br><span class="line">        c.start();</span><br><span class="line">        d.start();</span><br><span class="line">        e.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>运行结果： <img src="http://p5vswdxl9.bkt.clouddn.com/shareResult.png" alt="shareResult"></li>
+<li>以上步骤共享数据的情况就是多个线程可以访问同一个变量，实现了$5$个线程共同对一个count变量进行减法操作的目的。A和B的count值都为$8$，说明A和B同时对count进行处理，产生“非线程安全”问题，JVM中 $i—$ 操作分为三步：<ol>
+<li>取得原有 $i$ 值；</li>
+<li>计算 $i-1$；</li>
+<li>对 $i$ 进行赋值操作；</li>
+</ol>
+</li>
+<li>如何避免：对多个线程之间进行同步，也就是用按顺序排队的方式进行减 $1$ 操作。以下为同步方式实现。具体同步介绍参见<a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/">Chapter(1-2)</a></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">        <span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 线程共享操作 (线程同步)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread2_1</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.run();</span><br><span class="line">        count--;</span><br><span class="line">        System.out.println(<span class="string">"线程"</span> + <span class="keyword">this</span>.currentThread().getName() + <span class="string">"计算，count = "</span> + count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>代码运行结果：<img src="http://p5vswdxl9.bkt.clouddn.com/%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5.png" alt="线程同步"></li>
+</ol>
 
       
     </div>
@@ -533,11 +575,11 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/">Chapter(1)</a></p>
+  <p><span>本文标题:</span><a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/">Chapter(1-1)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 ZhangSunny 的个人博客">ZhangSunny</a></p>
   <p><span>发布时间:</span>2016年05月01日 - 12:05</p>
   <p><span>最后更新:</span>2016年05月01日 - 20:05</p>
-  <p><span>原始链接:</span><a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" title="Chapter(1)">http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</a>
+  <p><span>原始链接:</span><a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" title="Chapter(1-1)">http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -616,7 +658,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" title="Chapter(1)">http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</a>
+    <a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" title="Chapter(1-1)">http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -655,8 +697,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/01/InterviewCase/Java面试题目集锦/" rel="prev" title="Java面试题目集锦 (1)">
-                Java面试题目集锦 (1) <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/" rel="prev" title="Chapter(1-2)">
+                Chapter(1-2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -901,7 +943,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Thread类中start-方法和run-方法的区别"><span class="nav-number">1.</span> <span class="nav-text">Thread类中start()方法和run()方法的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Thread类中start-方法和run-方法的区别"><span class="nav-number">1.</span> <span class="nav-text">Thread类中start()方法和run()方法的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例变量与线程安全"><span class="nav-number">2.</span> <span class="nav-text">实例变量与线程安全</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不共享数据"><span class="nav-number">2.0.1.</span> <span class="nav-text">不共享数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享数据"><span class="nav-number">2.1.</span> <span class="nav-text">共享数据</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -935,7 +977,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共28.7k字</span>
+    <span class="post-count">博客全站共29.3k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -963,7 +1005,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.7k</span>
+    <span title="Site words total count">29.3k</span>
    
   -->
 </div>
