@@ -517,13 +517,7 @@
           <h3 id="Thread类中start-方法和run-方法的区别"><a href="#Thread类中start-方法和run-方法的区别" class="headerlink" title="Thread类中start()方法和run()方法的区别"></a>Thread类中start()方法和run()方法的区别</h3><ol>
 <li>Thread.java类中的start()方法通知“线程规划器”，此线程已经准备就绪，等待调用线程对象的run()方法。这个过程其实就是让系统安排一个时间来调用Thread中的run()方法，也就是使线程得到运行，启动线程，具有异步执行的效果。</li>
 <li>如果代码调用thread.run()方法就不是异步执行，而是同步，那么此线程对象并不交给“线程规划器”来进行处理，而是由main()主线程来调用run()方法，也就是必须等run()方法中的代码执行完后才可以执行后面的代码。</li>
-<li>(<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener"><font color="#ff6600">代码Demo地址</font></a>)：参见com.multithread.demo.chapter1.ThreaStartAndRun目录下代码</li>
-<li>运行结果：<ol>
-<li>start()方法 ：<img src="http://p5vswdxl9.bkt.clouddn.com/Thread-start.png" alt="start()方法"></li>
-<li>run()方法 ：<img src="http://p5vswdxl9.bkt.clouddn.com/Thread-run.png" alt="run()方法"></li>
-</ol>
-</li>
-</ol>
+<li>(<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener"><font color="#ff6600">代码Demo地址</font></a>)：参见com.multithread.demo.chapter1.ThreaStartAndRun目录下代码。</li></ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/#more" rel="contents">
