@@ -260,7 +260,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter3%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -272,7 +272,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter3%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -295,7 +295,7 @@
   </entry>
   <entry>
     <title><![CDATA[JavaCore（1）]]></title>
-    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-1%2F</url>
+    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-3%2F</url>
     <content type="text"><![CDATA[Java核心Java基本语法：Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
       <categories>
         <category>Java</category>
@@ -317,7 +317,7 @@
   </entry>
   <entry>
     <title><![CDATA[JavaCore（1）]]></title>
-    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-3%2F</url>
+    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-1%2F</url>
     <content type="text"><![CDATA[Java核心Java基本语法：Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
       <categories>
         <category>Java</category>

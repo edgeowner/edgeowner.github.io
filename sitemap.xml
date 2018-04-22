@@ -93,6 +93,13 @@
   </url>
   
   <url>
+    <loc>http://edgeowner.com/images/manifest.json</loc>
+    
+    <lastmod>2018-03-08T03:59:34.245Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://edgeowner.com/archives/index.html</loc>
     
     <lastmod>2018-03-06T13:44:36.675Z</lastmod>
@@ -142,6 +149,13 @@
   </url>
   
   <url>
+    <loc>http://edgeowner.com/2016/10/01/Transaction/transaction/</loc>
+    
+    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://edgeowner.com/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
@@ -150,13 +164,6 @@
   
   <url>
     <loc>http://edgeowner.com/2016/10/01/Lock/optimistic-pessimistic/</loc>
-    
-    <lastmod>2016-10-01T12:19:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edgeowner.com/2016/10/01/Transaction/transaction/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     
@@ -219,14 +226,14 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter3/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
