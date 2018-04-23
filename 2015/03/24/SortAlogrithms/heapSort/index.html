@@ -108,7 +108,7 @@
   
     
     
-    <link href="//fonts.lug.ustc.edu.cn/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -515,7 +515,9 @@
 
       
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p>堆排序是利用堆这种数据结构而设计的一种排序算法，堆排序是一种选择排序，它的最坏，最好，平均时间复杂度均为O(nlogn)，它也是不稳定排序。<br>堆是具有以下性质的完全二叉树：每个结点的值都大于或等于其左右孩子结点的值，称为大顶堆；或者每个结点的值都小于或等于其左右孩子结点的值，称为小顶堆。<br>大堆小堆图例：<br><img src="http://p5vswdxl9.bkt.clouddn.com/%E5%A4%A7%E5%A0%86%E5%B0%8F%E5%A0%86.png" alt=""><br>简单来说：堆排序是将数据看成是完全二叉树、根据完全二叉树的特性来进行排序的一种算法。<br>最大堆要求节点的元素都要不小于其孩子，最小堆要求节点元素都不大于其左右孩子。那么处于最大堆的根节点的元素一定是这个堆中的最大值。<br>完全二叉树有个特性：左边子节点位置 = 当前父节点的两倍 + 1，右边子节点位置 = 当前父节点的两倍 + 2<br><a href="https://mp.weixin.qq.com/s?__biz=MzI4Njg5MDA5NA==&amp;mid=2247484064&amp;idx=2&amp;sn=d308d573df43e8e3b0633d0dc1147c3b&amp;chksm=ebd743a1dca0cab774e7df348401039dda0765923efde0b9cf8e3589c4ceab25c5ec0cea5f7d#rd" target="_blank" rel="noopener">点击参考文章</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>这里我们讨论最大堆：当前每个父节点都大于子节点。<br>In this Algorithm we first build the heap using the given elements, We create a Max Heap to sort the elements in ascending order , Once the heap is<br>created we swap the root node with the last node an delete the last node from the heap。</p>
+<a id="more"></a>
+<hr>
+<h4 id="算法思路"><a href="#算法思路" class="headerlink" title="算法思路"></a>算法思路</h4><p>这里我们讨论最大堆：当前每个父节点都大于子节点。<br>In this Algorithm we first build the heap using the given elements, We create a Max Heap to sort the elements in ascending order , Once the heap is<br>created we swap the root node with the last node an delete the last node from the heap。</p>
 <ol>
 <li>Build a heap we need transform it into to a max  heap ;</li>
 <li>Create a Max heap (this Max heap parent node is always greater than or equal to child nodes);</li>
@@ -914,7 +916,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆排序"><span class="nav-number">1.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法思路"><span class="nav-number">0.1.</span> <span class="nav-text">算法思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现方式"><span class="nav-number">0.2.</span> <span class="nav-text">代码实现方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆排序"><span class="nav-number">1.</span> <span class="nav-text">堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法思路"><span class="nav-number">1.1.</span> <span class="nav-text">算法思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码实现方式"><span class="nav-number">1.2.</span> <span class="nav-text">代码实现方式</span></a></li></ol></li></ol></div>
             
 
           </div>

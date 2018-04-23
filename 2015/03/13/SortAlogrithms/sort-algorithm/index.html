@@ -108,7 +108,7 @@
   
     
     
-    <link href="//fonts.lug.ustc.edu.cn/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -154,19 +154,19 @@
 
 
 
-<meta name="description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类： 插入排序：直接插入排序 、希尔排序 ；">
+<meta name="description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；   &amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类：  插入排序：直接插入排序 、希尔">
 <meta name="keywords" content="Algorithms,Sort">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法">
 <meta property="og:url" content="http://edgeowner.com/2015/03/13/SortAlogrithms/sort-algorithm/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类： 插入排序：直接插入排序 、希尔排序 ；">
+<meta property="og:description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；   &amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类：  插入排序：直接插入排序 、希尔">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/all_sort_sumary.png">
 <meta property="og:updated_time" content="2015-03-14T12:29:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法">
-<meta name="twitter:description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类： 插入排序：直接插入排序 、希尔排序 ；">
+<meta name="twitter:description" content="排序算法分类&amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的效率上分类，主要分四类：  简单排序：冒泡排序 、(直接)选择排序 、(直接)插入排序 ； 高效排序：快速排序 、堆排序 、希尔排序 ； 分治递归思想实现的排序：递归排序 ； 线性排序：计数排序 、桶排序 、基数排序 ；   &amp;emsp;&amp;emsp;&amp;emsp;排序算法从排序的方式分类，主要分为五类：  插入排序：直接插入排序 、希尔">
 <meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/all_sort_sumary.png">
 
 
@@ -519,15 +519,21 @@
 <li><code>简单排序</code>：<strong><em>冒泡排序 </em></strong>、<strong><em>(直接)选择排序 </em></strong>、<strong><em>(直接)插入排序 </em></strong>；</li>
 <li><code>高效排序</code>：<strong><em>快速排序 </em></strong>、<strong><em>堆排序 </em></strong>、<strong><em>希尔排序 </em></strong>；</li>
 <li><code>分治递归思想实现的排序</code>：<strong><em>递归排序 </em></strong>；</li>
-<li><code>线性排序</code>：<strong><em>计数排序 </em></strong>、<strong><em>桶排序 </em></strong>、<strong><em>基数排序 </em></strong>；<h5 id="emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类："><a href="#emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类：" class="headerlink" title="&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类："></a>&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类：</h5></li>
+<li><code>线性排序</code>：<strong><em>计数排序 </em></strong>、<strong><em>桶排序 </em></strong>、<strong><em>基数排序 </em></strong>；</li>
+</ol>
+</blockquote>
+<h5 id="emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类："><a href="#emsp-emsp-emsp-排序算法从排序的方式分类，主要分为五类：" class="headerlink" title="&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类："></a>&emsp;&emsp;&emsp;排序算法从排序的方式分类，主要分为五类：</h5><blockquote>
+<ol>
 <li><code>插入排序</code>：<strong><em>直接插入排序 </em></strong>、<strong><em>希尔排序 </em></strong>；</li>
 <li><code>选择排序</code>：<strong><em>直接选择排序 </em></strong>、<strong><em>堆排序 </em></strong>；</li>
 <li><code>交换排序</code>：<strong><em>冒泡排序 </em></strong>、<strong><em>快速排序 </em></strong>；</li>
 <li><code>线性排序</code>：<strong><em>计数排序 </em></strong>、<strong><em>基数排序 </em></strong>、<strong><em>桶排序 </em></strong>；</li>
-<li><code>递归排序</code>：<strong><em>归并排序 </em></strong>；<a id="more"></a>
-</li>
+<li><code>递归排序</code>：<strong><em>归并排序 </em></strong>；</li>
 </ol>
+</blockquote>
+<a id="more"></a>
 <hr>
+<blockquote>
 <p><strong>关于时间复杂度：</strong></p>
 <ol>
 <li>平方阶 (O(n2)) 排序 各类简单排序：直接插入、直接选择和冒泡排序。</li>
@@ -535,11 +541,15 @@
 <li>O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序</li>
 <li>线性阶 (O(n)) 排序 基数排序，此外还有桶、箱排序。</li>
 </ol>
+</blockquote>
+<blockquote>
 <p><strong><em>关于稳定性 </em></strong>：</p>
 <ol>
 <li>稳定的排序算法：冒泡排序、插入排序、归并排序和基数排序。</li>
 <li>不是稳定的排序算法：选择排序、快速排序、希尔排序、堆排序。</li>
 </ol>
+</blockquote>
+<blockquote>
 <p><strong><em>名词解释 </em></strong>：</p>
 <ol>
 <li>n：数据规模</li>

@@ -108,7 +108,7 @@
   
     
     
-    <link href="//fonts.lug.ustc.edu.cn/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -515,9 +515,6 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="JVM内存结构"><a href="#JVM内存结构" class="headerlink" title="JVM内存结构"></a>JVM内存结构</h3><p>&emsp;&emsp;JVM内存结构主要有三大块：<strong><em>堆内存</em></strong> 、<strong><em>方法法区</em></strong> 和 <strong><em>栈</em></strong>。<br>&emsp;&emsp;<strong><em>堆内存</em></strong> 是JVM中最大的一块由 <strong>年轻代</strong>和 <strong>老年代</strong> 组成，而年轻代内存又被分为三部分， <strong>Eden空间</strong> 、<strong>From Survivo空间</strong> 、<strong>To Survivor空间</strong> ，默认情况下年轻代按照$8:1:1$的比例来分配；<font color="#FF3030">方法区存储类信息、常量、静态变量等数据，是线程共享的区域</font> ，为与<strong>Java堆</strong>区分，方法区还有一个别名NonHeap(非堆)；栈又分为 <strong>Java虚拟机栈</strong> 和 <strong>本地方法栈</strong> 主要用于方法的执行。<br>&emsp;&emsp;<font color="#FF0000">JAVA的JVM的内存可分为3个区</font>： <strong>堆(Heap)</strong>、 <strong>栈(Stack)</strong>  、 <strong>方法区(Method Area)</strong> 。实际IDEA开发Tomcat启动项配置示例：  </p>
 <blockquote>
 <font face="微软雅黑" color="#9900ff" size="2">-Xms1024m -Xmx1024m  -XX:PermSize=512M -XX:MaxPermSize=1024m  -Dfile.encoding=utf-8 </font>   
-
-
-
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -567,10 +564,7 @@
 <h4 id="存储内容-4"><a href="#存储内容-4" class="headerlink" title="存储内容"></a>存储内容</h4><ol>
 <li><font color="#EE4000">常量池(Constant Pool)</font>：<strong>常量池数据编辑之后被确定，是Class文件中的一部分。存储了类、方法、接口等中的常量，也包括字符串常量。</strong></li>
 <li><font color="#EE4000">字符串池/字符串常量池(String  Pool/ String Constant Pool)</font>：是常量池中的一部分，存储编译期类中产生的<font color="#EE0000">字符串类型数据。</font></li>
-<li><font color="#EE4000">运行时常量池(Runtime Constant Pool)</font>：**方法区的一部分，所有线程共享。虚拟机加载Class后把常量池中的数据放入到运行时常量池**。<font color="#EE3B3B">常量池</font>：可以理解为Class文件中的资源仓库，它是Class文件结构中与其他项目资源关联最多的数据类型。
- 1. 常量池中主要存放两大类常量：<font color="#EE4000">字面量</font>(Literal)和<font color="#EE4000">符号引用</font>(Symbolic Reference)。
- 2. **字面量**：文本字符串、声明为final的常量值等。
- 3. **符号引用**：<font color="#EE4000">类和接口的完全限定名</font>(Fully Qualified Name)、<font color="#EE4000">字段的名称</font>和<font color="#EE4000">描述符</font>(Descriptor)、<font color="#EE4000">方法的名称</font>和<font color="#EE4000">描述符号</font>
+<li><font color="#EE4000">运行时常量池(Runtime Constant Pool)</font>：<strong>方法区的一部分，所有线程共享。虚拟机加载Class后把常量池中的数据放入到运行时常量池</strong>。<font color="#EE3B3B">常量池</font>：可以理解为Class文件中的资源仓库，它是Class文件结构中与其他项目资源关联最多的数据类型。<br> 1. 常量池中主要存放两大类常量：<font color="#EE4000">字面量</font>(Literal)和<font color="#EE4000">符号引用</font>(Symbolic Reference)。<br> 2. <strong>字面量</strong>：文本字符串、声明为final的常量值等。<br> 3. <strong>符号引用</strong>：<font color="#EE4000">类和接口的完全限定名</font>(Fully Qualified Name)、<font color="#EE4000">字段的名称</font>和<font color="#EE4000">描述符</font>(Descriptor)、<font color="#EE4000">方法的名称</font>和<font color="#EE4000">描述符号</font>
 
 
 </li>
@@ -1666,7 +1660,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.4/MathJax.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
