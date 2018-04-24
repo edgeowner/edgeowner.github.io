@@ -553,7 +553,7 @@
 </ol>
 <ol start="2">
 <li><strong>运行结果</strong>：<br><img src="http://p5vswdxl9.bkt.clouddn.com/shareResult.png" alt="shareResult"></li>
-<li><strong>代码解析</strong>：以上步骤共享数据的情况就是多个线程可以访问同一个变量，实现了$5$个线程共同对一个count变量进行减法操作的目的。A和B的count值都为 $8$，说明A和B同时对count进行处理，产生“非线程安全”问题，JVM中 $i–$ 操作分为三步：<ol>
+<li><strong>代码解析</strong>：以上步骤共享数据的情况就是多个线程可以访问同一个变量，实现了$5$个线程共同对一个count变量进行减法操作的目的。A和B的count值都为 $8$，说明A和B同时对count进行处理，产生“非线程安全”问题，JVM中 $i- -$ 操作分为三步：<ol>
 <li>取得原有 $i$ 值；</li>
 <li>计算 $i-1$；</li>
 <li>对 $i$ 进行赋值操作；</li>
@@ -701,8 +701,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/" rel="prev" title="Chapter(1-2)">
-                Chapter(1-2) <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/01/Nginx-Config/Nginx-Config/" rel="prev" title="Nginx基本简介">
+                Nginx基本简介 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -825,7 +825,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -836,7 +836,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -847,7 +847,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -926,6 +926,14 @@
                     <a href="https://yemengying.com/" title="yemengying" target="_blank">yemengying</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://int64.me/index.html" title="cwen" target="_blank">cwen</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://taozj.net/201612/study-conclusion-stage.html" title="taozj" target="_blank">taozj</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -979,7 +987,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共29.3k字</span>
+    <span class="post-count">博客全站共31.3k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -1007,7 +1015,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.3k</span>
+    <span title="Site words total count">31.3k</span>
    
   -->
 </div>
@@ -1650,7 +1658,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

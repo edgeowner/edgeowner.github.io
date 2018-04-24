@@ -154,18 +154,21 @@
 
 
 
-<meta name="description" content="###&amp;emsp;&amp;emsp; 本文继Chapter(1-1)中">
+<meta name="description" content="多线程同步&amp;emsp;&amp;emsp;本文是对Chapter(1-1)中结尾中线程同步的方法继续做介绍。&amp;emsp;&amp;emsp;先来回顾下Chapter(1-1)文章结尾代码片段：1234567891011121314151617package com.multithread.demo.chapter1.ThreadShareDemo;/** * @author zhangsunny * @desc">
 <meta name="keywords" content="多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chapter(1-2)">
 <meta property="og:url" content="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/index.html">
 <meta property="og:site_name" content="edgeowner">
-<meta property="og:description" content="###&amp;emsp;&amp;emsp; 本文继Chapter(1-1)中">
+<meta property="og:description" content="多线程同步&amp;emsp;&amp;emsp;本文是对Chapter(1-1)中结尾中线程同步的方法继续做介绍。&amp;emsp;&amp;emsp;先来回顾下Chapter(1-1)文章结尾代码片段：1234567891011121314151617package com.multithread.demo.chapter1.ThreadShareDemo;/** * @author zhangsunny * @desc">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/unsafeThread.jpg">
+<meta property="og:image" content="http://p5vswdxl9.bkt.clouddn.com/safeThread.jpg">
 <meta property="og:updated_time" content="2016-05-01T12:19:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter(1-2)">
-<meta name="twitter:description" content="###&amp;emsp;&amp;emsp; 本文继Chapter(1-1)中">
+<meta name="twitter:description" content="多线程同步&amp;emsp;&amp;emsp;本文是对Chapter(1-1)中结尾中线程同步的方法继续做介绍。&amp;emsp;&amp;emsp;先来回顾下Chapter(1-1)文章结尾代码片段：1234567891011121314151617package com.multithread.demo.chapter1.ThreadShareDemo;/** * @author zhangsunny * @desc">
+<meta name="twitter:image" content="http://p5vswdxl9.bkt.clouddn.com/unsafeThread.jpg">
 
 
 
@@ -487,7 +490,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7
+                  964
                 </span>
               
 
@@ -512,7 +515,47 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>###<br>&emsp;&emsp; 本文继Chapter(1-1)中</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="多线程同步"><a href="#多线程同步" class="headerlink" title="多线程同步"></a>多线程同步</h3><p>&emsp;&emsp;本文是对<a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/">Chapter(1-1)</a>中结尾中<code>线程同步</code>的方法继续做介绍。<br>&emsp;&emsp;先来回顾下Chapter(1-1)文章结尾代码片段：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 线程共享操作 (线程同步)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread2_1</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.run();</span><br><span class="line">        count--;</span><br><span class="line">        System.out.println(<span class="string">"线程"</span> + <span class="keyword">this</span>.currentThread().getName() + <span class="string">"计算，count = "</span> + count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>&emsp;&emsp;以上代码通过在方法前加入synchronized关键字，使多个线程在执行<strong>run()</strong>时，以排队的方式进行处理。当一个线程调用<strong>run()</strong>前，先判断<strong>run()</strong>方法有没有被上锁，如果上锁，说明有其他线程正在调用<strong>run()</strong>方法，必须等其他线程对<strong>run()</strong>方法调用结束后才可以执行<strong>run()</strong>方法。这样就实现了排队调用<strong>run()</strong>方法，达到了按顺序对<strong>count</strong>变量减$1$的效果。<font color="#FF6A6A">synchronized</font>可以在任意对象及方法上加锁，<font color="#0000EE">这段加锁的代码</font>被称为“<font color="#FF6A6A">互斥区</font>”或“<font color="#FF6A6A">临界区</font>”。<br>&emsp;&emsp;一个线程要执行同步方法里的代码时，线程首先去获取这把锁，也就会有两种结果：</p>
+<pre><code>1. ``获取锁成功``：那么这个线程可以执行sychronize里的代码。
+2. ``获取锁失败``：那么着个线程就会不断地尝试获取这把锁，直到能够拿到为止，而且是有多个线程同时去争抢这把锁。
+</code></pre><hr>
+<h3 id="非线程安全"><a href="#非线程安全" class="headerlink" title="非线程安全"></a>非线程安全</h3><p>&emsp;&emsp;非线程安全主要是指<strong><em>多个线程 </em></strong>对<font color="#FF6A6A">同一个对象</font>中的<font color="#FF6A6A">同一个实例变量</font>进行操作时会出现值被更改，值不同步的情况，影响程序的执行流程。</p>
+<hr>
+<h4 id="非线程安全环境"><a href="#非线程安全环境" class="headerlink" title="非线程安全环境"></a>非线程安全环境</h4><p>代码Demo例子详见<a href="https://github.com/edgeowner/JavaMulti-threadProgramming" target="_blank" rel="noopener">Github代码</a></p>
+<ol>
+<li><p><strong><em>ALogin类 </em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadIsNotSafe;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>   非线程安全ALogin</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ALogin</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LoginServlet.doPost(<span class="string">"a"</span>,<span class="string">"aa"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>BLogin类 </em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadIsNotSafe;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>   非线程安全BLogin</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BLogin</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        LoginServlet.doPost(<span class="string">"b"</span>,<span class="string">"bb"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>LoginServlet类 </em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadIsNotSafe;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.MessageFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>   非线程安全LoginServlet</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String username;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(String usernameParam, String passwordParam)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            username = usernameParam;</span><br><span class="line">            <span class="keyword">if</span> (usernameParam.equals(<span class="string">"a"</span>)) &#123;</span><br><span class="line">                Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            password = passwordParam;</span><br><span class="line"></span><br><span class="line">            System.out.println(MessageFormat.format(<span class="string">"username = &#123;0&#125; , password = &#123;1&#125;"</span>,username,password));</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p><strong><em>RunTest </em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadIsNotSafe;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>   非线程安全Demo测试</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ALogin aLogin = <span class="keyword">new</span> ALogin();</span><br><span class="line">        aLogin.start();</span><br><span class="line">        BLogin bLogin = <span class="keyword">new</span> BLogin();</span><br><span class="line">        bLogin.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>运行结果</strong><br><img src="http://p5vswdxl9.bkt.clouddn.com/unsafeThread.jpg" alt=""></p>
+<font color="#FF6A6A">以上结果出现非线程安全问题</font>
+</li>
+<li><p><strong>解决方法</strong>：使用<font color="#FF6A6A">synchronized</font>关键字。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadIsNotSafe;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.MessageFormat;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 非线程安全LoginServlet</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String username;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(String usernameParam, String passwordParam)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            username = usernameParam;</span><br><span class="line">            <span class="keyword">if</span> (usernameParam.equals(<span class="string">"a"</span>)) &#123;</span><br><span class="line">                Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            password = passwordParam;</span><br><span class="line"></span><br><span class="line">            System.out.println(MessageFormat.format(<span class="string">"username = &#123;0&#125; , password = &#123;1&#125;"</span>, username, password));</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="7">
+<li><strong>运行结果</strong><br><img src="http://p5vswdxl9.bkt.clouddn.com/safeThread.jpg" alt=""></li>
+</ol>
+<hr>
+<h3 id="线程方法总结-部分"><a href="#线程方法总结-部分" class="headerlink" title="线程方法总结(部分)"></a>线程方法总结(部分)</h3><ol>
+<li><strong>currentThread()</strong>方法可返回代码段正在被那个线程调用的信息。</li>
+<li><strong>isAlive()</strong>方法是判断当前线程是否处于活动状态(就是线程已经启动且尚未种植，线程处于<font color="#FF6A6A">正在运行</font>或<font color="#FF6A6A">准备开始运行</font>的状态)。</li>
+<li><strong>sleep()</strong>方法作用是在指定毫秒数内让当前“正在执行的线程”休眠。这个“正在执行的线程”是指<font color="#EE0000">this</font>.currentThread()返回的线程。</li>
+<li><strong>getId()</strong>方法作用是取得线程的唯一标识。</li>
+</ol>
 
       
     </div>
@@ -639,8 +682,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/" rel="next" title="Chapter(1-1)">
-                <i class="fa fa-chevron-left"></i> Chapter(1-1)
+              <a href="/2016/05/01/Nginx-Config/Nginx-Config/" rel="next" title="Nginx基本简介">
+                <i class="fa fa-chevron-left"></i> Nginx基本简介
               </a>
             
           </div>
@@ -744,8 +787,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -764,7 +816,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -775,7 +827,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -786,7 +838,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -865,6 +917,14 @@
                     <a href="https://yemengying.com/" title="yemengying" target="_blank">yemengying</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://int64.me/index.html" title="cwen" target="_blank">cwen</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://taozj.net/201612/study-conclusion-stage.html" title="taozj" target="_blank">taozj</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -874,6 +934,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程同步"><span class="nav-number">1.</span> <span class="nav-text">多线程同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非线程安全"><span class="nav-number">2.</span> <span class="nav-text">非线程安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非线程安全环境"><span class="nav-number">2.1.</span> <span class="nav-text">非线程安全环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程方法总结-部分"><span class="nav-number">3.</span> <span class="nav-text">线程方法总结(部分)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -902,7 +978,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共29.3k字</span>
+    <span class="post-count">博客全站共31.3k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -930,7 +1006,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.3k</span>
+    <span title="Site words total count">31.3k</span>
    
   -->
 </div>
@@ -1573,7 +1649,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

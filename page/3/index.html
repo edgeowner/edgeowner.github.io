@@ -1486,7 +1486,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  7
+                  964
                 </span>
               
 
@@ -1512,10 +1512,7 @@
 
       
         
-          
-          ###&emsp;&emsp; 本文继Chapter(1-1)中
-
-          
+          <h3 id="多线程同步"><a href="#多线程同步" class="headerlink" title="多线程同步"></a>多线程同步</h3><p>&emsp;&emsp;本文是对<a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/">Chapter(1-1)</a>中结尾中<code>线程同步</code>的方法继续做介绍。<br>&emsp;&emsp;先来回顾下Chapter(1-1)文章结尾代码片段：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 线程共享操作 (线程同步)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread2_1</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.run();</span><br><span class="line">        count--;</span><br><span class="line">        System.out.println(<span class="string">"线程"</span> + <span class="keyword">this</span>.currentThread().getName() + <span class="string">"计算，count = "</span> + count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/#more" rel="contents">
@@ -1622,7 +1619,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1633,7 +1630,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1644,7 +1641,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1723,6 +1720,14 @@
                     <a href="https://yemengying.com/" title="yemengying" target="_blank">yemengying</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://int64.me/index.html" title="cwen" target="_blank">cwen</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://taozj.net/201612/study-conclusion-stage.html" title="taozj" target="_blank">taozj</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -1760,7 +1765,7 @@
   <span class="post-meta-item-icon"> <i class="fa fa-area-chart"></i></span> 
   <div class="theme-info">
     <div class="powered-by"></div>
-    <span class="post-count">博客全站共29.3k字</span>
+    <span class="post-count">博客全站共31.3k字</span>
   </div>
     <div class="powered-by">
       <span class="post-meta-divider">|</span> 
@@ -1788,7 +1793,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">29.3k</span>
+    <span title="Site words total count">31.3k</span>
    
   -->
 </div>
@@ -2427,7 +2432,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
