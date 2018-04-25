@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/05/01/Nginx-Config/Nginx-Config/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -399,7 +399,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/05/01/Nginx-Config/Nginx-Config/" itemprop="url">Nginx基本简介</a></h2>
+                <a class="post-title-link" href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/" itemprop="url">Chapter(1-2)</a></h2>
         
 
         <div class="post-meta">
@@ -446,8 +446,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/负载均衡/" itemprop="url" rel="index">
-                    <span itemprop="name">负载均衡</span>
+                  <a href="/categories/Java-Multi-thread-Programming书籍/" itemprop="url" rel="index">
+                    <span itemprop="name">Java Multi-thread Programming书籍</span>
                   </a>
                 </span>
 
@@ -463,7 +463,7 @@
 
           
           
-             <span id="/2016/05/01/Nginx-Config/Nginx-Config/" class="leancloud_visitors" data-flag-title="Nginx基本简介">
+             <span id="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/" class="leancloud_visitors" data-flag-title="Chapter(1-2)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,7 +488,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,047
+                  964
                 </span>
               
 
@@ -514,28 +514,10 @@
 
       
         
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Nginx作为web服务器软件，具有高性能、高并发和低内存占用特点。此外其也提供反向代理功能。</p>
-<h4 id="Nginx特点"><a href="#Nginx特点" class="headerlink" title="Nginx特点"></a>Nginx特点</h4><ol>
-<li>支持高并发连接</li>
-<li>内存消耗少</li>
-<li>配置文件简单</li>
-<li>成本低廉</li>
-<li>支持Rewrite重写规则</li>
-<li>内置健康检查功能</li>
-<li>节省宽带</li>
-<li>稳定性高</li>
-</ol>
-<h4 id="Nginx架构"><a href="#Nginx架构" class="headerlink" title="Nginx架构"></a>Nginx架构</h4><p><img src="http://p5vswdxl9.bkt.clouddn.com/nginx%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg" alt="nginx架构"></p>
-<ol>
-<li>master进程主要用来管理worker进程，包含：接收来自外界的信号，向各worker进程发送信号，监控worker进程的运行状态，当worker进程退出后(异常情况下)，会自动重新启动新的worker进程。</li>
-<li>worker进程则是处理基本的网络事件。多个worker进程之间是对等的，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个请求，只可能在一个worker进程中处理，一个worker进程，不可能处理其它进程的请求。</li>
-<li>开发模型：epoll和kqueue。</li>
-<li>支持的事件机制：kqueue、epoll、rt signals、/dev/poll 、event ports、select以及poll。</li>
-<li>支持的kqueue特性包括EV_CLEAR、EV_DISABLE、NOTE_LOWAT、EV_EOF，可用数据的数量，错误代码。</li>
-<li>支持sendfile、sendfile64和sendfilev;文件AIO；DIRECTIO;支持Accept-filters和TCP_DEFER_ACCEP。
+          <h3 id="多线程同步"><a href="#多线程同步" class="headerlink" title="多线程同步"></a>多线程同步</h3><p>&emsp;&emsp;本文是对<a href="http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/">Chapter(1-1)</a>中结尾中<code>线程同步</code>的方法继续做介绍。<br>&emsp;&emsp;先来回顾下Chapter(1-1)文章结尾代码片段：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.multithread.demo.chapter1.ThreadShareDemo;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhangsunny</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span> 线程共享操作 (线程同步)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread2_1</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.run();</span><br><span class="line">        count--;</span><br><span class="line">        System.out.println(<span class="string">"线程"</span> + <span class="keyword">this</span>.currentThread().getName() + <span class="string">"计算，count = "</span> + count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/05/01/Nginx-Config/Nginx-Config/#more" rel="contents">
+            <a class="btn" href="/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1772,7 +1754,7 @@
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>
