@@ -108,7 +108,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.loli.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -982,7 +982,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Transaction/transaction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1001,7 +1001,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/" itemprop="url">乐观锁和悲观锁(OCC和PCC)</a></h2>
+                <a class="post-title-link" href="/2016/10/01/Transaction/transaction/" itemprop="url">事务知识点</a></h2>
         
 
         <div class="post-meta">
@@ -1065,7 +1065,7 @@
 
           
           
-             <span id="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/" class="leancloud_visitors" data-flag-title="乐观锁和悲观锁(OCC和PCC)">
+             <span id="/2016/10/01/Transaction/transaction/" class="leancloud_visitors" data-flag-title="事务知识点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1090,7 +1090,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,425
+                  2,047
                 </span>
               
 
@@ -1116,12 +1116,10 @@
 
       
         
-          
-          &emsp;&emsp;本文在介乐观锁和悲观锁之前请先了解事务相关知识点乐观并发控制(乐观锁)和悲观并发控制（悲观锁）是并发控制主要采用的技术手段。&emsp;&emsp;无论是悲观锁还是乐观锁，都是人们定义出来的概念，可以认为是一种思想。其实不仅仅是关系型数据库系统中有乐观锁和悲观锁的概念，像me
-          ...
+          <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/Transaction/transaction/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1381,7 +1379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/Transaction/transaction/">
+    <link itemprop="mainEntityOfPage" href="http://edgeowner.com/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangSunny">
@@ -1400,7 +1398,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/01/Transaction/transaction/" itemprop="url">事务知识点</a></h2>
+                <a class="post-title-link" href="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/" itemprop="url">乐观锁和悲观锁(OCC和PCC)</a></h2>
         
 
         <div class="post-meta">
@@ -1464,7 +1462,7 @@
 
           
           
-             <span id="/2016/10/01/Transaction/transaction/" class="leancloud_visitors" data-flag-title="事务知识点">
+             <span id="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/" class="leancloud_visitors" data-flag-title="乐观锁和悲观锁(OCC和PCC)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1489,7 +1487,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,047
+                  2,425
                 </span>
               
 
@@ -1515,10 +1513,12 @@
 
       
         
-          <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：<code>ACID</code>、<code>事物的常见问题</code>以及<code>事务的隔离级别</code>先做介绍，至于<code>锁</code>后续会有专题详细介绍。<br>事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。<br>事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。</p>
+          
+          &emsp;&emsp;本文在介乐观锁和悲观锁之前请先了解事务相关知识点乐观并发控制(乐观锁)和悲观并发控制（悲观锁）是并发控制主要采用的技术手段。&emsp;&emsp;无论是悲观锁还是乐观锁，都是人们定义出来的概念，可以认为是一种思想。其实不仅仅是关系型数据库系统中有乐观锁和悲观锁的概念，像me
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/10/01/Transaction/transaction/#more" rel="contents">
+            <a class="btn" href="/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1667,19 +1667,19 @@
                 <span class="links-of-author-item">
                   <a href="https://github.com/edgeowner" target="_blank" title="GitHub">
                     
-                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                      <i class="fa fa-fw fa-github"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
                   <a href="https://weibo.com/u/2003887723/home" target="_blank" title="Weibo">
                     
-                      <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                      <i class="fa fa-fw fa-weibo"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
                   <a href="https://plus.google.com/u/0/113974455569024478598" target="_blank" title="Google">
                     
-                      <i class="fa fa-fw fa-google"></i>Google</a>
+                      <i class="fa fa-fw fa-google"></i></a>
                 </span>
               
             
@@ -1756,7 +1756,7 @@
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; 2014 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-star"></i>
   </span>

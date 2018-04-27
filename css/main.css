@@ -929,6 +929,9 @@ pre .javascript .function {
   border-top: 3px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab {
@@ -1139,7 +1142,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background-image: url("https://ws1.sinaimg.cn/large/694830ebgy1fh3pyd05klj21kw0f2dy2.jpg");
+  background-image: url("http://p5vswdxl9.bkt.clouddn.com/logo.jpg");
 }
 .header-inner {
   position: relative;
@@ -2166,7 +2169,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47ff9a;
+  background: #3b454b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3050,11 +3053,17 @@ embed {
 }
 .custom-logo .site-title {
   margin: 10px auto 0;
-  font-size: 24px;
-  color: #222;
+  font-size: 48px;
+  color: #48d1cc;
 }
 .custom-logo .site-title a {
   border: none;
+}
+.custom-logo .site-subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f4a460;
+/*#999;*/
 }
 .custom-logo-image {
   margin: 0 auto;
