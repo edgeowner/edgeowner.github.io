@@ -2169,7 +2169,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3b454b;
+  background: #06b83c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3054,7 +3054,7 @@ embed {
 .custom-logo .site-title {
   margin: 10px auto 0;
   font-size: 48px;
-  color: #48d1cc;
+  color: #7fffd4;
 }
 .custom-logo .site-title a {
   border: none;
