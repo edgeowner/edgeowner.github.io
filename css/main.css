@@ -1192,7 +1192,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #999;
+  color: #3cf;
 }
 .use-motion .brand {
   opacity: 0;
@@ -2169,7 +2169,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4f5b2f;
+  background: #5dac9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3062,7 +3062,7 @@ embed {
 .custom-logo .site-subtitle {
   margin-top: 10px;
   font-size: 14px;
-  color: #f4a460;
+  color: #d1eeee;
 /*#999;*/
 }
 .custom-logo-image {
