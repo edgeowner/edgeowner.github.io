@@ -130,12 +130,12 @@
     
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/DesignPattern/SingletonPattern/</loc>
+    <loc>http://edgeowner.com/2017/05/06/Mysql/mysql-index/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>单例模式</title>
-        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
+        <title>Mysql索引介绍</title>
+        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -150,12 +150,12 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2017/05/06/Mysql/mysql-index/</loc>
+    <loc>http://edgeowner.com/2017/05/06/DesignPattern/SingletonPattern/</loc>
     <lastmod>2017-05-06T13:40:21.000Z</lastmod>
     <data>
         <display>
-        <title>Mysql索引介绍</title>
-        <pubTime>2017-05-06T11:23:43.000Z</pubTime>
+        <title>单例模式</title>
+        <pubTime>2017-05-06T10:23:43.000Z</pubTime>
         
         <tag>Code</tag>
          
@@ -340,19 +340,19 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <loc>http://edgeowner.com/2016/05/01/Nginx-Config/Nginx-Config/</loc>
     <lastmod>2016-05-01T12:19:21.000Z</lastmod>
     <data>
         <display>
-        <title>Chapter(1-2)</title>
+        <title>Nginx基本简介</title>
         <pubTime>2016-05-01T05:20:43.000Z</pubTime>
         
-        <tag>多线程</tag>
+        <tag>Nginx</tag>
          
          
            
              
-              <breadCrumb title="Java Multi-thread Programming书籍" url="http://edgeowner.com/categories/Java-Multi-thread-Programming%E4%B9%A6%E7%B1%8D/"/>
+              <breadCrumb title="负载均衡" url="http://edgeowner.com/categories/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
           
         </display>
     </data>
@@ -380,26 +380,6 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/05/01/Nginx-Config/Nginx-Config/</loc>
-    <lastmod>2016-05-01T12:19:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx基本简介</title>
-        <pubTime>2016-05-01T05:20:43.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-         
-           
-             
-              <breadCrumb title="负载均衡" url="http://edgeowner.com/categories/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://edgeowner.com/2018/04/27/local-nexus-plugins/local-nexus-plugins/</loc>
     <lastmod>2016-05-01T12:19:21.000Z</lastmod>
     <data>
@@ -413,6 +393,26 @@
            
              
               <breadCrumb title="环境搭建" url="http://edgeowner.com/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <lastmod>2016-05-01T12:19:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Chapter(1-2)</title>
+        <pubTime>2016-05-01T05:20:43.000Z</pubTime>
+        
+        <tag>多线程</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java Multi-thread Programming书籍" url="http://edgeowner.com/categories/Java-Multi-thread-Programming%E4%B9%A6%E7%B1%8D/"/>
           
         </display>
     </data>
@@ -542,6 +542,28 @@
 
     
   <url>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
+    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>ThreadPoolExecutor 参数详解</title>
+        <pubTime>2016-04-21T01:15:31.000Z</pubTime>
+        
+        <tag>多线程</tag>
+         
+        <tag>线程池</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java多线程" url="http://edgeowner.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/</loc>
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     <data>
@@ -586,29 +608,7 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
-    <lastmod>2016-04-21T12:17:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>ThreadPoolExecutor 参数详解</title>
-        <pubTime>2016-04-21T01:15:31.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-        <tag>线程池</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java多线程" url="http://edgeowner.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     <data>
         <display>
@@ -628,7 +628,7 @@
 
     
   <url>
-    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-1/</loc>
+    <loc>http://edgeowner.com/2015/04/13/JavaCore/Java-Core-4/</loc>
     <lastmod>2015-04-14T12:29:00.000Z</lastmod>
     <data>
         <display>
