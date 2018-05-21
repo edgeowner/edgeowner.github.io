@@ -140,6 +140,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[事务知识点]]></title>
+    <url>%2F2016%2F10%2F01%2FTransaction%2Ftransaction%2F</url>
+    <content type="text"><![CDATA[事务&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。 事务特性：ACID事务的ACID特性： A：Atomiciy(原子性)：一个事物必须保证其中的操作要么全部执行，要么全部回滚，不可能存在只执行了一部分这种情况出现。简单说就是事务是一个不可分隔的工作单位，事务中的操作要么都发生，要么都不发生； 事务包含的全部操作是一个不可分割的整体，要么全部执行，要么全部都不执行。 C：Consistency(一致性)：数据必须保证从一种一致性的状态转换为另一种一致性状态。也就是事务开始到结束的时间段内，事务前后数据的完整性必须保证一致； 例如：事务之前A,B两个账户的总和是10万(A:4W,B:6W),现在A转账B2万(A:2W,B:8W),A,B账户总和依旧应该是10万，如果不是10万的话，则事务前后对于账户总和这种资源是不一致的。 I：Isolation(隔离性)：在一个事物未执行完毕时，通常会保证其他Session无法看到这个事务的执行结果。也就是说多个用户并发访问数据库时，一个用户的事物不能被其他用户的事物所干扰，多个并发事务之间数据要相互隔离。数据库系统提供一定的隔离机制，保证事务在不受外部并发操作影响的”独立”环境执行； 主要规定了各个事务之间相互影响的程度，主要用于规定多个事务访问同一数据资源，各个事务对该数据资源访问的行为。 D：Durability(持久性)：事务一旦commit，则数据就会保存下来，即使提交完之后系统崩溃，数据也不会丢失。 事务一旦完成，要将数据所做的变更记录下来(冗余存储或多数据网络备份)。 事务常见问题更新丢失(Lost Update)： 场景：假定两个事物有$A$和$B$，事务$A$和事物$B$同时获得相同的数据，然后在各自的事物中修改数据M，事先$A$先提交事物，数据M假如为$M+$，事务$B$后提交事物，数据$M$变成了$M++$，最终结果变成$M++$，覆盖了事物$A$的更新。 原因：当多个事务选择同一行操作，并且都是基于最初选定的值，由于每个事务都不知道其他事务的存在，就会发生更新覆盖的问题。类比Github提交冲突。 例子： 事物$A$ 事物$B$ 读取 $X=100$ 读取 $X=100$ 写入 $X=X+100$ 事物结束 $X = 200$ 写入 $X =X+100$ 事物结束 $X=300$(事物A的数据更新丢失) 脏读(Dirty Reads)： 场景：允许事物B可以读到事物A修改而未提交的数据，可能会造成脏读（脏读本质就是无效数据，只有当事物$A$回滚，那么事物B读到的数据才为无效的，所以这里只是可能造成脏读，当事物$A$不回滚的时候，事物$B$读到的数据就不为脏数据，也就是有效的数据，脏数据会导致以后的操作都会发生错误，一定要避免，不能凭借侥幸，事物$A$不能百分之百保证不回滚，所以这种隔离级别很少用于实际应用，并且它的性能也不比其他借笔好）。 原因：事物B读取了事物$A$已经修改但尚未提交的数据。若事物$A$回滚数据，事物$A$的数据存在不一致性的问题。 例子： 事物$A$ 事物$B$ 写入 $X=X+100(x=200)$ 读取 $X=200$(无效数据，脏读) 事务回滚 $X=100$ 事务结束 $X=100$ 事务结束 不可重复读(Non-Repeatable Reads)： 场景：不可重复读是指在一个事务范围中$2$次或者多次查询同一数据$M$返回了不同的数据，例如：事务$B$读取某一数据，事务$A$修改了该数据$M$并且提交，事务$B$又读取该数据$M$(可能是再次校验)，在同一个事务$B$中，读取同一个数据$M$的结果集不同。 原因：事物$B$第一次读取最初数据，第二次读取事物A已经提交的修改或删除数据。导致两次读取数据不一致。不符合事物的隔离性。 例子： 事物$A$ 事物$B$ 读取 $X=100$ 读取 $X=100$ 写入 $X=X+100$ 读取 $X=100$ 事务结束，$X=200$ 读取 $X=200$(在一个事务B中读X的值发生了变化) 事物结束 幻读(Phantom Reads)： 当用户读取某一个范围的数据行时，另一个事物又在该范围内查询了新行，当用户再读取该范围的数据行时，会发现会有新的“幻影行”，例如：事物$B$读到某一个数据$M$，事物$A$对数据$M$增加了一行并提交，事物$B$又读数据$M$，发生多出了一行造成的结果不一致(如果行数相同，则是不可重复读)。 原因：事物$B$根据相同的条件第二次查询到事物$A$提交的新增数据，两次数据结果集不一致。不符合事物的隔离性。 例子：在事物$B$里，同一个数据集$M$，读到的条数不一致(新增，删除)。 事务$A$ 事务$B$ 读取数据集$M$(3行) 在数据集$M$插入一行(4行) 事务结束 读取数据$M$(4行) 事务结束 事务的隔离级别数据库的事物隔离越严格，并发副作用越小，但付出的代价也就越大。因为事务隔离实质上是将事务在一定程度上“串行”进行，这显然与“并发”是矛盾的。实际业务中处理的话，根据自己的业务逻辑，权衡能接受的最大副作用，从而平衡了“隔离” 和“并发” 的问题。Mysql默认隔离级别是可重复读的。事务的隔离级别通常有四种（RU, RC, RR，Serializable）： 隔离级别 读数据一致性 脏读可能性 不可重复读可能性 幻读可能性 加锁读 未提交读(Read uncommitted) 最低级别 Y Y Y N 已提交读(Read committed) 语句级别 N Y Y N 可重复读(Repeatable read) 事务级别 N N Y N 可序列化(Serializable) 最高级别，事务级别 N N N Y MySql常用命令查询隔离级别select @@tx_isolation; 设置手动提交set autocommit=0 ; 查看当前事务自动提交模式select @@autocommit; 设置隔离级别set tx_isolation = ‘READ-COMMITTED’; 查询表的状态show table status like ‘test1’; 修改表的存储引擎alter table test1 engine = INNODB 查看是否开启日志show variables like ‘log_bin’; 查看日志状态show master status; 相关技术参考：深入浅出事务（1）深入浅出事务（2）深入浅出事务（3）MySQL表锁和行锁机制Mysql之锁与事务数据库 - 事务管理（ACID）、隔离级别、事务传播行为]]></content>
+      <categories>
+        <category>并发控制相关知识点</category>
+      </categories>
+      <tags>
+        <tag>事务</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[乐观锁和悲观锁(OCC和PCC)]]></title>
     <url>%2F2016%2F10%2F01%2FSortAlogrithms%2Foptimistic-pessimistic-locking%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;本文在介乐观锁和悲观锁之前请先了解事务相关知识点乐观并发控制(乐观锁)和悲观并发控制（悲观锁）是并发控制主要采用的技术手段。&emsp;&emsp;无论是悲观锁还是乐观锁，都是人们定义出来的概念，可以认为是一种思想。其实不仅仅是关系型数据库系统中有乐观锁和悲观锁的概念，像memcache、hibernate、tair等都有类似的概念。&emsp;&emsp;针对于不同的业务场景，应该选用不同的并发控制方式。所以，不要把乐观并发控制和悲观并发控制狭义的理解为DBMS中的概念，更不要把他们和数据中提供的锁机制（行锁、表锁、排他锁、共享锁）混为一谈。其实，在DBMS中，悲观锁正是利用数据库本身提供的锁机制来实现的。 乐观锁和悲观锁乐观锁（Optimistic Concurrency Control，OCC）：乐观锁的定义： 1.在关系数据库管理系统里，乐观锁指的是一种并发控制的方法，又名“乐观锁”(Optimistic Concurrency Control)，缩写“OCC”，它假设多用户并发的事务在处理时不会彼此互相影响，各事务能够在不产生锁的情况下处理各自影响的那部分数据。在提交数据更新之前，每个事务会先检查在该事务读取数据后，有没有其他事务又修改了该数据。如果其他事务有更新的话，正在提交的事务会进行回滚。 2.乐观锁(Optimistic Locking)相对悲观锁而言，乐观锁假设认为数据一般情况下不会造成冲突，所以在数据进行提交更新的时候，才会正式对数据的冲突与否进行检测，如果发现冲突了，则让返回用户错误的信息，让用户决定如何去做。 3.相对于悲观锁，在对数据库进行处理的时候，乐观锁并不会使用数据库提供的锁机制。一般的实现乐观锁的方式就是记录数据版本。 乐观锁的流程： 1.数据版本,为数据增加的一个版本标识。当读取数据时，将版本标识的值一同读出，数据每更新一次，同时对版本标识进行更新。当我们提交更新的时候，判断数据库表对应记录的当前版本信息与第一次取出来的版本标识进行比对，如果数据库表当前版本号与第一次取出来的版本标识值相等，则予以更新，否则认为是过期数据。 2.对于并发间操作产生的线程安全问题持乐观状态，乐观锁认为竞争不总是会发生，因此它不需要持有锁，将比较和替换这两个动作作为一个原子操作尝试去修改内存中的变量，若失败则表示发生冲突，那么就应该有相应的重试逻辑。 悲观锁Demo演示： 1.实现数据版本有两种方式，第一种是使用版本号，第二种是使用时间戳。使用版本号实现乐观锁：使用版本号时，可以在数据初始化时指定一个版本号，每次对数据的更新操作都对版本号执行$+1$操作。并判断当前版本号是不是该数据的最新的版本号。 12345678#Demo 1.01.查询出商品信息select (status,status,version) from t_goods where id=#&#123;id&#125;2.根据商品信息生成订单3.修改商品status为2update t_goods set status=2,version=version+1where id=#&#123;id&#125; and version=#&#123;version&#125;; 2.对于并发间操作产生的线程安全问题持悲状态，悲观锁认为竞争总是会发生，因此每次对某资源进行操作时，都会持有一个独占的锁，就像synchronized，直接上了锁就操作资源 悲观锁的优点和不足：&emsp;&emsp;乐观并发控制相信事务之间的数据竞争(data race)的概率是比较小的，因此尽可能直接做下去，直到提交的时候才去锁定，所以不会产生任何锁和死锁。但如果直接简单这么做，还是有可能会遇到不可预期的结果，例如两个事务都读取了数据库的某一行，经过修改以后写回数据库，这时就遇到了问题。 悲观锁（Pessimistic Concurrency Control，PCC）：悲观锁的定义： 1.悲观锁指的是对数据被外界（包括本系统当前的其他事务，以及来自外部系统的事务处理）修改持保守态度(悲观)，因此，在整个数据处理过程中，将数据处于锁定状态。 悲观锁的实现，往往依靠数据库提供的锁机制 （也只有数据库层提供的锁机制才能真正保证数据访问的排他性，否则，即使在本系统中实现了加锁机制，也无法保证外部系统不会修改数据）； 2.关系型数据库里，悲观并发控制是一种并发控制的方法。它可以阻止一个事物以影响其他用户的方式来修改数据。如果一个事物执行的操作都某行数据应用了锁，那只有当这个事物把锁释放，其他事物才能执行与该锁冲突的操作。 悲观锁的流程： 1.悲观锁的流程：在对任意记录进行修改前，先尝试为该记录加上排他锁(exclusive locking)，如果成功加锁，那么就可以对记录做修改，事务完成后就会解锁，期间若有其他对该记录做修改或加排他锁的操作，都会等待我们解锁或直接抛出异常。 悲观锁Demo演示： 1.Mysql InnoDB使用悲观锁：要使用悲观锁，我们必须关闭mysql数据库的自动提交属性，因为MySQL默认使用autocommit模式，也就是说，当你执行一个更新操作后，MySQL会立刻将结果进行提交。set autocommit=0;1234567891011#Demo 1.0//0.开始事务begin;/begin work;/start transaction; (三者选一就可以)//1.查询出商品信息select status from t_goods where id=1 for update;//2.根据商品信息生成订单insert into t_orders (id,goods_id) values (null,1);//3.修改商品status为2update t_goods set status=2;//4.提交事务commit;/commit work; &emsp;&emsp;上面的查询语句中，我们使用了select…for update的方式，这样就通过开启排他锁的方式实现了悲观锁。此时在t_goods表中，id为1的 那条数据就被我们锁定了，其它的事务必须等本次事务提交之后才能执行。这样我们可以保证当前的数据不会被其它事务修改。 使用select…for update会把数据给锁住，不过我们需要注意一些锁的级别，MySQL InnoDB默认行级锁。行级锁都是基于索引的，如果一条SQL语句用不到索引是不会使用行级锁的，会使用表级锁把整张表锁住，这点需要注意 。 简单理解下悲观锁：当一个事务锁定了一些数据之后，只有当当前锁提交了事务，释放了锁，其他事务才能获得锁并执行操作。悲观并发控制主要用于数据争用激烈的环境，以及发生并发冲突时使用锁保护数据的成本要低于回滚事物的成本环境中。 2.下面另外一个简单Demo使用方式如下： 首先要关闭MySQL的自动提交：set autocommit = 0; 12345#Demo 2.0begin --开启事务select id, total, front, end from price where id=1 for update insert into price values(?,?,?,?,?)commit --提交事务 &emsp;&emsp;这里使用select for update的方式利用数据库开启了悲观锁，锁定了id=1的这条数据(注意:这里除非是使用了索引会启用行级锁，不然是会使用表锁，将整张表都锁住。 )。之后使用commit提交事务并释放锁，这样下一个线程过来拿到的就是正确的数据。悲观锁一般是用于并发不是很高，并且不允许脏读等情况。但是对数据库资源消耗较大。 悲观锁的优点和不足：&emsp;&emsp;悲观并发控制实际上是“先取锁再访问”的保守策略，为数据处理的安全提供了保证。但是在效率方面，处理加锁的机制会让数据库产生额外的开销，还有增加产生死锁的机会；另外，在只读型事务处理中由于不会产生冲突，也没必要使用锁，这样做只能增加系统负载；还有会降低了并行性，一个事务如果锁定了某行数据，其他事务就必须等待该事务处理完才可以处理那行数. 相关技术参考： 乐观锁与悲观锁的实际应用(推荐此文) MySQL乐观锁在分布式场景下的实践(推荐此文) 乐观锁与悲观锁 深入理解乐观锁与悲观锁 深入理解乐观锁与悲观锁 mysql的锁–行锁，表锁，乐观锁，悲观锁 数据库的锁机制 本文代码Demo：Github地址：参见Price相关代码]]></content>
@@ -164,17 +175,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[事务知识点]]></title>
-    <url>%2F2016%2F10%2F01%2FTransaction%2Ftransaction%2F</url>
-    <content type="text"><![CDATA[事务&emsp;&emsp;本文主要介绍事务的相关知识点，同时也为后续讲解乐观锁和悲观锁作铺垫，先对以下事务相关的知识点：ACID、事物的常见问题以及事务的隔离级别先做介绍，至于锁后续会有专题详细介绍。事务就是一组原子性的sql，或者一个独立的工作单元，事务可以就Mysql引擎来说的话就是要么全部执行这一组sql语句（CURD组合），要么全部都不执行（比如其中一条语句失败会导致这一组语句全部失败）。事务是并发控制的单元，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位，说白了就是为了保证系统始终处于一个完整且正确的状态。 事务特性：ACID事务的ACID特性： A：Atomiciy(原子性)：一个事物必须保证其中的操作要么全部执行，要么全部回滚，不可能存在只执行了一部分这种情况出现。简单说就是事务是一个不可分隔的工作单位，事务中的操作要么都发生，要么都不发生； 事务包含的全部操作是一个不可分割的整体，要么全部执行，要么全部都不执行。 C：Consistency(一致性)：数据必须保证从一种一致性的状态转换为另一种一致性状态。也就是事务开始到结束的时间段内，事务前后数据的完整性必须保证一致； 例如：事务之前A,B两个账户的总和是10万(A:4W,B:6W),现在A转账B2万(A:2W,B:8W),A,B账户总和依旧应该是10万，如果不是10万的话，则事务前后对于账户总和这种资源是不一致的。 I：Isolation(隔离性)：在一个事物未执行完毕时，通常会保证其他Session无法看到这个事务的执行结果。也就是说多个用户并发访问数据库时，一个用户的事物不能被其他用户的事物所干扰，多个并发事务之间数据要相互隔离。数据库系统提供一定的隔离机制，保证事务在不受外部并发操作影响的”独立”环境执行； 主要规定了各个事务之间相互影响的程度，主要用于规定多个事务访问同一数据资源，各个事务对该数据资源访问的行为。 D：Durability(持久性)：事务一旦commit，则数据就会保存下来，即使提交完之后系统崩溃，数据也不会丢失。 事务一旦完成，要将数据所做的变更记录下来(冗余存储或多数据网络备份)。 事务常见问题更新丢失(Lost Update)： 场景：假定两个事物有$A$和$B$，事务$A$和事物$B$同时获得相同的数据，然后在各自的事物中修改数据M，事先$A$先提交事物，数据M假如为$M+$，事务$B$后提交事物，数据$M$变成了$M++$，最终结果变成$M++$，覆盖了事物$A$的更新。 原因：当多个事务选择同一行操作，并且都是基于最初选定的值，由于每个事务都不知道其他事务的存在，就会发生更新覆盖的问题。类比Github提交冲突。 例子： 事物$A$ 事物$B$ 读取 $X=100$ 读取 $X=100$ 写入 $X=X+100$ 事物结束 $X = 200$ 写入 $X =X+100$ 事物结束 $X=300$(事物A的数据更新丢失) 脏读(Dirty Reads)： 场景：允许事物B可以读到事物A修改而未提交的数据，可能会造成脏读（脏读本质就是无效数据，只有当事物$A$回滚，那么事物B读到的数据才为无效的，所以这里只是可能造成脏读，当事物$A$不回滚的时候，事物$B$读到的数据就不为脏数据，也就是有效的数据，脏数据会导致以后的操作都会发生错误，一定要避免，不能凭借侥幸，事物$A$不能百分之百保证不回滚，所以这种隔离级别很少用于实际应用，并且它的性能也不比其他借笔好）。 原因：事物B读取了事物$A$已经修改但尚未提交的数据。若事物$A$回滚数据，事物$A$的数据存在不一致性的问题。 例子： 事物$A$ 事物$B$ 写入 $X=X+100(x=200)$ 读取 $X=200$(无效数据，脏读) 事务回滚 $X=100$ 事务结束 $X=100$ 事务结束 不可重复读(Non-Repeatable Reads)： 场景：不可重复读是指在一个事务范围中$2$次或者多次查询同一数据$M$返回了不同的数据，例如：事务$B$读取某一数据，事务$A$修改了该数据$M$并且提交，事务$B$又读取该数据$M$(可能是再次校验)，在同一个事务$B$中，读取同一个数据$M$的结果集不同。 原因：事物$B$第一次读取最初数据，第二次读取事物A已经提交的修改或删除数据。导致两次读取数据不一致。不符合事物的隔离性。 例子： 事物$A$ 事物$B$ 读取 $X=100$ 读取 $X=100$ 写入 $X=X+100$ 读取 $X=100$ 事务结束，$X=200$ 读取 $X=200$(在一个事务B中读X的值发生了变化) 事物结束 幻读(Phantom Reads)： 当用户读取某一个范围的数据行时，另一个事物又在该范围内查询了新行，当用户再读取该范围的数据行时，会发现会有新的“幻影行”，例如：事物$B$读到某一个数据$M$，事物$A$对数据$M$增加了一行并提交，事物$B$又读数据$M$，发生多出了一行造成的结果不一致(如果行数相同，则是不可重复读)。 原因：事物$B$根据相同的条件第二次查询到事物$A$提交的新增数据，两次数据结果集不一致。不符合事物的隔离性。 例子：在事物$B$里，同一个数据集$M$，读到的条数不一致(新增，删除)。 事务$A$ 事务$B$ 读取数据集$M$(3行) 在数据集$M$插入一行(4行) 事务结束 读取数据$M$(4行) 事务结束 事务的隔离级别数据库的事物隔离越严格，并发副作用越小，但付出的代价也就越大。因为事务隔离实质上是将事务在一定程度上“串行”进行，这显然与“并发”是矛盾的。实际业务中处理的话，根据自己的业务逻辑，权衡能接受的最大副作用，从而平衡了“隔离” 和“并发” 的问题。Mysql默认隔离级别是可重复读的。事务的隔离级别通常有四种（RU, RC, RR，Serializable）： 隔离级别 读数据一致性 脏读可能性 不可重复读可能性 幻读可能性 加锁读 未提交读(Read uncommitted) 最低级别 Y Y Y N 已提交读(Read committed) 语句级别 N Y Y N 可重复读(Repeatable read) 事务级别 N N Y N 可序列化(Serializable) 最高级别，事务级别 N N N Y MySql常用命令查询隔离级别select @@tx_isolation; 设置手动提交set autocommit=0 ; 查看当前事务自动提交模式select @@autocommit; 设置隔离级别set tx_isolation = ‘READ-COMMITTED’; 查询表的状态show table status like ‘test1’; 修改表的存储引擎alter table test1 engine = INNODB 查看是否开启日志show variables like ‘log_bin’; 查看日志状态show master status; 相关技术参考：深入浅出事务（1）深入浅出事务（2）深入浅出事务（3）MySQL表锁和行锁机制Mysql之锁与事务数据库 - 事务管理（ACID）、隔离级别、事务传播行为]]></content>
-      <categories>
-        <category>并发控制相关知识点</category>
-      </categories>
-      <tags>
-        <tag>事务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Java面试题目集锦 (1)]]></title>
     <url>%2F2016%2F06%2F01%2FInterviewCase%2FJava%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E9%9B%86%E9%94%A6%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -187,17 +187,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Chapter(1-2)]]></title>
-    <url>%2F2016%2F05%2F01%2FJavaMultiThreadBook%2FMultiThreadChapter2%2F</url>
-    <content type="text"><![CDATA[多线程同步&emsp;&emsp;本文是对Chapter(1-1)中结尾中线程同步的方法继续做介绍。&emsp;&emsp;先来回顾下Chapter(1-1)文章结尾代码片段：1234567891011121314151617package com.multithread.demo.chapter1.ThreadShareDemo;/** * @author zhangsunny * @desc 线程共享操作 (线程同步) */public class MyThread2_1 extends Thread &#123; private int count = 10; @Override synchronized public void run() &#123; super.run(); count--; System.out.println("线程" + this.currentThread().getName() + "计算，count = " + count); &#125;&#125; &emsp;&emsp;以上代码通过在方法前加入synchronized关键字，使多个线程在执行run()时，以排队的方式进行处理。当一个线程调用run()前，先判断run()方法有没有被上锁，如果上锁，说明有其他线程正在调用run()方法，必须等其他线程对run()方法调用结束后才可以执行run()方法。这样就实现了排队调用run()方法，达到了按顺序对count变量减$1$的效果。synchronized可以在任意对象及方法上加锁，这段加锁的代码被称为“互斥区”或“临界区”。&emsp;&emsp;一个线程要执行同步方法里的代码时，线程首先去获取这把锁，也就会有两种结果： 1. ``获取锁成功``：那么这个线程可以执行sychronize里的代码。 2. ``获取锁失败``：那么着个线程就会不断地尝试获取这把锁，直到能够拿到为止，而且是有多个线程同时去争抢这把锁。 非线程安全&emsp;&emsp;非线程安全主要是指多个线程 对同一个对象中的同一个实例变量进行操作时会出现值被更改，值不同步的情况，影响程序的执行流程。 非线程安全环境代码Demo例子详见Github代码 ALogin类 123456789101112131415package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全ALogin */public class ALogin extends Thread &#123; @Override public void run() &#123; LoginServlet.doPost("a","aa"); &#125;&#125; BLogin类 12345678910111213141516package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全BLogin */public class BLogin extends Thread &#123; @Override public void run() &#123; LoginServlet.doPost("b","bb"); &#125;&#125; LoginServlet类 12345678910111213141516171819202122232425262728package com.multithread.demo.chapter1.ThreadIsNotSafe;import java.text.MessageFormat;/** * @author zhangsunny * @desc 非线程安全LoginServlet */public class LoginServlet &#123; private static String username; private static String password; public static void doPost(String usernameParam, String passwordParam) &#123; try &#123; username = usernameParam; if (usernameParam.equals("a")) &#123; Thread.sleep(5000); &#125; password = passwordParam; System.out.println(MessageFormat.format("username = &#123;0&#125; , password = &#123;1&#125;",username,password)); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125;&#125; RunTest 12345678910111213141516package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全Demo测试 */public class RunTest &#123; public static void main(String[] args) &#123; ALogin aLogin = new ALogin(); aLogin.start(); BLogin bLogin = new BLogin(); bLogin.start(); &#125;&#125; 运行结果 以上结果出现非线程安全问题 解决方法：使用synchronized关键字。 123456789101112131415161718192021222324252627282930package com.multithread.demo.chapter1.ThreadIsNotSafe;import java.text.MessageFormat;/** * @author zhangsunny * @desc 非线程安全LoginServlet */public class LoginServlet &#123; private static String username; private static String password; synchronized public static void doPost(String usernameParam, String passwordParam) &#123; try &#123; username = usernameParam; if (usernameParam.equals("a")) &#123; Thread.sleep(5000); &#125; password = passwordParam; System.out.println(MessageFormat.format("username = &#123;0&#125; , password = &#123;1&#125;", username, password)); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125;&#125; 运行结果 线程方法总结(部分) currentThread()方法可返回代码段正在被那个线程调用的信息。 isAlive()方法是判断当前线程是否处于活动状态(就是线程已经启动且尚未种植，线程处于正在运行或准备开始运行的状态)。 sleep()方法作用是在指定毫秒数内让当前“正在执行的线程”休眠。这个“正在执行的线程”是指this.currentThread()返回的线程。 getId()方法作用是取得线程的唯一标识。]]></content>
-      <categories>
-        <category>Java Multi-thread Programming书籍</category>
-      </categories>
-      <tags>
-        <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Nginx基本简介]]></title>
     <url>%2F2016%2F05%2F01%2FNginx-Config%2FNginx-Config%2F</url>
     <content type="text"><![CDATA[前言&emps;&emps;Nginx作为web服务器软件，具有高性能、高并发和低内存占用特点。此外其也提供反向代理功能。 Nginx特点 支持高并发连接 内存消耗少 配置文件简单 成本低廉 支持Rewrite重写规则 内置健康检查功能 节省宽带 稳定性高 Nginx架构 master进程主要用来管理worker进程，包含：接收来自外界的信号，向各worker进程发送信号，监控worker进程的运行状态，当worker进程退出后(异常情况下)，会自动重新启动新的worker进程。 worker进程则是处理基本的网络事件。多个worker进程之间是对等的，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个请求，只可能在一个worker进程中处理，一个worker进程，不可能处理其它进程的请求。 开发模型：epoll和kqueue。 支持的事件机制：kqueue、epoll、rt signals、/dev/poll 、event ports、select以及poll。 支持的kqueue特性包括EV_CLEAR、EV_DISABLE、NOTE_LOWAT、EV_EOF，可用数据的数量，错误代码。 支持sendfile、sendfile64和sendfilev;文件AIO；DIRECTIO;支持Accept-filters和TCP_DEFER_ACCEP。 Nginx请求分发Nginx启动后，会有一个master进程和多个worker进程。master进程主要用来管理worker进程，包含：接收来自外界信号，像各worker进程发送信号，监控worker进程的运行状态，当worker进程退出后（异常情况下），会自动重新启动新的worker进程。而基本的网络事件，则是放在worker进程中来处理了。多个worker进程之间是对等的，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个请求，只可能在一个worker进程中处理，一个worker进程，不可能处理其它进程的请求。worker进程的个数是可以设置的，一般我们会设置与机器CPU核数一致，这里面的原因与Nginx的进程模型以及事件处理模型是分不开的。Nginx进程模型Nginx性能Nginx的高并发，官方测试支持5万并发连接。实际生产环境能到2-3万并发连接数。10000个非活跃的HTTP keep-alive 连接仅占用约2.5MB内存。三万并发连接下，10个Nginx进程，消耗内存150M。淘宝tengine团队说测试结果是“24G内存机器上，处理并发请求可达200万”。 负载均衡 负载均衡在服务端开发中算是一个比较重要的特性。Nginx除了作为常规的Web服务器外，还会被大规模的用于反向代理前端，因为Nginx的异步框架可以处理很大的并发请求，把这些并发请求hold住之后就可以分发给后台服务端(backend servers，也叫做服务池， 后面简称backend)来做复杂的计算、处理和响应，这种模式的好处是相当多的：隐藏业务主机更安全，节约了公网IP地址，并且在业务量增加的时候可以方便地扩容后台服务器。 Nginx有一个特性，就是在反向代理的时候，其默认会将前端所有请求都读取完毕后，再向后端upstream发送请求，这等于Nginx将前端的高并发、复杂的外网传输环境给hold住了，这也是Nginx被作为最流行的接入层的原因所在。 什么是负载均衡&emps;&emps;应用部署在不同的服务器上，但是通过统一的域名进入，Nginx则对请求进行分发，将请求分发到不同的服务器上去处理，这样就可以有效的减轻了单台服务器的压力。&emps;&emps;在上面这两种情况下，Nginx服务器的作用都只是作为分发服务器，真正的内容，我们可以放在其他的服务器上，这样来，还能起到一层安全隔壁的作用，Nginx作为隔离层 推荐博文 Nginx负载均衡 如何用Nginx搭建一个安全的、快速的微服务架构]]></content>
@@ -206,6 +195,17 @@
       </categories>
       <tags>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Chapter(1-2)]]></title>
+    <url>%2F2016%2F05%2F01%2FJavaMultiThreadBook%2FMultiThreadChapter2%2F</url>
+    <content type="text"><![CDATA[多线程同步&emsp;&emsp;本文是对Chapter(1-1)中结尾中线程同步的方法继续做介绍。&emsp;&emsp;先来回顾下Chapter(1-1)文章结尾代码片段：1234567891011121314151617package com.multithread.demo.chapter1.ThreadShareDemo;/** * @author zhangsunny * @desc 线程共享操作 (线程同步) */public class MyThread2_1 extends Thread &#123; private int count = 10; @Override synchronized public void run() &#123; super.run(); count--; System.out.println("线程" + this.currentThread().getName() + "计算，count = " + count); &#125;&#125; &emsp;&emsp;以上代码通过在方法前加入synchronized关键字，使多个线程在执行run()时，以排队的方式进行处理。当一个线程调用run()前，先判断run()方法有没有被上锁，如果上锁，说明有其他线程正在调用run()方法，必须等其他线程对run()方法调用结束后才可以执行run()方法。这样就实现了排队调用run()方法，达到了按顺序对count变量减$1$的效果。synchronized可以在任意对象及方法上加锁，这段加锁的代码被称为“互斥区”或“临界区”。&emsp;&emsp;一个线程要执行同步方法里的代码时，线程首先去获取这把锁，也就会有两种结果： 1. ``获取锁成功``：那么这个线程可以执行sychronize里的代码。 2. ``获取锁失败``：那么着个线程就会不断地尝试获取这把锁，直到能够拿到为止，而且是有多个线程同时去争抢这把锁。 非线程安全&emsp;&emsp;非线程安全主要是指多个线程 对同一个对象中的同一个实例变量进行操作时会出现值被更改，值不同步的情况，影响程序的执行流程。 非线程安全环境代码Demo例子详见Github代码 ALogin类 123456789101112131415package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全ALogin */public class ALogin extends Thread &#123; @Override public void run() &#123; LoginServlet.doPost("a","aa"); &#125;&#125; BLogin类 12345678910111213141516package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全BLogin */public class BLogin extends Thread &#123; @Override public void run() &#123; LoginServlet.doPost("b","bb"); &#125;&#125; LoginServlet类 12345678910111213141516171819202122232425262728package com.multithread.demo.chapter1.ThreadIsNotSafe;import java.text.MessageFormat;/** * @author zhangsunny * @desc 非线程安全LoginServlet */public class LoginServlet &#123; private static String username; private static String password; public static void doPost(String usernameParam, String passwordParam) &#123; try &#123; username = usernameParam; if (usernameParam.equals("a")) &#123; Thread.sleep(5000); &#125; password = passwordParam; System.out.println(MessageFormat.format("username = &#123;0&#125; , password = &#123;1&#125;",username,password)); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125;&#125; RunTest 12345678910111213141516package com.multithread.demo.chapter1.ThreadIsNotSafe;/** * @author zhangsunny * @desc 非线程安全Demo测试 */public class RunTest &#123; public static void main(String[] args) &#123; ALogin aLogin = new ALogin(); aLogin.start(); BLogin bLogin = new BLogin(); bLogin.start(); &#125;&#125; 运行结果 以上结果出现非线程安全问题 解决方法：使用synchronized关键字。 123456789101112131415161718192021222324252627282930package com.multithread.demo.chapter1.ThreadIsNotSafe;import java.text.MessageFormat;/** * @author zhangsunny * @desc 非线程安全LoginServlet */public class LoginServlet &#123; private static String username; private static String password; synchronized public static void doPost(String usernameParam, String passwordParam) &#123; try &#123; username = usernameParam; if (usernameParam.equals("a")) &#123; Thread.sleep(5000); &#125; password = passwordParam; System.out.println(MessageFormat.format("username = &#123;0&#125; , password = &#123;1&#125;", username, password)); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125;&#125; 运行结果 线程方法总结(部分) currentThread()方法可返回代码段正在被那个线程调用的信息。 isAlive()方法是判断当前线程是否处于活动状态(就是线程已经启动且尚未种植，线程处于正在运行或准备开始运行的状态)。 sleep()方法作用是在指定毫秒数内让当前“正在执行的线程”休眠。这个“正在执行的线程”是指this.currentThread()返回的线程。 getId()方法作用是取得线程的唯一标识。]]></content>
+      <categories>
+        <category>Java Multi-thread Programming书籍</category>
+      </categories>
+      <tags>
+        <tag>多线程</tag>
       </tags>
   </entry>
   <entry>
@@ -288,7 +288,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter3%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -300,7 +300,7 @@
   </entry>
   <entry>
     <title><![CDATA[ThreadPoolExecutor 参数详解]]></title>
-    <url>%2F2016%2F04%2F21%2FJavaMultiThreadBook%2FMultiThreadChapter3%2F</url>
+    <url>%2F2016%2F04%2F21%2FJavaMultiThread%2FThreadPoolExecutor%2F</url>
     <content type="text"><![CDATA[ThreadPoolExecutor类介绍&emsp;&emsp;]]></content>
       <categories>
         <category>Java多线程</category>
@@ -346,17 +346,6 @@
   </entry>
   <entry>
     <title><![CDATA[JavaCore（1）]]></title>
-    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-4%2F</url>
-    <content type="text"><![CDATA[Java核心Java基本语法： Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java基础系列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JavaCore（1）]]></title>
     <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-2%2F</url>
     <content type="text"><![CDATA[Java核心Java基本语法：Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
       <categories>
@@ -364,6 +353,17 @@
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaCore（1）]]></title>
+    <url>%2F2015%2F04%2F13%2FJavaCore%2FJava-Core-4%2F</url>
+    <content type="text"><![CDATA[Java核心Java基本语法： Java类和对象：Java集合：Java泛型：Java注解：Java反射：]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java基础系列</tag>
       </tags>
   </entry>
   <entry>
