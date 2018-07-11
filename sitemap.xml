@@ -149,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/</loc>
+    <loc>http://edgeowner.com/2016/10/01/Lock/optimistic-pessimistic/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/10/01/Lock/optimistic-pessimistic/</loc>
+    <loc>http://edgeowner.com/2016/10/01/SortAlogrithms/optimistic-pessimistic-locking/</loc>
     
     <lastmod>2016-10-01T12:19:21.000Z</lastmod>
     
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/</loc>
+    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</loc>
     
     <lastmod>2016-05-01T12:19:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2018/04/27/local-nexus-plugins/local-nexus-plugins/</loc>
+    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter2/</loc>
     
     <lastmod>2016-05-01T12:19:21.000Z</lastmod>
     
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/05/01/JavaMultiThreadBook/MultiThreadChapter1/</loc>
+    <loc>http://edgeowner.com/2018/04/27/local-nexus-plugins/local-nexus-plugins/</loc>
     
     <lastmod>2016-05-01T12:19:21.000Z</lastmod>
     
@@ -247,7 +247,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
@@ -261,7 +261,7 @@
   </url>
   
   <url>
-    <loc>http://edgeowner.com/2016/04/21/JavaMultiThread/ThreadPoolExecutor/</loc>
+    <loc>http://edgeowner.com/2016/04/21/JavaMultiThreadBook/MultiThreadChapter4/</loc>
     
     <lastmod>2016-04-21T12:17:23.000Z</lastmod>
     
